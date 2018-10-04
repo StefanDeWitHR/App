@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Core.Views.MainPage"           	
+             xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"
+             
+             xmlns:converters="clr-namespace:Core.Converters"
+             xmlns:b1="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True" >
+
+    <ScrollView>
+        <StackLayout>
+            <!-- Title for square object-->
+            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+                <Label FontAttributes="Bold" Text="Advertenties" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+            <StackLayout   VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
+                <cv:CarouselView  Position="2"   HeightRequest="400" >
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <ListView  HeightRequest="400"  HorizontalOptions="FillAndExpand" ItemsSource="{Binding NewsArticles}" VerticalOptions="FillAndExpand" >
+                                <ListView.Behaviors>
+                                    <b1:EventToCommandBehavior EventName="ItemTapped"
+                                          Command="{Binding GetNewsArticleCommabnd}"
+                                          EventArgsConverter="{converters:ItemTappedEventArgsConverter}" />
+                                </ListView.Behaviors>
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+                                            <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Path=Image}"/>
+                                            <Label  HeightRequest="25" TextColor="White" Text="{Binding Path=Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
+            </StackLayout>
+        
+
+        <!-- Title for square object-->
+            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+                <Label FontAttributes="Bold" Text="Laatse nieuws" HorizontalOptions="Center"></Label> 
+            </StackLayout>
+
+            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
+                <cv:CarouselView ItemsSource="{Binding NewsArticles}"  HeightRequest="400"  BackgroundColor="LawnGreen">
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+                                <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
+                                <Label  HeightRequest="25" TextColor="White" Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
+            </StackLayout>
+
+            <!-- Title for square object-->
+            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+                <Label FontAttributes="Bold" Text="Deal focuss" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+
+            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
+                <cv:CarouselView ItemsSource="{Binding NewsArticles}"  HeightRequest="400"  BackgroundColor="LawnGreen">
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+                                <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
+                                <Label  HeightRequest="25" TextColor="White" Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
+            </StackLayout>
+
+            <!-- Title for square object-->
+            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+                <Label FontAttributes="Bold" Text="Vestigingslocaties" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
+                <cv:CarouselView ItemsSource="{Binding NewsArticles}"  HeightRequest="400"  BackgroundColor="LawnGreen">
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+                                <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
+                                <Label  HeightRequest="25" TextColor="White" Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
+            </StackLayout>
+
+            <!-- Title for square object-->
+            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+                <Label FontAttributes="Bold" Text="Evenementen" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
+                <cv:CarouselView ItemsSource="{Binding NewsArticles}"  HeightRequest="400"  BackgroundColor="LawnGreen">
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+                                <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
+                                <Label  HeightRequest="25" TextColor="White" Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
+            </StackLayout>
+            <!-- Title for square object-->
+            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+                <Label FontAttributes="Bold" Text="Contentpartners" HorizontalOptions="Center"></Label>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
+                <cv:CarouselView ItemsSource="{Binding NewsArticles}"  HeightRequest="400"  BackgroundColor="LawnGreen">
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+                                <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
+                                <Label  HeightRequest="25" TextColor="White" Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
+            </StackLayout>
+
+
+
+            <!-- Title for square object-->
+            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+                <Label FontAttributes="Bold" Text="Placeholder for Magzine | columnisten" HorizontalOptions="Center"></Label>
+            </StackLayout>
+            <!-- not done yet-->
+            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" BackgroundColor="Yellow">
+
+                <Label  Text=""></Label>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

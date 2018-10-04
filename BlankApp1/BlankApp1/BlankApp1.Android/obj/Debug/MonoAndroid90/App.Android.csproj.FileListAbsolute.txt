@@ -1,0 +1,3 @@
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid90\App.Android.csprojAssemblyReference.cache
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid90\res.flag
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid90\App.Android.csproj.CoreCompileInputs.cache

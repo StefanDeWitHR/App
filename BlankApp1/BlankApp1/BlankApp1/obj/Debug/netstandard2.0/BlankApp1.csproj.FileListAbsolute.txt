@@ -1,0 +1,11 @@
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\BlankApp1.deps.json
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\BlankApp1.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\BlankApp1.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\BlankApp1.csprojAssemblyReference.cache
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\BlankApp1.csproj.CoreCompileInputs.cache
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\BlankApp1.App.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\BlankApp1.Views.MainPage.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\BlankApp1.AssemblyInfoInputs.cache
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\BlankApp1.AssemblyInfo.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\BlankApp1.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\BlankApp1.pdb

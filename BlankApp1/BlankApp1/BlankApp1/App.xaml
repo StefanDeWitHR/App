@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+             x:Class="Core.App">
+	<Application.Resources>
+
+        <ResourceDictionary>
+
+            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="PrimaryDark">#1976D2</Color>
+            <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
+            <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
+            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
+            <Color x:Key="LightTextColor">#999999</Color>
+            <Color x:Key="default_color_company">#e20413</Color>
+            <Color x:Key="default_background">#ffffff</Color>
+
+
+            <!-- header template --><!--
+            <ControlTemplate x:Key="header">
+
+                <Grid  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition  Height="100"/>
+                        <RowDefinition Height="100"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition  Width="4*"/>
+                        <ColumnDefinition Width="6*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image  Source="hamburger_menu.png"  Grid.Column="0" Grid.Row="0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnMenuTapped"
+                                NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Image  WidthRequest="275" Source="PropertyNL-logo.jpg"  Grid.Column="1" Grid.Row="0">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLogoTapped" NumberOfTapsRequired="1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="8" BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+                    <ContentPresenter  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5"/>
+
+                </Grid>
+
+            </ControlTemplate>-->
+            <!-- end header template-->
+        </ResourceDictionary>
+        </Application.Resources>
+</prism:PrismApplication>

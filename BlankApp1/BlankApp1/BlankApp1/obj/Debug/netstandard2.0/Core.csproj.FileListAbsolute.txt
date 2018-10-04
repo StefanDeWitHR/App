@@ -1,0 +1,14 @@
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\Core.deps.json
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\Core.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\Core.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.App.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Views.Header.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Views.MainPage.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Views.MenuPage.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Views.NewsArticlesPage.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Core.Views.MenuPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout BackgroundColor="Silver" Padding="20">
+                <Button Text="Go Test 1" 
+                              TextColor="White"
+                              BackgroundColor="Red" 
+                              Command="{Binding OnNavigateCommand}" 
+                              CommandParameter="NavigationPage/Test1Page"/>
+                <Button Text="Go Test 2"  
+                              TextColor="White"
+                              BackgroundColor="Black" 
+                              Command="{Binding OnNavigateCommand}" 
+                              CommandParameter="NavigationPage/Test2Page"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>
+
+
+<!--<StackLayout>
+            --><!-- User information when logged in --><!--
+            <StackLayout HeightRequest="200" Padding="10">
+                <Label Text="Ingelogd als: Stefan de Wit"></Label>
+                <Image Source="me.png" Aspect="AspectFit"></Image>
+            </StackLayout>
+
+            <StackLayout>
+                --><!-- menu --><!--
+                <Button BorderColor="Red" BorderRadius="2" BackgroundColor="White" Text="Nieuwsartikelen" Command="{Binding GoSecondCommand}"></Button>
+                <Button BorderColor="Red" BackgroundColor="White" Text="Over ons" Command="{Binding AboutUsCommand}"></Button>
+                <Button BorderColor="Red" BackgroundColor="White"  Text="Contact" Command="{Binding GoSecondCommand}"></Button>
+                <Button BorderColor="Red" BackgroundColor="White" Text="Proeflidmaatschap aanvragen" Command="{Binding GoSecondCommand}"></Button>
+            </StackLayout>
+        </StackLayout>-->
