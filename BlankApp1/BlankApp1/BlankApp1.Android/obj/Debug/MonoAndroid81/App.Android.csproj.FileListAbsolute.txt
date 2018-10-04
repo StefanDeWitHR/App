@@ -19,6 +19,10 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\r
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\layout\tabbar.xml
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\layout\toolbar.xml
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\values\styles.xml
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\contacts.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\hamburger.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\logo.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\me.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\R.cs.flag
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\R.txt
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\uploadflags.txt

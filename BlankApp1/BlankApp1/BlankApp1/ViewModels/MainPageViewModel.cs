@@ -9,18 +9,17 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Xamarin.Forms;
-using System.Linq;
 namespace Core.ViewModels
 {
 
         public class MainPageViewModel : ViewModelBase
-        {
+    {
         private readonly INavigationService _navigationService;
         private readonly INewsArticlesService _newsArticleService;
 
         // Commands
-        private DelegateCommand<NewsArticles> _GetNewsArticle;
-        public DelegateCommand<NewsArticles> GetNewsArticleCommabnd => _GetNewsArticle ?? (_GetNewsArticle = new DelegateCommand<NewsArticles>(ItemSelected));
+        public  DelegateCommand<object> GetNewsArticleCommand { get;  }
+        
         //
 
         public MainPageViewModel(INavigationService navigationService, INewsArticlesService newsArticlesService)
@@ -31,15 +30,20 @@ namespace Core.ViewModels
             _newsArticleService = newsArticlesService;
             _navigationService = navigationService;
 
+            //Command Instances
+            GetNewsArticleCommand = new DelegateCommand<object>(MoreInfoNewsArticle);
+
 
         }
 
-        public async void ItemSelected (object args)
+        public async void MoreInfoNewsArticle(object param)
         {
-            var p = new NavigationParameters();
-            p.Add("item", args);
+            NewsArticles newsArticles = param as NewsArticles;
 
-            await _navigationService.NavigateAsync("NewsArticlesPage", p);
+            var parameters = new NavigationParameters();
+            parameters.Add("Id", newsArticles.Id);
+
+            await _navigationService.NavigateAsync(new Uri("NavigationPage/NewsArticlesPage", UriKind.Relative), parameters);
         }
 
         private List<NewsArticles> _newsArticles;
@@ -63,11 +67,11 @@ namespace Core.ViewModels
             }
         }
 
+
         public async override void OnNavigatingTo(NavigationParameters parameters)
         {
             base.OnNavigatingTo(parameters);
             NewsArticles = await _newsArticleService.GetNewsArticles();
-         //   NewsArticles = NewsArticles.ToList();
         }
     } 
 }

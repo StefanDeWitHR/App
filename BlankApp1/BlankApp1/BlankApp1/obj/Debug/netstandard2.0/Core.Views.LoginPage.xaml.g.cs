@@ -11,12 +11,12 @@
 namespace Core.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Projecten\\App\\BlankApp1\\BlankApp1\\BlankApp1\\Views\\Header.xaml")]
-    public partial class Header : global::Xamarin.Forms.ContentView {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Projecten\\App\\BlankApp1\\BlankApp1\\BlankApp1\\Views\\LoginPage.xaml")]
+    public partial class LoginPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Header));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginPage));
         }
     }
 }

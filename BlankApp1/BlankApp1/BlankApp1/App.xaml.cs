@@ -36,13 +36,18 @@ namespace Core
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<MainPage>();
-            containerRegistry.RegisterForNavigation<NewsArticlesPage>();
+            containerRegistry.RegisterForNavigation<MainPage , MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<NewsArticlesPage , NewsArticlesPageViewModel>();
             containerRegistry.RegisterForNavigation<MenuPage , MenuPageViewModel>();
-       
+            containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             // Services 
             containerRegistry.Register<INewsArticlesService, NewsArticlesService>();
             
         }
+
+        //private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        //{
+        //    await NavigationService.NavigateAsync(new System.Uri("/MenuPage/", System.UriKind.Absolute));
+        //}
     }
 }

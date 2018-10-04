@@ -16,16 +16,5 @@ namespace Core.Views
          
 
         }
-        // Get the selected newsarticle onClick
-        //private void CarouselView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        //{
-        //    var newsArticle = ((CarouselView)sender).Item as NewsArticles;
-        //    if(newsArticle == null)
-        //    {
-        //        return;
-        //    }
-
-
-        //}
     }
 }

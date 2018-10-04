@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Core.Views.LoginPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Name="LoginPage" NavigationPage.HasNavigationBar="false" 
+             ControlTemplate="{StaticResource header}">
+   
+    
+    <ContentPage.Content>
+        <StackLayout  Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250">
+
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="Inloggen" FontSize="Large"></Label>
+                <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Margin="10">
+                <Label Text="Gebruikersnaam"></Label>
+                <Entry></Entry>
+                <Label Text="Wachtwoord"></Label>
+                <Entry IsPassword="True"></Entry>
+                <Button Text="Inloggen"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

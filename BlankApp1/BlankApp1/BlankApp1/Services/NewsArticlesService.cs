@@ -13,26 +13,35 @@ namespace Core.Services
         {
              new NewsArticles
             {
+                Id = 1,
                 Name = "Niewsartikel 1 ",
                 Image = "https://propertynl.com/media/newsarticle/photos/104838/27416/Camelot.png?w=330"
             },
              new NewsArticles
             {
+                Id = 2,
                 Name = "Niewsartikel 2 ",
                 Image = "https://propertynl.com/media/newsarticle/photos/104854/27434/Atlantic-Huis.jpg?w=330"
             },
              new NewsArticles
             {
+                Id =3,
                 Name = "Niewsartikel 3 ",
                 Image = "https://propertynl.com/media/newsarticle/photos/104853/27433/Indruk-nieuwe-pui-units-LU-1-6-SPAA-2.jpg?w=330"
             },
              new NewsArticles
             {
+                Id =4,
                 Name = "Niewsartikel 4 ",
                 Image = "https://propertynl.com/media/newsarticle/photos/104847/27427/photo-about-fcf87eb87d8a8fef13f67b5a2664f86e.png?w=330"
             },
 
         };
+        public NewsArticles GetNewsArticleById(int Id)
+        {
+            NewsArticles newsArticle = NewsArticles.Find(x => x.Id == Id);
+            return newsArticle;
+        }
         public async Task<List<NewsArticles>> GetNewsArticles()
         {
             await Task.Delay(500);
