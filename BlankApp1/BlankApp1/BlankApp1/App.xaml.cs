@@ -40,14 +40,15 @@ namespace Core
             containerRegistry.RegisterForNavigation<NewsArticlesPage , NewsArticlesPageViewModel>();
             containerRegistry.RegisterForNavigation<MenuPage , MenuPageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
+            containerRegistry.RegisterForNavigation<ContactPage>();
+            containerRegistry.RegisterForNavigation<AboutUsPage>();
+            containerRegistry.RegisterForNavigation<TrialPage>(); // TODO -> Viewmodel connecting
+
             // Services 
             containerRegistry.Register<INewsArticlesService, NewsArticlesService>();
             
         }
 
-        //private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        //{
-        //    await NavigationService.NavigateAsync(new System.Uri("/MenuPage/", System.UriKind.Absolute));
-        //}
+
     }
 }

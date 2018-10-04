@@ -16,11 +16,11 @@
 
                 <StackLayout>
                     <!-- menu -->
-                    <Button   CommandParameter="NavigationPage/MainPage" Text="Nieuwsartikelen" Command="{Binding OnNavigateCommand}"></Button>
-                    <Button   Text="Over ons" Command="{Binding OnNavigateCommand}"></Button>
-                    <Button   Text="Contact" Command="{Binding OnNavigateCommand}"></Button>
-                    <Button   Text="Proeflidmaatschap aanvragen" Command="{Binding OnNavigateCommand}"></Button>
-                    <Button   CommandParameter="NavigationPage/LoginPage" Text="Inloggen" Command="{Binding OnNavigateCommand}"></Button>
+                    <Button   CommandParameter="NavigationPage/MainPage"    Text="Nieuwsartikelen" Command="{Binding OnNavigateCommand}"></Button>
+                    <Button   CommandParameter="NavigationPage/AboutUsPage" Text="Over ons" Command="{Binding OnNavigateCommand}"></Button>
+                    <Button   CommandParameter="NavigationPage/ContactPage"   Text="Contact" Command="{Binding OnNavigateCommand}"></Button>
+                    <Button   CommandParameter="NavigationPage/TrialPage"   Text="Proeflidmaatschap aanvragen" Command="{Binding OnNavigateCommand}"></Button>
+                    <Button   CommandParameter="NavigationPage/LoginPage"   Text="Inloggen" Command="{Binding OnNavigateCommand}"></Button>
                 </StackLayout>
             </StackLayout>
         </ContentPage>

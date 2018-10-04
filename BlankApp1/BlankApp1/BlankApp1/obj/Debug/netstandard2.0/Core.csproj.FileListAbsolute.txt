@@ -12,3 +12,6 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Ass
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Views.LoginPage.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Views.AboutUsPage.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Views.ContactPage.xaml.g.cs
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.Views.TrialPage.xaml.g.cs
