@@ -1,50 +1,94 @@
 ﻿using Core.Models;
 using Core.Services;
 using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Navigation;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using System.Text;
-using Xamarin.Forms;
+using System.Linq;
+using System.Collections.ObjectModel;
 
 namespace Core.ViewModels
 {
     public class NewsArticlesPageViewModel : ViewModelBase, INavigationAware
     {
-        private readonly INavigationService   _navigationService;
+        private readonly INavigationService _navigationService;
         private readonly INewsArticlesService _newsArticlesService;
 
-        public NewsArticlesPageViewModel(INavigationService navigationService , INewsArticlesService newsArticlesService) : base(navigationService)
-        {
-            _navigationService = navigationService;
-            _newsArticlesService = newsArticlesService;
-        }
+        public DelegateCommand<object> GetNewsArticleCommand { get; }
+        public DelegateCommand<object> SearchNewsArticleCommand { get; }
 
-        private NewsArticles _newsArticle;
-        public NewsArticles NewsArticle
+        public NewsArticlesPageViewModel(INavigationService navigationService, INewsArticlesService newsArticlesService)
+       : base(navigationService)
         {
-            get { return _newsArticle; }
+            Title = "Homepage";
+
+            _newsArticlesService = newsArticlesService;
+            _navigationService = navigationService;
+
+            //Command instances
+            GetNewsArticleCommand = new DelegateCommand<object>(MoreInfoNewsArticle);
+            SearchNewsArticleCommand = new DelegateCommand<object>(SearchOnNewsArticle);
+
+        }
+        private List<NewsArticles> _newsArticles;
+        public List<NewsArticles> NewsArticles
+        {
+            get { return _newsArticles; }
             set
             {
-                _newsArticle = value;
+                _newsArticles = value;
                 RaisePropertyChanged();
             }
         }
-
-        public override void OnNavigatedFrom(NavigationParameters parameters)
+        private ObservableCollection<NewsArticles> _OC_NewsArticles;
+        public ObservableCollection<NewsArticles> OC_NewsArticles
         {
-            //
+            get
+            {
+                return _OC_NewsArticles;
+            }
+            set
+            {
+                _OC_NewsArticles = value;
+                RaisePropertyChanged();
+            }
         }
-  
-        public override void OnNavigatedTo(NavigationParameters parameters)
+        public async override void OnNavigatingTo(NavigationParameters parameters)
         {
-            if (parameters.ContainsKey("Id"))
-                Title = (string)parameters["title"];
-                int paramId = (int)parameters["Id"];
-                NewsArticle = _newsArticlesService.GetNewsArticleById(paramId);   
+            base.OnNavigatingTo(parameters);
+            NewsArticles = await _newsArticlesService.GetNewsArticles();
+        }
+        public async void MoreInfoNewsArticle(object param)
+        {
+            NewsArticles newsArticles = param as NewsArticles;
+
+            var parameters = new NavigationParameters();
+            parameters.Add("Id", newsArticles.Id);
+
+            await _navigationService.NavigateAsync(new Uri("NavigationPage/NewsArticleDetailPage", UriKind.Relative), parameters);
+        }
+
+
+        private string _KeyWord;
+        public string KeyWord
+        {
+            get
+            {
+                return _KeyWord;
+            }
+            set
+            {
+                _KeyWord = value;
+                RaisePropertyChanged();
+            }
+        }
+        public async void SearchOnNewsArticle(object param)
+        {
+            //NewsArticles.Where(x => x.Name.Contains(keyWord));
+            string keyWord = _KeyWord.ToLower();
+            NewsArticles = _newsArticles.Where(x => x.Name.Contains(keyWord)).ToList();
+            //NewsArticles = _newsArticles;
 
         }
     }

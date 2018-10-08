@@ -1,12 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Core.Views.AboutUsPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" NavigationPage.HasNavigationBar="false"
+             ControlTemplate="{StaticResource header}" x:Class="Core.Views.AboutUsPage">
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="About us page"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout  Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250">
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Over ons" FontSize="Large"></Label>
+                    <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+                <StackLayout Margin="10">
+                    <Label Text="PropertyNL staat synoniem voor: `gedegen kennis van zaken op vastgoedgebied` "></Label>
+                    <Label Text="Behalve dé leverancier van informatie over alle 
+                       aspecten van het vastgoed zijn we een solide partner en een 
+                       interessante werkgever. Met al haar producten en diensten richten wij ons op de vastgoedprofessional 
+                       in Nederland en Europa."></Label>
+
+                    <Label Text="Over PropertyNL " FontSize="Medium" FontFamily="bold" ></Label>
+                    <Label Text="PropertyNL is in 2000 opgericht en heeft zich sindsdien ontwikkeld tot dé onderzoeksorganisatie en uitgeverij op het gebied van commercieel vastgoed en de woningmarkt 
+                       in Nederland. Het eigen onderzoek is de basis voor gedegen en gevarieerde publicaties. 
+                       We brengen nieuws, rapporten en onderzoeksresultaten via verschillende kanalen, 
+                       zowel via print als digitaal. Met al deze publicaties richten wij ons op de 
+                       vastgoedprofessional in Nederland. Wij willen hiermee een toonaangevende 
+                       bron van informatie zijn voor onder meer makelaars, ontwikkelaars, beleggers en 
+                       financiers, woningcorporaties, overheid, adviseurs, advocatuur, facility managers en architecten."
+                ></Label>
+                    <Label Text="Team " FontSize="Medium" FontFamily="bold" ></Label>
+                    <Label Text="Bij PropertyNL en de Europese zusterorganisatie PropertyEU 
+                       zijn inmiddels 40 enthousiaste professionals werkzaam. 
+                       Kenmerkend zijn een hechte samenwerking waarbij we elkaar constant inspireren 
+                       en stimuleren om een beter product af te leveren. Werken bij 
+                       PropertyNL betekent regelmatig contact met de kopstukken uit de 
+                       vastgoedwereld en de mogelijkheid
+                       tot ontplooiing en profilering binnen deze sector."></Label>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

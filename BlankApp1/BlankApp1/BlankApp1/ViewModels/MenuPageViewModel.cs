@@ -17,6 +17,7 @@ namespace Core.ViewModels
         {
             _navigationService = navigationService;
             OnNavigateCommand = new DelegateCommand<string>(NavigateAync);
+            
         }
 
         async void NavigateAync(string page)

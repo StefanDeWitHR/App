@@ -1,30 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Core.Views.NewsArticlesPage"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             prism:ViewModelLocator.AutowireViewModel="True" NavigationPage.HasNavigationBar="false" 
-             Title="{Binding NewsArticle.Name}" >
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Core.Views.NewsArticlesPage" NavigationPage.HasNavigationBar="false" 
+             ControlTemplate="{StaticResource header}" x:Name="NewsArticlesPage">
+
 
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-          
-                <StackLayout HorizontalOptions="Start">
-                    <Button  HorizontalOptions="Start" Text="Categorie" WidthRequest="120"></Button>
-                </StackLayout>
-                <StackLayout HorizontalOptions="CenterAndExpand">
-                
-                <Label   HorizontalOptions="CenterAndExpand" Text="{Binding NewsArticle.Name}"></Label>
-                <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+        <!--<ScrollView>-->
+        <StackLayout>
+            <StackLayout VerticalOptions="Start"  HorizontalOptions="Start" Orientation="Horizontal" Padding="5">
+                <SearchBar Grid.Column="0" Text="{Binding KeyWord}" SearchCommand="{Binding SearchNewsArticleCommand}" Grid.Row="0" WidthRequest="200" Placeholder="Zoeken" Margin="0"></SearchBar>
+                <Picker Grid.Column="1" Grid.Row="0"  Title="Kies categorie"></Picker>
             </StackLayout>
-            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand">
-                <Image Source="{Binding NewsArticle.Image}" Aspect="AspectFill" HeightRequest="375"></Image>
-                    <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
-                </StackLayout>
-          
-        </StackLayout>
-    </ScrollView>
+            <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
 
+            <ListView ItemsSource="{Binding NewsArticles}" HasUnevenRows="true" HeightRequest="800" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Image Source="{Binding Image}"  HeightRequest="375" Aspect="AspectFill" ></Image>
+                                <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <Button Text="Lees meer" 
+                                                    Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference NewsArticlesPage}}"
+                                                    CommandParameter="{Binding .}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </ContentPage.Content>
+    
 </ContentPage>

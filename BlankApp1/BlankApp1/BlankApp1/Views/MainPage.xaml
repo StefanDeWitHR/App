@@ -4,26 +4,27 @@
              x:Class="Core.Views.MainPage"           	
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
-             xmlns:b="clr-namespace:Corcav.Behaviors;assembly=Corcav.Behaviors"       
-             xmlns:converters="clr-namespace:Core.Converters"
-             xmlns:b1="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"  x:Name="MainPage" NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}">
+
+   
 
     <ScrollView>
         <StackLayout>
 
             <!-- Title for square object-->
-            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+            <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand"  BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold"  FontSize="Large" Text="Advertenties" HorizontalOptions="Center"></Label>
             </StackLayout>
             
             <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
-                <cv:CarouselView ItemsSource="{Binding NewsArticles}"  HeightRequest="400"  >
+                <cv:CarouselView  ItemsSource="{Binding NewsArticles}"  HeightRequest="400" Position="{Binding Position, Mode=TwoWay}">
+
                     <cv:CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
-                                <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
+                                <Image HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
+                               
                                 <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 <Button Text="Lees meer" 
                                             Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
@@ -32,12 +33,13 @@
                         </DataTemplate>
                     </cv:CarouselView.ItemTemplate>
                 </cv:CarouselView>
+                
             </StackLayout>
 
 
         <!-- Title for square object-->
-            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
-                <Label FontAttributes="Bold"  FontSize="Large" Text="Laatse nieuws" HorizontalOptions="Center"></Label> 
+            <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
+                <Label FontAttributes="Bold"  FontSize="Large" Text="Laatste nieuws" HorizontalOptions="Center"></Label> 
             </StackLayout>
 
             <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
@@ -57,7 +59,7 @@
             </StackLayout>
 
             <!-- Title for square object-->
-            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+            <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold" FontSize="Large"  Text="Deal focuss" HorizontalOptions="Center"></Label>
             </StackLayout>
 
@@ -79,7 +81,7 @@
             </StackLayout>
 
             <!-- Title for square object-->
-            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+            <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold" FontSize="Large" Text="Vestigingslocaties" HorizontalOptions="Center"></Label>
             </StackLayout>
 
@@ -100,7 +102,7 @@
             </StackLayout>
 
             <!-- Title for square object-->
-            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+            <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold" FontSize="Large" Text="Evenementen" HorizontalOptions="Center"></Label>
             </StackLayout>
 
@@ -120,7 +122,7 @@
                 </cv:CarouselView>
             </StackLayout>
             <!-- Title for square object-->
-            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+            <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold" FontSize="Large" Text="Contentpartners" HorizontalOptions="Center"></Label>
             </StackLayout>
 
@@ -142,7 +144,7 @@
 
 
             <!-- Title for square object-->
-            <StackLayout HeightRequest="25"  HorizontalOptions="FillAndExpand">
+            <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold"  FontSize="Large" Text="Placeholder for Magzine | columnisten" HorizontalOptions="Center"></Label>
             </StackLayout>
             <!-- not done yet-->

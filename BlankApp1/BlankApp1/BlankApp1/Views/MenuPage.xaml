@@ -15,10 +15,11 @@
                 </StackLayout>
 
                 <StackLayout>
-                    <!-- menu -->
-                    <Button   CommandParameter="NavigationPage/MainPage"    Text="Nieuwsartikelen" Command="{Binding OnNavigateCommand}"></Button>
+                    <!-- Menu items -->
+                    <Button   CommandParameter="NavigationPage/MainPage"    Text="Homepagina" Command="{Binding OnNavigateCommand}"></Button>
+                    <Button   CommandParameter="NavigationPage/NewsArticlesPage"    Text="Nieuwsartikelen" Command="{Binding OnNavigateCommand}"></Button>
                     <Button   CommandParameter="NavigationPage/AboutUsPage" Text="Over ons" Command="{Binding OnNavigateCommand}"></Button>
-                    <Button   CommandParameter="NavigationPage/ContactPage"   Text="Contact" Command="{Binding OnNavigateCommand}"></Button>
+                    <Button   CommandParameter="NavigationPage/ContactPage" Text="Contact" Command="{Binding OnNavigateCommand}"></Button>
                     <Button   CommandParameter="NavigationPage/TrialPage"   Text="Proeflidmaatschap aanvragen" Command="{Binding OnNavigateCommand}"></Button>
                     <Button   CommandParameter="NavigationPage/LoginPage"   Text="Inloggen" Command="{Binding OnNavigateCommand}"></Button>
                 </StackLayout>
@@ -26,20 +27,3 @@
         </ContentPage>
     </MasterDetailPage.Master>
 </MasterDetailPage>
-
-
-<!--<StackLayout>
-            --><!-- User information when logged in --><!--
-            <StackLayout HeightRequest="200" Padding="10">
-                <Label Text="Ingelogd als: Stefan de Wit"></Label>
-                <Image Source="me.png" Aspect="AspectFit"></Image>
-            </StackLayout>
-
-            <StackLayout>
-                --><!-- menu --><!--
-                <Button BorderColor="Red" BorderRadius="2" BackgroundColor="White" Text="Nieuwsartikelen" Command="{Binding GoSecondCommand}"></Button>
-                <Button BorderColor="Red" BackgroundColor="White" Text="Over ons" Command="{Binding AboutUsCommand}"></Button>
-                <Button BorderColor="Red" BackgroundColor="White"  Text="Contact" Command="{Binding GoSecondCommand}"></Button>
-                <Button BorderColor="Red" BackgroundColor="White" Text="Proeflidmaatschap aanvragen" Command="{Binding GoSecondCommand}"></Button>
-            </StackLayout>
-        </StackLayout>-->

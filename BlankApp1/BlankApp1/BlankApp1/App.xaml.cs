@@ -8,6 +8,7 @@ using Prism.DryIoc;
 using Core.Services;
 using System;
 
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Core
 {
@@ -18,9 +19,9 @@ namespace Core
          * This imposes a limitation in which the App class must have a default constructor. 
          * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
          */
+      
         public App() : this(null) {
 
-           
         }
        
         public static double ScreenHeight;
@@ -37,18 +38,18 @@ namespace Core
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage , MainPageViewModel>();
-            containerRegistry.RegisterForNavigation<NewsArticlesPage , NewsArticlesPageViewModel>();
+            containerRegistry.RegisterForNavigation<NewsArticleDetailPage, NewsArticleDetailPageViewModel>();
+            containerRegistry.RegisterForNavigation<NewsArticlesPage, NewsArticlesPageViewModel>();
             containerRegistry.RegisterForNavigation<MenuPage , MenuPageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<ContactPage>();
             containerRegistry.RegisterForNavigation<AboutUsPage>();
-            containerRegistry.RegisterForNavigation<TrialPage>(); // TODO -> Viewmodel connecting
+            containerRegistry.RegisterForNavigation<TrialPage , TrialPageViewModel>(); 
 
             // Services 
             containerRegistry.Register<INewsArticlesService, NewsArticlesService>();
             
         }
-
-
     }
 }
+

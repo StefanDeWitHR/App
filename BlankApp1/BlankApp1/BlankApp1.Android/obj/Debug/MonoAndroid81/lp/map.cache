@@ -2,6 +2,7 @@ Corcav.Behaviors
 Core
 DryIoc
 FormsViewGroup
+Newtonsoft.Json
 Prism
 Prism.DryIoc.Forms
 Prism.Forms

@@ -32,7 +32,7 @@ namespace Core.ViewModels
 
             //Command Instances
             GetNewsArticleCommand = new DelegateCommand<object>(MoreInfoNewsArticle);
-
+          
 
         }
 
@@ -43,7 +43,7 @@ namespace Core.ViewModels
             var parameters = new NavigationParameters();
             parameters.Add("Id", newsArticles.Id);
 
-            await _navigationService.NavigateAsync(new Uri("NavigationPage/NewsArticlesPage", UriKind.Relative), parameters);
+            await _navigationService.NavigateAsync(new Uri("NavigationPage/NewsArticleDetailPage", UriKind.Relative), parameters);
         }
 
         private List<NewsArticles> _newsArticles;
@@ -66,7 +66,6 @@ namespace Core.ViewModels
                 RaisePropertyChanged();
             }
         }
-
 
         public async override void OnNavigatingTo(NavigationParameters parameters)
         {
