@@ -7,11 +7,17 @@
              prism:ViewModelLocator.AutowireViewModel="True"  x:Name="MainPage" NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}">
 
-   
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 40, 20, 20" />
+            <On Platform="Android, UWP" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
 
     <ScrollView>
         <StackLayout>
 
+        
             <!-- Title for square object-->
             <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand"  BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold"  FontSize="Large" Text="Advertenties" HorizontalOptions="Center"></Label>
@@ -23,12 +29,15 @@
                     <cv:CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
-                                <Image HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
-                               
-                                <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-                                <Button Text="Lees meer" 
+                                <Image HeightRequest="250" Aspect="AspectFill" Source="{Binding Image}"/>
+                                <Label  HeightRequest="25"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding Title}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <ScrollView>
+                                <Label  HeightRequest="75"  Text="{Binding Description}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                </ScrollView>
+                                <Button Text="> Lees verder " 
                                             Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
                                             CommandParameter="{Binding .}" />
+                              
                             </StackLayout>
                         </DataTemplate>
                     </cv:CarouselView.ItemTemplate>

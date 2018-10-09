@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 using Prism.DryIoc;
 using Core.Services;
 using System;
-
+using Prism.Navigation;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Core
@@ -49,6 +49,11 @@ namespace Core
             // Services 
             containerRegistry.Register<INewsArticlesService, NewsArticlesService>();
             
+        }
+        // Open menu on tap
+        private void OnMenuTapped(object sender, EventArgs e)
+        {
+            (App.Current.MainPage as MasterDetailPage).IsPresented = true;
         }
     }
 }

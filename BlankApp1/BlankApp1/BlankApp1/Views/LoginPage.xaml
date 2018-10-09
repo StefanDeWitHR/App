@@ -6,8 +6,14 @@
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Name="LoginPage" NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}">
-   
-    
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 40, 20, 20" />
+            <On Platform="Android, UWP" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
     <ContentPage.Content>
         <StackLayout  Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250">
 

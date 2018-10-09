@@ -11,18 +11,15 @@ using Xamarin.Forms.Xaml;
 namespace Core.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MenuPage : MasterDetailPage, IMasterDetailPageOptions
+    public partial class MenuPage : MasterDetailPage 
     {
         public MenuPage()
         {
             InitializeComponent();
-          
+    
         }
 
-        public bool IsPresentedAfterNavigation
-        {
-            get { return false; }
-        }
+      
     }
-
 }
+

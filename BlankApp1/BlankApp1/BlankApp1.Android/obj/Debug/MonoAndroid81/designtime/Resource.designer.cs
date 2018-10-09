@@ -3770,6 +3770,9 @@ namespace App.Droid
 			// aapt resource value: 0x7F050002
 			public const int hello = 2131034114;
 			
+			// aapt resource value: 0x7F050004
+			public const int library_name = 2131034116;
+			
 			// aapt resource value: 0x7F060013
 			public const int mr_button_content_description = 2131099667;
 			

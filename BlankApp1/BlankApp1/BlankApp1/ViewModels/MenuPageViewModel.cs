@@ -9,7 +9,7 @@ using Xamarin.Forms;
 
 namespace Core.ViewModels
 {
-    public class MenuPageViewModel 
+    public class MenuPageViewModel
     {
         INavigationService _navigationService;
         public DelegateCommand<string> OnNavigateCommand { get; set; }
@@ -17,12 +17,14 @@ namespace Core.ViewModels
         {
             _navigationService = navigationService;
             OnNavigateCommand = new DelegateCommand<string>(NavigateAync);
-            
+           
         }
 
         async void NavigateAync(string page)
         {
             await _navigationService.NavigateAsync(new Uri(page, UriKind.Relative));
         }
+
+      
     }
 }

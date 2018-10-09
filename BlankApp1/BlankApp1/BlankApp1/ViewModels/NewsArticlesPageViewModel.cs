@@ -7,6 +7,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Collections.ObjectModel;
+using Xamarin.Forms;
+using System.Windows.Input;
 
 namespace Core.ViewModels
 {
@@ -16,7 +18,9 @@ namespace Core.ViewModels
         private readonly INewsArticlesService _newsArticlesService;
 
         public DelegateCommand<object> GetNewsArticleCommand { get; }
-        public DelegateCommand<object> SearchNewsArticleCommand { get; }
+
+
+        private ICommand _SearchNewsArticleCommand;
 
         public NewsArticlesPageViewModel(INavigationService navigationService, INewsArticlesService newsArticlesService)
        : base(navigationService)
@@ -28,9 +32,9 @@ namespace Core.ViewModels
 
             //Command instances
             GetNewsArticleCommand = new DelegateCommand<object>(MoreInfoNewsArticle);
-            SearchNewsArticleCommand = new DelegateCommand<object>(SearchOnNewsArticle);
 
         }
+        // Properties 
         private List<NewsArticles> _newsArticles;
         public List<NewsArticles> NewsArticles
         {
@@ -57,7 +61,8 @@ namespace Core.ViewModels
         public async override void OnNavigatingTo(NavigationParameters parameters)
         {
             base.OnNavigatingTo(parameters);
-            NewsArticles = await _newsArticlesService.GetNewsArticles();
+            NewsArticles = await _newsArticlesService.GetNewsArticles(); //Copy of the list
+            OC_NewsArticles = new ObservableCollection<NewsArticles>(NewsArticles);
         }
         public async void MoreInfoNewsArticle(object param)
         {
@@ -68,28 +73,17 @@ namespace Core.ViewModels
 
             await _navigationService.NavigateAsync(new Uri("NavigationPage/NewsArticleDetailPage", UriKind.Relative), parameters);
         }
-
-
-        private string _KeyWord;
-        public string KeyWord
+        public ICommand SearchNewsArticleCommand
         {
             get
             {
-                return _KeyWord;
+                return _SearchNewsArticleCommand ?? (_SearchNewsArticleCommand = new Command<string>((keyWord) =>
+                {
+                    OC_NewsArticles = new ObservableCollection<NewsArticles>(_newsArticles
+                     .Where(x => x.Title.ToLower()
+                     .Contains(keyWord.ToLower())).ToList());
+                }));
             }
-            set
-            {
-                _KeyWord = value;
-                RaisePropertyChanged();
-            }
-        }
-        public async void SearchOnNewsArticle(object param)
-        {
-            //NewsArticles.Where(x => x.Name.Contains(keyWord));
-            string keyWord = _KeyWord.ToLower();
-            NewsArticles = _newsArticles.Where(x => x.Name.Contains(keyWord)).ToList();
-            //NewsArticles = _newsArticles;
-
         }
     }
 }
