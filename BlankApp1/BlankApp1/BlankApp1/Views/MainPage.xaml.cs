@@ -13,8 +13,8 @@ namespace Core.Views
         public MainPage()
         {
             InitializeComponent();
-         
 
+          
         }
     }
 }

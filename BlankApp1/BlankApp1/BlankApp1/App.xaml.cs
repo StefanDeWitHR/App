@@ -8,6 +8,7 @@ using Prism.DryIoc;
 using Core.Services;
 using System;
 using Prism.Navigation;
+using Core.Helpers;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Core
@@ -48,7 +49,9 @@ namespace Core
 
             // Services 
             containerRegistry.Register<INewsArticlesService, NewsArticlesService>();
-            
+            containerRegistry.Register<IRSSArticlesService, RSSArticlesService>();
+            containerRegistry.Register<IHttpManager, HttpManager>();
+
         }
         // Open menu on tap
         private void OnMenuTapped(object sender, EventArgs e)

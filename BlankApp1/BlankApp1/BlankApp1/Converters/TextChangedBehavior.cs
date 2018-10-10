@@ -1,4 +1,6 @@
+﻿
 ﻿using Corcav.Behaviors;
+using System;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,6 +9,7 @@ using Xamarin.Forms;
 namespace Core.Converters
 {
     public class TextChangedBehavior : Xamarin.Forms.Behavior<SearchBar>
+
     {
         protected override void OnAttachedTo(SearchBar bindable)
         {

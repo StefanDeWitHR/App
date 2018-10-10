@@ -3,69 +3,27 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Core.Helpers
 {
-    public static partial class pasAPI
+    public  class HttpManager : IHttpManager
     {
-        public static string BasePath;
-        public static string Username;
-        public static string Password;
-        public static string ClientID;
+        //public static string Username;
+        //public static string Password;
+        public  string BasePath = "https://servicemodule.propertynl.com/api/export/";
+        //GetRSSArticles?newsChannel=NL&Sticky=True
+
+        // public static FetchTokenResponse TokenInfo;
+        //   public static SQLiteConnection DB;
+        //   public static SQLiteConnection ActiveDB;
+        //  public static string Path = UserLoginDetails.SQLitePath;
 
 
-      // public static FetchTokenResponse TokenInfo;
-      //   public static SQLiteConnection DB;
-      //   public static SQLiteConnection ActiveDB;
-      //  public static string Path = UserLoginDetails.SQLitePath;
 
-        public static void Init()
-        {
-            BasePath = "";  // TODO
-            //Username = "admin";
-            //Password = "adminpass";
-            ClientID =  "API_CLIENT";
-        }
-
-        //// get token
-        //public static void GetToken()
-        //{
-        //    try
-        //    {
-        //        string LParams = string.Format("grant_type=password&username={0}&password={1}&client_id={2}", Username, Password, ClientID);
-
-        //        var LResult = Task.Run<string>(() => HTTPPost("PostFetchToken", LParams)).Result;
-        //        if (LResult == "404")
-        //        {
-        //            ApplicationSettings.api = Convert.ToInt32(LResult);
-        //        }
-        //        else
-        //        {
-        //            if (LResult.ToUpper().Contains("ERROR"))
-        //            {
-        //                UserLoginDetails.LoginError = "IsError";
-        //            }
-
-        //            FetchTokenResponse FR = JsonConvert.DeserializeObject<FetchTokenResponse>(LResult);
-        //            TokenInfo = FR;
-        //        }
-        //    }
-        //    catch (Exception E)
-        //    {
-        //        TokenInfo = null;
-        //        throw E;
-        //    }
-        //}
-
-        // overload 
-        //public static async Task<string> Post<T>(T DTO, string url)
-        //{
-        //    return await Post<T>(DTO, url);
-        //}
-
-        public static async Task<string> Post<T>(T DTO, string url)
+        public  async Task<string> Post<T>(T DTO, string url)
         {
             try
             {
@@ -93,25 +51,20 @@ namespace Core.Helpers
             }
         }
 
-        public static async Task<T> Get<T>(string url)
+        public  async Task<T> Get<T>(string url)
         {
             try
             {
                 string FullUrl = BasePath + url;
 
-                HttpClient HC = new HttpClient();
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                HttpResponseMessage response =  client.GetAsync(FullUrl).Result ;
 
-                //if (TokenInfo != null)
-                //{
-                //    HC.DefaultRequestHeaders.Add("Authorization", "Bearer " + TokenInfo.access_token);
-                //}
-
-                HttpResponseMessage HR = await HC.GetAsync(FullUrl);
-
-                string LResult = await HR.Content.ReadAsStringAsync();
+                string LResult = await response.Content.ReadAsStringAsync();
                 T Result = JsonConvert.DeserializeObject<T>(LResult);
 
-                int statuscode = Convert.ToInt32(HR.StatusCode);
+                int statuscode = Convert.ToInt32(response.StatusCode);
 
                 return Result;
             }
@@ -121,7 +74,7 @@ namespace Core.Helpers
             }
         }
        
-        public static async Task<bool> Put<T>(T DTO, string url)
+        public  async Task<bool> Put<T>(T DTO, string url)
         {
             bool LResult = false;
 

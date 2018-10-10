@@ -4,8 +4,10 @@
              x:Class="Core.Views.MainPage"           	
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:control="clr-namespace:Core.Controls"
+             xmlns:local="clr-namespace:Core.Converters"
              prism:ViewModelLocator.AutowireViewModel="True"  x:Name="MainPage" NavigationPage.HasNavigationBar="false" 
-             ControlTemplate="{StaticResource header}">
+             ControlTemplate="{StaticResource header}" >
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -14,58 +16,82 @@
         </OnPlatform>
     </ContentPage.Padding>
 
+    <!-- HMTL TO TEXT CONVERTER -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:HtmlToTextConverter x:Key="HtmlToTextConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
     <ScrollView>
         <StackLayout>
-
-        
             <!-- Title for square object-->
             <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand"  BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold"  FontSize="Large" Text="Advertenties" HorizontalOptions="Center"></Label>
             </StackLayout>
-            
+
+
             <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
-                <cv:CarouselView  ItemsSource="{Binding NewsArticles}"  HeightRequest="400" Position="{Binding Position, Mode=TwoWay}">
+
+                <cv:CarouselView   ItemsSource="{Binding RSSArticles.channel.items}" HeightRequest="400">
 
                     <cv:CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
-                                <Image HeightRequest="250" Aspect="AspectFill" Source="{Binding Image}"/>
-                                <Label  HeightRequest="25"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding Title}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <Image HeightRequest="250" Aspect="AspectFill" Source="{Binding enclosure.url}"/>
+
+                                <Label  HeightRequest="25"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding title}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 <ScrollView>
-                                <Label  HeightRequest="75"  Text="{Binding Description}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                    <Label  HeightRequest="75" 
+                                            Text="{Binding description , Converter={StaticResource HtmlToTextConverter}}"
+                                            HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                    </Label>
+                               
                                 </ScrollView>
                                 <Button Text="> Lees verder " 
                                             Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
                                             CommandParameter="{Binding .}" />
-                              
+
+
                             </StackLayout>
                         </DataTemplate>
                     </cv:CarouselView.ItemTemplate>
                 </cv:CarouselView>
-                
+
             </StackLayout>
 
 
         <!-- Title for square object-->
             <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
-                <Label FontAttributes="Bold"  FontSize="Large" Text="Laatste nieuws" HorizontalOptions="Center"></Label> 
+                <Label FontAttributes="Bold"  FontSize="Large" Text="Laatste nieuws" HorizontalOptions="Center"></Label>
             </StackLayout>
 
             <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
-                <cv:CarouselView ItemsSource="{Binding NewsArticles}"  HeightRequest="400"  >
+                <cv:CarouselView   ItemsSource="{Binding RSSArticles.channel.items}" HeightRequest="400">
+
                     <cv:CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
-                                <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
-                                <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-                                <Button Text="Lees meer" 
+                                <Image HeightRequest="250" Aspect="AspectFill" Source="{Binding enclosure.url}"/>
+
+                                <Label  HeightRequest="25"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding title}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <ScrollView>
+                                    <Label  HeightRequest="75"  Text="{Binding description}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                </ScrollView>
+                                <Button Text="> Lees verder " 
                                             Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
                                             CommandParameter="{Binding .}" />
+
+
                             </StackLayout>
                         </DataTemplate>
                     </cv:CarouselView.ItemTemplate>
                 </cv:CarouselView>
+
             </StackLayout>
+
+
 
             <!-- Title for square object-->
             <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">

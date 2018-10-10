@@ -16,18 +16,19 @@ namespace Core.ViewModels
     {
         private readonly INavigationService _navigationService;
         private readonly INewsArticlesService _newsArticleService;
-
+        private readonly IRSSArticlesService _RSSArticlesService;
         // Commands
         public  DelegateCommand<object> GetNewsArticleCommand { get;  }
         
         //
 
-        public MainPageViewModel(INavigationService navigationService, INewsArticlesService newsArticlesService)
+        public MainPageViewModel(INavigationService navigationService, INewsArticlesService newsArticlesService , IRSSArticlesService RSSArticlesService)
             : base(navigationService)
         {
             Title = "Homepage";
 
             _newsArticleService = newsArticlesService;
+            _RSSArticlesService = RSSArticlesService;
             _navigationService = navigationService;
 
             //Command Instances
@@ -35,7 +36,8 @@ namespace Core.ViewModels
           
 
         }
-
+        private int _position;
+        public int Position { get { return _position; } set { _position = value; RaisePropertyChanged(); } }
         public async void MoreInfoNewsArticle(object param)
         {
             NewsArticles newsArticles = param as NewsArticles;
@@ -56,21 +58,19 @@ namespace Core.ViewModels
                 RaisePropertyChanged();
             }
         }
-        private NewsArticles _selectedItem;
-        public NewsArticles SelectedItem
+        private Rss _RSSArticles;
+        public Rss RSSArticles
         {
-            get { return _selectedItem; }
-            set
-            {
-                _selectedItem = value;
-                RaisePropertyChanged();
-            }
+            get { return _RSSArticles; }
+            set { _RSSArticles = value; RaisePropertyChanged(); }
         }
+
 
         public async override void OnNavigatingTo(NavigationParameters parameters)
         {
             base.OnNavigatingTo(parameters);
             NewsArticles = await _newsArticleService.GetNewsArticles();
+            RSSArticles = await _RSSArticlesService.GetRSSArticles();
         }
     } 
 }

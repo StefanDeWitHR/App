@@ -22,6 +22,9 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\r
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\contacts.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\hamburger.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\me.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\logo.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\selected_circle.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\unselected_circle.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\R.cs.flag
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\R.txt
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\uploadflags.txt
@@ -101,9 +104,7 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\a
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
-C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\logo.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\App.Android.dll
-C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\Core.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\App.Android.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\Corcav.Behaviors.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb

@@ -2825,13 +2825,13 @@ containing a value of this type.
         public static int abc_textfield_search_material=0x7f020051;
         public static int abc_vector_test=0x7f020052;
         public static int avd_hide_password=0x7f020053;
-        public static int avd_hide_password_1=0x7f020111;
-        public static int avd_hide_password_2=0x7f020112;
-        public static int avd_hide_password_3=0x7f020113;
+        public static int avd_hide_password_1=0x7f020113;
+        public static int avd_hide_password_2=0x7f020114;
+        public static int avd_hide_password_3=0x7f020115;
         public static int avd_show_password=0x7f020054;
-        public static int avd_show_password_1=0x7f020114;
-        public static int avd_show_password_2=0x7f020115;
-        public static int avd_show_password_3=0x7f020116;
+        public static int avd_show_password_1=0x7f020116;
+        public static int avd_show_password_2=0x7f020117;
+        public static int avd_show_password_3=0x7f020118;
         public static int contacts=0x7f020055;
         public static int design_bottom_navigation_item_background=0x7f020056;
         public static int design_fab_background=0x7f020057;
@@ -3016,10 +3016,12 @@ containing a value of this type.
         public static int notification_bg_normal=0x7f02010a;
         public static int notification_bg_normal_pressed=0x7f02010b;
         public static int notification_icon_background=0x7f02010c;
-        public static int notification_template_icon_bg=0x7f02010f;
-        public static int notification_template_icon_low_bg=0x7f020110;
+        public static int notification_template_icon_bg=0x7f020111;
+        public static int notification_template_icon_low_bg=0x7f020112;
         public static int notification_tile_bg=0x7f02010d;
         public static int notify_panel_notification_icon_bg=0x7f02010e;
+        public static int selected_circle=0x7f02010f;
+        public static int unselected_circle=0x7f020110;
     }
     public static final class id {
         public static int action0=0x7f09009e;
