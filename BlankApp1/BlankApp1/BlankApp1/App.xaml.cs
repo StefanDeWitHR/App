@@ -9,6 +9,7 @@ using Core.Services;
 using System;
 using Prism.Navigation;
 using Core.Helpers;
+using System.Windows.Input;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Core
@@ -31,7 +32,9 @@ namespace Core
 
         protected override async void OnInitialized()
         {
+           
             InitializeComponent();
+
             await NavigationService.NavigateAsync(new System.Uri("/MenuPage/NavigationPage/MainPage", System.UriKind.Absolute));
         }
 
@@ -53,6 +56,55 @@ namespace Core
             containerRegistry.Register<IHttpManager, HttpManager>();
 
         }
+
+        //  Social media icons
+        private void OnFaceBookTapped(object sender, EventArgs e)
+        {
+            try
+            {
+                Device.OpenUri(new Uri("fb://page/PropertyNL"));
+            }
+            catch
+            {
+                Device.OpenUri(new Uri("https://www.facebook.com/pages/PropertyNL"));
+            }
+        }
+        private void OnMailTapped(object sender, EventArgs e)
+        {
+            try
+            {
+                Device.OpenUri(new Uri("mailto:redactie@propertynl.com"));
+            }
+            catch
+            {
+                throw new Exception("Mail application not found on device");
+            }
+        }
+        private void OnLinkedInTapped(object sender , EventArgs e)
+        {
+            try
+            {
+                Device.OpenUri(new Uri("https://www.linkedin.com/company/propertynl"));
+            }
+            catch
+            {
+                throw new Exception("Try again");
+            }
+            
+        }
+        private void OnTwitterTapped(object sender, EventArgs e)
+        {
+            try
+            {
+                 Device.OpenUri(new Uri("twitter://userName?user_id=propertynl"));
+            }
+            catch
+            {
+                Device.OpenUri(new Uri("https://twitter.com/propertynl"));
+            }
+         
+        }
+
         // Open menu on tap
         private void OnMenuTapped(object sender, EventArgs e)
         {

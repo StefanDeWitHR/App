@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 namespace Core.ViewModels
 {
@@ -19,6 +20,10 @@ namespace Core.ViewModels
         private readonly IRSSArticlesService _RSSArticlesService;
         // Commands
         public  DelegateCommand<object> GetNewsArticleCommand { get;  }
+
+        // Arrow navigation
+        public ICommand OnNextRSSArticleCommand { get; }     
+        public ICommand OnPrevRSSArticleCommand { get; }
         
         //
 
@@ -33,11 +38,12 @@ namespace Core.ViewModels
 
             //Command Instances
             GetNewsArticleCommand = new DelegateCommand<object>(MoreInfoNewsArticle);
-          
+            
+            OnNextRSSArticleCommand = new Command(OnNextRSSArticle);
+            OnPrevRSSArticleCommand = new Command(OnPrevRSSArticle);
 
         }
-        private int _position;
-        public int Position { get { return _position; } set { _position = value; RaisePropertyChanged(); } }
+        
         public async void MoreInfoNewsArticle(object param)
         {
             NewsArticles newsArticles = param as NewsArticles;
@@ -65,13 +71,48 @@ namespace Core.ViewModels
             set { _RSSArticles = value; RaisePropertyChanged(); }
         }
 
+        private int _RSSArticlesPosition;
+        public int RSSArticlesPosition
+        {
+            get { return _RSSArticlesPosition; }
+            set { _RSSArticlesPosition = value; RaisePropertyChanged(); }
+        }
 
         public async override void OnNavigatingTo(NavigationParameters parameters)
         {
             base.OnNavigatingTo(parameters);
             NewsArticles = await _newsArticleService.GetNewsArticles();
             RSSArticles = await _RSSArticlesService.GetRSSArticles();
+            RSSArticlesPosition = 0;
         }
+
+        // Navigation carasoulView
+        void OnNextRSSArticle()
+        {
+            int totalCount = RSSArticles.channel.items.Count();
+            if ((RSSArticlesPosition + 1) != totalCount)
+            {
+                RSSArticlesPosition++;
+            }
+            else
+            {
+                RSSArticlesPosition = 0;
+            }
+
+        }
+        void OnPrevRSSArticle()
+        {
+            int totalCount = RSSArticles.channel.items.Count();
+            if (RSSArticlesPosition == 0)
+            {
+                RSSArticlesPosition = totalCount - 1;
+            }
+            else
+            {
+                RSSArticlesPosition--;
+            }
+        }
+
     } 
 }
 

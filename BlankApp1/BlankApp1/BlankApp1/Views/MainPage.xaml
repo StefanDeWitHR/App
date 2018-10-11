@@ -7,7 +7,8 @@
              xmlns:control="clr-namespace:Core.Controls"
              xmlns:local="clr-namespace:Core.Converters"
              prism:ViewModelLocator.AutowireViewModel="True"  x:Name="MainPage" NavigationPage.HasNavigationBar="false" 
-             ControlTemplate="{StaticResource header}" >
+             ControlTemplate="{StaticResource header}">
+    
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -20,6 +21,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:HtmlToTextConverter x:Key="HtmlToTextConverter" />
+          
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -27,27 +29,80 @@
     <ScrollView>
         <StackLayout>
             <!-- Title for square object-->
-            <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand"  BackgroundColor="{StaticResource lblHeader}">
-                <Label FontAttributes="Bold"  FontSize="Large" Text="Advertenties" HorizontalOptions="Center"></Label>
+            <StackLayout HeightRequest="50" Padding="5" HorizontalOptions="FillAndExpand"  BackgroundColor="{StaticResource lblHeader}">
+                <Label FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  FontSize="Medium"  Text="{Binding RSSArticles.channel.description}" HorizontalOptions="Center"></Label>
             </StackLayout>
 
 
-            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
+            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450"  >
 
-                <cv:CarouselView   ItemsSource="{Binding RSSArticles.channel.items}" HeightRequest="400">
+                <cv:CarouselView  Position="{Binding RSSArticlesPosition}"  ItemsSource="{Binding RSSArticles.channel.items}" HeightRequest="400">
+                
+                    <cv:CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+
+                                        <ColumnDefinition Width="25"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="25"></ColumnDefinition>
+
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Row="0" Grid.Column="0"   WidthRequest="25" HeightRequest="45" Source="left_arrow_carasoulView.png">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Command="{Binding BindingContext.OnPrevRSSArticleCommand,Source={x:Reference MainPage}}"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                    <Image  Grid.Row="0" Grid.Column="1"   HeightRequest="250" Aspect="AspectFill" Source="{Binding enclosure.url}"/>
+
+                                    <Image Grid.Row="0" Grid.Column="2"    WidthRequest="25" HeightRequest="45" Source="right_arrow_carasoulView.png">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Command="{Binding BindingContext.OnNextRSSArticleCommand,Source={x:Reference MainPage}}"
+                                                NumberOfTapsRequired="1" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </Grid>
+                                <Label  HeightRequest="25"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding title}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                    <ScrollView>
+                                        <Label  HeightRequest="100" 
+                                                Text="{Binding description , Converter={StaticResource HtmlToTextConverter}}"
+                                                HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                                        </Label>
+                               
+                                    </ScrollView>
+                                <Button Text="> Lees verder " 
+                                                Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                                CommandParameter="{Binding .}" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </cv:CarouselView.ItemTemplate>
+                </cv:CarouselView>
+
+            </StackLayout>
+
+            <!--<StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" >
+
+                <cv:CarouselView  Position="{Binding RSSArticlesPosition}"  ItemsSource="{Binding RSSArticles.channel.items}" HeightRequest="400">
 
                     <cv:CarouselView.ItemTemplate>
                         <DataTemplate>
                             <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+
                                 <Image HeightRequest="250" Aspect="AspectFill" Source="{Binding enclosure.url}"/>
+
+                                <Image WidthRequest="25" HeightRequest="25" Source="arrow_right.png"></Image>
 
                                 <Label  HeightRequest="25"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding title}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 <ScrollView>
-                                    <Label  HeightRequest="75" 
+                                    <Label  HeightRequest="100" 
                                             Text="{Binding description , Converter={StaticResource HtmlToTextConverter}}"
                                             HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                                     </Label>
-                               
+
                                 </ScrollView>
                                 <Button Text="> Lees verder " 
                                             Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
@@ -59,10 +114,14 @@
                     </cv:CarouselView.ItemTemplate>
                 </cv:CarouselView>
 
-            </StackLayout>
+            </StackLayout>-->
 
 
-        <!-- Title for square object-->
+
+
+
+
+            <!-- Title for square object-->
             <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold"  FontSize="Large" Text="Laatste nieuws" HorizontalOptions="Center"></Label>
             </StackLayout>
@@ -182,11 +241,7 @@
             <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold"  FontSize="Large" Text="Placeholder for Magzine | columnisten" HorizontalOptions="Center"></Label>
             </StackLayout>
-            <!-- not done yet-->
-            <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450" BackgroundColor="Yellow">
-
-                <Label  Text=""></Label>
-            </StackLayout>
+         
         </StackLayout>
     </ScrollView>
 </ContentPage>
