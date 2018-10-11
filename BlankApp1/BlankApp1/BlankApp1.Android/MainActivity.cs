@@ -8,7 +8,7 @@ using System.Reflection;
 
 namespace App.Droid
 {
-    [Activity(Label = "App", Icon = "@mipmap/ic_launcher", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "PropertyNL", Icon = "@drawable/logo", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -21,14 +21,6 @@ namespace App.Droid
             base.OnCreate(bundle);
             Stormlion.SNavigation.Droid.Platform.Init(this);
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            //LoadApplication(UXDivers.Gorilla.Droid.Player.CreateApplication(
-            //    this,
-            //    new UXDivers.Gorilla.Config("Good Gorilla")
-            //       .RegisterAssemblyFromType<Prism.IActiveAware>() // Prism
-            //       .RegisterAssemblyFromType<Prism.DryIoc.PrismApplication>() // Prism.Forms
-            //       .RegisterAssemblyFromType<Prism.Ioc.IContainerExtension>()
-
-            //    ));
             var cv = typeof(Xamarin.Forms.CarouselView);
             var assembly = Assembly.Load(cv.FullName); // https://blog.xamarin.com/flip-through-items-with-xamarin-forms-carouselview/
             LoadApplication(new Core.App(new AndroidInitializer()));
