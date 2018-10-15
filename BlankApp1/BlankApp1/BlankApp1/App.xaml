@@ -79,18 +79,16 @@
 
                                 <Image Source="fb_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="0">
                                     <Image.GestureRecognizers>
-                                       <TapGestureRecognizer
+                                        <TapGestureRecognizer
                                          Tapped="OnFaceBookTapped"
                                         NumberOfTapsRequired="1"/>
-                                    
-                                     </Image.GestureRecognizers>
+                                    </Image.GestureRecognizers>
                                 </Image>
                                 <Image Source="mail_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="1">
                                     <Image.GestureRecognizers>
                                         <TapGestureRecognizer
                                          Tapped="OnMailTapped"
                                         NumberOfTapsRequired="1"/>
-
                                     </Image.GestureRecognizers>
                                 </Image>
                                 <Image Source="linkedin_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="2">
@@ -108,7 +106,13 @@
                                         NumberOfTapsRequired="1"/>
                                     </Image.GestureRecognizers>
                                 </Image>
-                                <Label Grid.Column="4" Text="Tel. +31(0)88776 73 78"></Label>
+                                <Image Source="phone_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="4">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                         Tapped="OnPhoneTapped"
+                                        NumberOfTapsRequired="1"/>
+                                    </Image.GestureRecognizers>
+                                </Image>
                             </Grid>
                         </RelativeLayout>
                         <!-- End Footer template-->

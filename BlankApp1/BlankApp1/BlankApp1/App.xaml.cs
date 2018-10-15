@@ -16,12 +16,7 @@ namespace Core
 {
     public partial class App : PrismApplication
     {
-        /* 
-         * The Xamarin Forms XAML Previewer in Visual Studio uses System.Activator.CreateInstance.
-         * This imposes a limitation in which the App class must have a default constructor. 
-         * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
-         */
-      
+
         public App() : this(null) {
 
         }
@@ -34,7 +29,7 @@ namespace Core
         {
            
             InitializeComponent();
-
+            NavigationPage.SetHasNavigationBar(this, false);
             await NavigationService.NavigateAsync(new System.Uri("/MenuPage/NavigationPage/MainPage", System.UriKind.Absolute));
         }
 
@@ -62,7 +57,7 @@ namespace Core
         {
             try
             {
-                Device.OpenUri(new Uri("fb://page/PropertyNL"));
+                Device.OpenUri(new Uri("fb://company/PropertyNL"));
             }
             catch
             {
@@ -103,6 +98,18 @@ namespace Core
                 Device.OpenUri(new Uri("https://twitter.com/propertynl"));
             }
          
+        }
+        private void OnPhoneTapped(object sender , EventArgs e)
+        {
+            try
+            {
+                Device.OpenUri(new Uri("tel:+31(0)88776 73 78"));
+
+            }
+            catch
+            {
+                throw new System.Exception("Something went wrong");
+            }
         }
 
         // Open menu on tap

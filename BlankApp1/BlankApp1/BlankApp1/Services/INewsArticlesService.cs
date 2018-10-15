@@ -9,7 +9,7 @@ namespace Core.Services
     public interface INewsArticlesService
     {
         Task<List<NewsArticles>> GetNewsArticles();
-        NewsArticles GetNewsArticleById(int Id);
+        NewsArticles GetNewsArticleById(Guid UniqueId);
       //  Task<ObservableCollection<NewsArticles>> GetNewsArticles();
     }
 }

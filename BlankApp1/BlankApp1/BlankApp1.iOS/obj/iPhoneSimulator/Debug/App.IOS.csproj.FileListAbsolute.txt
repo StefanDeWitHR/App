@@ -86,3 +86,15 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\App
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\App.iOS.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\left_arrow_carasoulView.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\right_arrow_carasoulView.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\bin\iPhoneSimulator\Debug\FluentValidation.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\twitter_icon.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\fb_icon.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\linkedin_icon.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\mail_icon.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\phone_icon.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\post_author.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\post_category.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\post_date.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\post_footer_tags.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\post_views.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\navigate_back.png

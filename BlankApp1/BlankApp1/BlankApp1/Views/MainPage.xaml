@@ -66,9 +66,9 @@
                                         </Image.GestureRecognizers>
                                     </Image>
                                 </Grid>
-                                <Label  HeightRequest="25"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding title}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <Label  HeightRequest="100" Margin="22,0,18,0"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding title}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
                                     <ScrollView>
-                                        <Label  HeightRequest="100" 
+                                        <Label  HeightRequest="100" LineBreakMode="WordWrap"
                                                 Text="{Binding description , Converter={StaticResource HtmlToTextConverter}}"
                                                 HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                                         </Label>

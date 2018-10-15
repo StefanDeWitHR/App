@@ -21,6 +21,7 @@ namespace App.Droid
             base.OnCreate(bundle);
             Stormlion.SNavigation.Droid.Platform.Init(this);
             global::Xamarin.Forms.Forms.Init(this, bundle);
+          
             var cv = typeof(Xamarin.Forms.CarouselView);
             var assembly = Assembly.Load(cv.FullName); // https://blog.xamarin.com/flip-through-items-with-xamarin-forms-carouselview/
             LoadApplication(new Core.App(new AndroidInitializer()));

@@ -16,16 +16,16 @@
 
                 <StackLayout>
                     <!-- Menu items -->
-                    <Button   CommandParameter="NavigationPage/MainPage"    Text="Homepagina" Command="{Binding OnNavigateCommand}"></Button>
-                        <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"></BoxView>
+                    <Button   CommandParameter="NavigationPage/MainPage"    Text="Home" Command="{Binding OnNavigateCommand}"></Button>
+                      
                     <Button   CommandParameter="NavigationPage/NewsArticlesPage"    Text="Nieuwsartikelen" Command="{Binding OnNavigateCommand}"></Button>
-                        <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"></BoxView>
+                        
                     <Button   CommandParameter="NavigationPage/AboutUsPage" Text="Over ons" Command="{Binding OnNavigateCommand}"></Button>
-                        <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"></BoxView>
+                       
                     <Button   CommandParameter="NavigationPage/ContactPage" Text="Contact" Command="{Binding OnNavigateCommand}"></Button>
-                        <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"></BoxView>
+                       
                     <Button   CommandParameter="NavigationPage/TrialPage"   Text="Proeflidmaatschap aanvragen" Command="{Binding OnNavigateCommand}"></Button>
-                        <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"></BoxView>
+                      
                     <Button   CommandParameter="NavigationPage/LoginPage"   Text="Inloggen" Command="{Binding OnNavigateCommand}"></Button>
                 </StackLayout>
             </StackLayout>

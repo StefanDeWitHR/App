@@ -20,23 +20,24 @@
                     <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
 
                     <Label Text="Vrouw"></Label>
-                    <Switch></Switch>
+                    <Switch IsToggled="{Binding IsFemale}"></Switch>
                     <Label Text="Man"></Label>
-                    <Switch></Switch>
-                    <Label Text="Voornaam" WidthRequest="100"></Label>
-                    <Entry WidthRequest="100"></Entry>
-                    <Label Text="Tussenvoegsel" WidthRequest="50"></Label>
-                    <Entry></Entry>
-                    <Label Text="Achternaam"></Label>
-                    <Entry WidthRequest="100"></Entry>
-                    <Label Text="E-mail" ></Label>
-                    <Entry WidthRequest="100"></Entry>
-                    <Label Text="Bedrijfsnaam" ></Label>
-                    <Entry WidthRequest="100"></Entry>
-                    <Label Text="Telefoonnummer" ></Label>
-                    <Entry WidthRequest="100"></Entry>
+                    <Switch IsToggled="{Binding IsMale}"></Switch>
 
-                    <Button Text="Aanvragen"></Button>
+                    <Label Text="Voornaam" WidthRequest="100"></Label>
+                    <Entry WidthRequest="100" Text="{Binding User.Firstname}"></Entry>
+                    <Label Text="Tussenvoegsel" WidthRequest="50"></Label>
+                    <Entry  Text="{Binding User.SecondName}" ></Entry>
+                    <Label Text="Achternaam"></Label>
+                    <Entry Text="{Binding User.LastName}"  WidthRequest="100"></Entry>
+                    <Label Text="E-mail" ></Label>
+                    <Entry Keyboard="Email" WidthRequest="100"  Text="{Binding User.Email}" ></Entry>
+                    <Label Text="Bedrijfsnaam" ></Label>
+                    <Entry WidthRequest="100"   Text="{Binding User.CompanyName}"></Entry>
+                    <Label Text="Telefoonnummer" ></Label>
+                    <Entry Keyboard="Telephone" WidthRequest="100"  Text="{Binding User.PhoneNumber}"></Entry>
+
+                    <Button Text="Aanvragen" Command="{Binding  RequestTrialCommand }"></Button>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

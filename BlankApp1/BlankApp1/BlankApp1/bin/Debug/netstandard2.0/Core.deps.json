@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "34897f31b76f6e8b50387d7cdad8ca176f92e858"
+    "signature": "fee86bd6e74f972eb62db47b5031750f9cbbb705"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,7 @@
       "Core/1.0.0": {
         "dependencies": {
           "Corcav.Behaviors": "2.3.7",
+          "FluentValidation": "8.0.100",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "11.0.2",
           "Prism.DryIoc.Forms": "7.0.0.396",
@@ -49,6 +50,20 @@
           "lib/netstandard1.0/DryIoc.dll": {
             "assemblyVersion": "2.12.6.0",
             "fileVersion": "2.12.6.0"
+          }
+        }
+      },
+      "FluentValidation/8.0.100": {
+        "dependencies": {
+          "System.Collections.Concurrent": "4.3.0",
+          "System.ComponentModel.Annotations": "4.4.1",
+          "System.ComponentModel.Primitives": "4.3.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.100.0"
           }
         }
       },
@@ -117,6 +132,58 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.Collections.Concurrent/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.Concurrent.dll": {
+            "assemblyVersion": "4.0.13.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.ComponentModel/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
+      "System.ComponentModel.Annotations/4.4.1": {
+        "runtime": {
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "4.2.0.0",
+            "fileVersion": "4.6.25921.2"
+          }
+        }
+      },
+      "System.ComponentModel.Primitives/4.3.0": {
+        "dependencies": {
+          "System.ComponentModel": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {
+            "assemblyVersion": "4.1.1.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        }
+      },
       "System.Diagnostics.Debug/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -125,6 +192,13 @@
         }
       },
       "System.Diagnostics.Tools/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Diagnostics.Tracing/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
@@ -330,6 +404,7 @@
           "System.Runtime": "4.3.0"
         }
       },
+      "System.ValueTuple/4.5.0": {},
       "Xamarin.Forms/2.5.0.122203": {
         "runtime": {
           "lib/netstandard1.0/Xamarin.Forms.Core.dll": {
@@ -378,6 +453,13 @@
       "sha512": "sha512-jmqwiN8591mEgDp7FU/HrOEzrHsrL0STNZQRMVh5BgvyNiaSu0hoxVXcZC9BwbEugCcOLdO6mUrcJPY3q/dYEQ==",
       "path": "dryioc.dll/2.12.6",
       "hashPath": "dryioc.dll.2.12.6.nupkg.sha512"
+    },
+    "FluentValidation/8.0.100": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kGyYfxWWsLawTXnPrZ6l82Mqe7n3gHoFDqPalrCzpsqzDP6Jthx8gnMvSrcsaDeeEpR6i6SRsWdX4NxQtIKd+Q==",
+      "path": "fluentvalidation/8.0.100",
+      "hashPath": "fluentvalidation.8.0.100.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
@@ -442,6 +524,34 @@
       "path": "system.collections/4.3.0",
       "hashPath": "system.collections.4.3.0.nupkg.sha512"
     },
+    "System.Collections.Concurrent/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VznTDDa4dbKvACzVS618692zI4yQszWfSY+Nn/tV2E703tqkk/MJ1ek/waaHc2jGWwPkHMRAy70fvqps19+uPQ==",
+      "path": "system.collections.concurrent/4.3.0",
+      "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8S4Rslb06Nu9JEsWYIdFwt0R7YRHWKlz8A+z4BHe5qVJwuduYW9HO3mdUD8fMesVYVX44t2wd0t6etrA+00CBQ==",
+      "path": "system.componentmodel/4.3.0",
+      "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Annotations/4.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9u9RA7adeZVCX5Jd0iJHNcZThjCdv7YbyC3ouznQQLCIjOFLSFkZZdGPGH1pUmyGLwrcBYnigT76JZu2blzQAA==",
+      "path": "system.componentmodel.annotations/4.4.1",
+      "hashPath": "system.componentmodel.annotations.4.4.1.nupkg.sha512"
+    },
+    "System.ComponentModel.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GR/QeOkUzZQBC6WE4k6yiKTspt6gkerKYPkYb0uw6UJ7G6q7OvS1/m3ukRbhLvzRvSNpiBfNqFONc+e3siKwsg==",
+      "path": "system.componentmodel.primitives/4.3.0",
+      "hashPath": "system.componentmodel.primitives.4.3.0.nupkg.sha512"
+    },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -455,6 +565,13 @@
       "sha512": "sha512-Aa+JYPeOQjK9f6pIiSd8GZs9dHkdXtBNxhegf4kUeSKVuCZjaWmkhU1s1P1yhbZ4VagXyTqCmKk8PvkRm5h2GA==",
       "path": "system.diagnostics.tools/4.3.0",
       "hashPath": "system.diagnostics.tools.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.Tracing/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FmiGR2QG86yr6w23cOg5N1RFAuiSBtuSEyFmUGyOY2+r4t4mFshXHstHSau9WvWJAAROBqtmBxRwv/WrrCdlJQ==",
+      "path": "system.diagnostics.tracing/4.3.0",
+      "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
     },
     "System.Globalization/4.3.0": {
       "type": "package",
@@ -581,6 +698,13 @@
       "sha512": "sha512-2Slu4z9m1xoZAN40QBf0YkNo7sklTLrUfoQwMepyS8B+bwKXeRURHX+eMF1hwqbtMP5AxbMWN8DkYXH2Bazrxg==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
+    },
+    "System.ValueTuple/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xZtSZNEHGa+tGsKuP4sh257vxJ/yemShz4EusmomkynMzuEDDjVaErBNewpzEF6swUgbcrSQAX3ELsEp1zCOwA==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
     "Xamarin.Forms/2.5.0.122203": {
       "type": "package",

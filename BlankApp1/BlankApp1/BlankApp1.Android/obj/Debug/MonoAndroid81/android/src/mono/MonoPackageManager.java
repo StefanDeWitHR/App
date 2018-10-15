@@ -111,6 +111,7 @@ class MonoPackageManager_Resources {
 		"Core.dll",
 		"DryIoc.dll",
 		"EngineIoClientDotNet.dll",
+		"FluentValidation.dll",
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.dll",
 		"Prism.dll",

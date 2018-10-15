@@ -2,6 +2,7 @@ Corcav.Behaviors
 Core
 DryIoc
 EngineIoClientDotNet
+FluentValidation
 FormsViewGroup
 Newtonsoft.Json
 Prism
@@ -49,6 +50,7 @@ System.Threading.Tasks
 System.Net.Primitives
 System.IO.FileSystem
 System.Text.Encoding
+System.ComponentModel.Annotations
 System.Collections.Concurrent
 System.Net.Security
 System.Threading.Timer

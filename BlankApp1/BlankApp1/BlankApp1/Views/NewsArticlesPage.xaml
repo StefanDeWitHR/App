@@ -4,7 +4,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:local="clr-namespace:Core.Converters"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Class="Core.Views.NewsArticlesPage" NavigationPage.HasNavigationBar="false" 
+             x:Class="Core.Views.NewsArticlesPage"   NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}" x:Name="NewsArticlesPage">
     
     <ContentPage.Padding>
@@ -17,16 +17,25 @@
 
     <ContentPage.Content>
         <!--<ScrollView>-->
-        <StackLayout>
-            <StackLayout VerticalOptions="Start"  HorizontalOptions="Start" Orientation="Horizontal">
-                <SearchBar x:Name="SearchBar" Grid.Column="0" SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar} ,Mode=TwoWay}"  SearchCommand="{Binding SearchNewsArticleCommand}" Grid.Row="0" WidthRequest="200" Placeholder="Zoeken" Margin="0">
-                <SearchBar.Behaviors>
-                    <local:TextChangedBehavior />
-                </SearchBar.Behaviors>
-                </SearchBar>
-                <Picker Grid.Column="1" Grid.Row="0"  Title="Kies categorie"></Picker>
-            </StackLayout>
+        <StackLayout Padding="0" Margin="0">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+               
+                    <SearchBar x:Name="SearchBar" Grid.Column="0" SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar} ,Mode=TwoWay}" 
+                           SearchCommand="{Binding SearchNewsArticleCommand}"  WidthRequest="175" Placeholder="Zoeken" Margin="0">
+                        <SearchBar.Behaviors>
+                            <local:TextChangedBehavior />
+                        </SearchBar.Behaviors>
+                    </SearchBar>
+                    <Picker Grid.Column="1" WidthRequest="200"   Title="Categorie"></Picker>
+             
+            </Grid>
             <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+
 
             <ListView ItemsSource="{Binding OC_NewsArticles , Mode=TwoWay}" HasUnevenRows="true" HeightRequest="800" >
                 <ListView.ItemTemplate>

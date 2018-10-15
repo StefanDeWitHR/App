@@ -41,10 +41,11 @@ namespace Core.Services
             },
 
         };
-        public NewsArticles GetNewsArticleById(int Id)
+        public NewsArticles GetNewsArticleById(Guid UniqueId)
         {
-            NewsArticles newsArticle = NewsArticles.Find(x => x.Id == Id);
-            return newsArticle;
+           // NewsArticles newsArticle = NewsArticles.Find(x => x.Id == Id);
+            //return newsArticle;
+            throw new NotImplementedException();
         }
         public async Task<List<NewsArticles>> GetNewsArticles()
         {

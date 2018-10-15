@@ -11,9 +11,10 @@ namespace Core.Converters
     {
        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
        {
-                string convertedValue = value as string;
-                return Regex.Replace(convertedValue, "<.*?>", string.Empty);
-        }
+           string convertedValue = value as string;
+           string regex = Regex.Replace(convertedValue, "<.*?>", string.Empty);
+           return regex.Replace("&nbsp;", "");
+       }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {

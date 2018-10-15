@@ -244,5 +244,26 @@
   <ItemGroup>
     <BundleResource Include="Resources\mail_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\phone_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\post_author.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\post_category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\post_date.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\post_footer_tags.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\post_views.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\navigate_back.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

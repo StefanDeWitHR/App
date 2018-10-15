@@ -46,12 +46,14 @@ namespace Core.ViewModels
         
         public async void MoreInfoNewsArticle(object param)
         {
-            NewsArticles newsArticles = param as NewsArticles;
+            Item SelectedItem = param as Item;
 
-            var parameters = new NavigationParameters();
-            parameters.Add("Id", newsArticles.Id);
-
-            await _navigationService.NavigateAsync(new Uri("NavigationPage/NewsArticleDetailPage", UriKind.Relative), parameters);
+            var parameters = new NavigationParameters
+            {
+                { "UniqueId", SelectedItem.UniqueId }
+            };
+            //NavigationPage/
+            await _navigationService.NavigateAsync(new Uri("NewsArticleDetailPage", UriKind.Relative), parameters);
         }
 
         private List<NewsArticles> _newsArticles;
@@ -77,6 +79,7 @@ namespace Core.ViewModels
             get { return _RSSArticlesPosition; }
             set { _RSSArticlesPosition = value; RaisePropertyChanged(); }
         }
+        
 
         public async override void OnNavigatingTo(NavigationParameters parameters)
         {

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Corcav.Behaviors" Version="2.3.7" />
+    <PackageReference Include="FluentValidation" Version="8.0.100" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="SNavigation.Forms" Version="0.1.2" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />

@@ -22,9 +22,7 @@
                 <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout Margin="10">
-                <Label Text="Gebruikersnaam"></Label>
                 <Entry Text="{Binding Username}" Placeholder="Gebruikersnaam"></Entry>
-                <Label Text="Wachtwoord"></Label>
                 <Entry IsPassword="True" Text="{Binding Password}" Placeholder="Wachtwoord"></Entry>
                 <Button Text="Inloggen" Command="{Binding LoginCommand}"></Button>
             </StackLayout>

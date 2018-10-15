@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Core.ViewModels
@@ -17,11 +18,36 @@ namespace Core.ViewModels
         private readonly INavigationService   _navigationService;
         private readonly INewsArticlesService _newsArticlesService;
 
+        //Commands
+        public ICommand OnCategoryTappedCommand { get; }
+        public ICommand OnBackNavigationCommand { get; }
+
+
+
         public NewsArticleDetailPageViewModel(INavigationService navigationService , INewsArticlesService newsArticlesService) : base(navigationService)
         {
             _navigationService = navigationService;
             _newsArticlesService = newsArticlesService;
+
+            OnCategoryTappedCommand = new Command(NavigateToNewsArticleCategory);
+            OnBackNavigationCommand = new Command(NavigateBack);
         }
+
+        public async void NavigateBack()
+        {
+            await _navigationService.GoBackAsync();
+        }
+        public async void NavigateToNewsArticleCategory(object CategoryId)
+        {
+
+            var parameters = new NavigationParameters
+            {
+                { "CategoryId", CategoryId }
+            };
+           
+            await _navigationService.NavigateAsync(new Uri("NewsArticlesPage", UriKind.Relative), parameters);
+        }
+
 
         private NewsArticles _newsArticle;
         public NewsArticles NewsArticle
@@ -41,10 +67,10 @@ namespace Core.ViewModels
   
         public override void OnNavigatedTo(NavigationParameters parameters)
         {
-            if (parameters.ContainsKey("Id"))
+            if (parameters.ContainsKey("UniqueId"))
                 Title = (string)parameters["title"];
-                int paramId = (int)parameters["Id"];
-                NewsArticle = _newsArticlesService.GetNewsArticleById(paramId);   
+                Guid UniqueId = (Guid)parameters["UniqueId"];
+                //NewsArticle = _newsArticlesService.GetNewsArticleById(UniqueId);   
 
         }
     }

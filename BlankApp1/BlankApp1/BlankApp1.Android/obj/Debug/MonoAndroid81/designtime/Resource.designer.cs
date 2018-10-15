@@ -2750,6 +2750,9 @@ namespace App.Droid
 			// aapt resource value: 0x7F0200F7
 			public const int mr_vol_type_audiotrack_light = 2130837751;
 			
+			// aapt resource value: 0x7F010010
+			public const int navigate_back = 2130771984;
+			
 			// aapt resource value: 0x7F02005B
 			public const int navigation_empty_icon = 2130837595;
 			
@@ -2789,11 +2792,29 @@ namespace App.Droid
 			// aapt resource value: 0x7F020065
 			public const int notify_panel_notification_icon_bg = 2130837605;
 			
-			// aapt resource value: 0x7F010010
-			public const int right_arrow_carasoulView = 2130771984;
-			
 			// aapt resource value: 0x7F010011
-			public const int twitter_icon = 2130771985;
+			public const int phone_icon = 2130771985;
+			
+			// aapt resource value: 0x7F010012
+			public const int post_author = 2130771986;
+			
+			// aapt resource value: 0x7F010013
+			public const int post_category = 2130771987;
+			
+			// aapt resource value: 0x7F010014
+			public const int post_date = 2130771988;
+			
+			// aapt resource value: 0x7F010015
+			public const int post_footer_tags = 2130771989;
+			
+			// aapt resource value: 0x7F010016
+			public const int post_views = 2130771990;
+			
+			// aapt resource value: 0x7F010017
+			public const int right_arrow_carasoulView = 2130771991;
+			
+			// aapt resource value: 0x7F010018
+			public const int twitter_icon = 2130771992;
 			
 			static Drawable()
 			{
