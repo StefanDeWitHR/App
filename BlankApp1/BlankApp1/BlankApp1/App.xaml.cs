@@ -7,6 +7,7 @@ using Xamarin.Forms.Xaml;
 using Prism.DryIoc;
 using Core.Services;
 using System;
+using System.Threading.Tasks;
 using Prism.Navigation;
 using Core.Helpers;
 using System.Windows.Input;
@@ -41,7 +42,7 @@ namespace Core
             containerRegistry.RegisterForNavigation<NewsArticlesPage, NewsArticlesPageViewModel>();
             containerRegistry.RegisterForNavigation<MenuPage , MenuPageViewModel>();
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
-            containerRegistry.RegisterForNavigation<ContactPage>();
+            containerRegistry.RegisterForNavigation<ContactPage , ContactViewModel>();
             containerRegistry.RegisterForNavigation<AboutUsPage>();
             containerRegistry.RegisterForNavigation<TrialPage , TrialPageViewModel>(); 
 
@@ -52,12 +53,14 @@ namespace Core
 
         }
 
+
         //  Social media icons
         private void OnFaceBookTapped(object sender, EventArgs e)
         {
+            
             try
             {
-                Device.OpenUri(new Uri("fb://company/PropertyNL"));
+                Device.OpenUri(new Uri("fb://page/943580452350442"));
             }
             catch
             {
@@ -117,6 +120,34 @@ namespace Core
         {
             (App.Current.MainPage as MasterDetailPage).IsPresented = true;
         }
+
+        // Android back button to prevent closing the application
+        public bool CanGoBack
+        {
+            get
+            {
+                MasterDetailPage mainPage = App.Current.MainPage as MasterDetailPage;
+
+                if (mainPage != null)
+                {
+                    bool canDoBack = mainPage.Detail.Navigation.NavigationStack.Count > 1 || mainPage.IsPresented;
+
+                    
+                    if (!canDoBack)
+                    {
+                        mainPage.IsPresented = true;
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                return true;
+            }
+        }
+
+      
     }
 }
 

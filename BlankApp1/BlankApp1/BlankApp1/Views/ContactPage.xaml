@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Core.Views.ContactPage" ControlTemplate="{StaticResource header}" NavigationPage.HasNavigationBar="False">
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             x:Class="Core.Views.ContactPage" ControlTemplate="{StaticResource header}"
+             mvvm:ViewModelLocator.AutowireViewModel="True"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="iOS" Value="20, 40, 20, 20" />
@@ -30,7 +33,15 @@
                 <StackLayout   Grid.Row="0" Grid.Column="2">
                     <Label Text="Telefoon" FontSize="Medium" FontFamily="Bold"></Label>
                     <Label Text="Algemeen"></Label>
-                    <Label Text="+31(0)887767378"></Label>
+                    <Label Text="+31(0)887767378" TextColor="#0645AD">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{ Binding OnPhoneLabelTappedCommand}"
+                                CommandParameter="+31(0)88776 73 78"
+                                NumberOfTapsRequired="1">
+                            </TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
                 </StackLayout>
             </Grid>
             

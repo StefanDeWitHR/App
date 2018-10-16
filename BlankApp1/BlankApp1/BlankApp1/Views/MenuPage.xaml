@@ -10,24 +10,29 @@
             <StackLayout>
                 <!-- User information when logged in -->
                 <StackLayout HeightRequest="200" Padding="10">
-                    <Label Text="Ingelogd als: Stefan de Wit"></Label>
-                    <!--<Image Source="me.png" Aspect="AspectFit"></Image>-->
+                    <Label HorizontalTextAlignment="Center"  Text="Ingelogd als: Stefan de Wit"></Label>
+                    <Image Source="me.png" Aspect="AspectFit" WidthRequest="180" HeightRequest="180"></Image>
                 </StackLayout>
+                <ScrollView>
+                    <StackLayout>
+                      
+                        <!-- Menu items -->
+                        <Button   CommandParameter="NavigationPage/MainPage"    Text="Home" Command="{Binding OnNavigateCommand}"></Button>
+                          
+                        <Button   CommandParameter="NavigationPage/NewsArticlesPage"    Text="Nieuwsartikelen" Command="{Binding OnNavigateCommand}"></Button>
+                            
+                        <Button   CommandParameter="NavigationPage/AboutUsPage" Text="Over ons" Command="{Binding OnNavigateCommand}"></Button>
+                           
+                        <Button   CommandParameter="NavigationPage/ContactPage" Text="Contact" Command="{Binding OnNavigateCommand}"></Button>
 
-                <StackLayout>
-                    <!-- Menu items -->
-                    <Button   CommandParameter="NavigationPage/MainPage"    Text="Home" Command="{Binding OnNavigateCommand}"></Button>
-                      
-                    <Button   CommandParameter="NavigationPage/NewsArticlesPage"    Text="Nieuwsartikelen" Command="{Binding OnNavigateCommand}"></Button>
-                        
-                    <Button   CommandParameter="NavigationPage/AboutUsPage" Text="Over ons" Command="{Binding OnNavigateCommand}"></Button>
-                       
-                    <Button   CommandParameter="NavigationPage/ContactPage" Text="Contact" Command="{Binding OnNavigateCommand}"></Button>
-                       
-                    <Button   CommandParameter="NavigationPage/TrialPage"   Text="Proeflidmaatschap aanvragen" Command="{Binding OnNavigateCommand}"></Button>
-                      
-                    <Button   CommandParameter="NavigationPage/LoginPage"   Text="Inloggen" Command="{Binding OnNavigateCommand}"></Button>
-                </StackLayout>
+                        <Button   CommandParameter="MenuPage/NavigationPage/TrialPage"   Text="Proeflidmaatschap aanvragen" Command="{Binding OnNavigateCommand}"></Button>
+
+                        <Button  IsVisible="{Binding IsLoggedOut}"  CommandParameter="NavigationPage/LoginPage"   Text="Inloggen" Command="{Binding OnNavigateCommand}"></Button>
+
+                        <Button  IsVisible="{Binding IsLoggedIn}" CommandParameter="NavigationPage/LoginPage"   Text="Uitloggen" Command="{Binding OnNavigateCommand}"></Button>
+
+                    </StackLayout>
+                </ScrollView>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

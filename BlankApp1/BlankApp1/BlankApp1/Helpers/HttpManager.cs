@@ -59,9 +59,10 @@ namespace Core.Helpers
 
                 HttpClient client = new HttpClient();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-                HttpResponseMessage response =  client.GetAsync(FullUrl).Result ;
+                HttpResponseMessage response =  client.GetAsync(FullUrl).Result;
 
                 string LResult = await response.Content.ReadAsStringAsync();
+                
                 T Result = JsonConvert.DeserializeObject<T>(LResult);
 
                 int statuscode = Convert.ToInt32(response.StatusCode);

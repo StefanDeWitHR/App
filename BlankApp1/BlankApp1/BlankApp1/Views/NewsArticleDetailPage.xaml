@@ -50,7 +50,7 @@
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="30"></RowDefinition>
-                          
+
                         </Grid.RowDefinitions>
                         <Image  Grid.Row="0" Grid.Column="0" Source="post_category.png"></Image>
                         <Label  Grid.Row="0" TextColor="Red" FontSize="Small" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="In transacties">
@@ -70,20 +70,21 @@
                         <Image Grid.Row="0"  Grid.Column="4" Source="post_views.png"></Image>
                         <Label Grid.Row="0" FontSize="Small" Grid.Column="5" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="Views: 483"></Label>
                     </Grid>
-                    <Grid>
-                          <Grid.ColumnDefinitions>
-                               <ColumnDefinition Width="Auto"></ColumnDefinition>
-                               <ColumnDefinition Width="Auto"></ColumnDefinition>
-                           </Grid.ColumnDefinitions>
-                         <Image    Grid.Column="0" Source="post_footer_tags.png"></Image>
-                        <Button    Grid.Column="1"  WidthRequest="150"  HorizontalOptions="Start" Text="Kantoren"></Button>
-                    </Grid>
-                        
-                 
+                    <ScrollView Orientation="Horizontal">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+
+                        </Grid.ColumnDefinitions>
+                        <Image    Grid.Column="0" Source="post_footer_tags.png"></Image>
+                            <Button    Grid.Column="1"  WidthRequest="150"  HorizontalOptions="Start" Text="Kantoren"></Button>
+                            <Button    Grid.Column="2" WidthRequest="150"  HorizontalOptions="Start" Text="Gebouwen"></Button>
+                            <Button    Grid.Column="3" WidthRequest="150"  HorizontalOptions="Start" Text="Test"></Button>
+                        </Grid>
+                    </ScrollView>
+
                 </StackLayout>
-
-
-
                 <StackLayout VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand">
                     <Image Source="https://propertynl.com/media/newsarticle/photos/105117/27726/Amsterdam-WTC-artist-impression-uitbreiding.jpg?w=690" Aspect="AspectFill" HeightRequest="300"></Image>
                 </StackLayout>

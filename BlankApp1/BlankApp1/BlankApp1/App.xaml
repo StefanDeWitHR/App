@@ -2,23 +2,18 @@
 <prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
-             x:Class="Core.App">
+                        xmlns:pullToRefresh="clr-namespace:Refractored.XamForms.PullToRefresh;assembly=Refractored.XamForms.PullToRefresh"
+                        x:Class="Core.App">
 	<Application.Resources>
 
         <ResourceDictionary>
 
-            <!--<Color x:Key="Primary">#2196F3</Color>
-            <Color x:Key="PrimaryDark">#1976D2</Color>
-            <Color x:Key="Accent">#96d1ff</Color>
-            <Color x:Key="LightBackgroundColor">#FAFAFA</Color>
-            <Color x:Key="DarkBackgroundColor">#C0C0C0</Color>
-            <Color x:Key="MediumGrayTextColor">#4d4d4d</Color>
-            <Color x:Key="LightTextColor">#999999</Color>
-            <Color x:Key="default_color_company">#e20413</Color>
-            <Color x:Key="default_background">#ffffff</Color>-->
-
             <Style TargetType="ContentPage">
                 <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="FontFamily" Value="Arial"></Setter>
             </Style>
             
             <!-- Settings for each mobile app -->
@@ -42,81 +37,80 @@
             <!-- header template -->
             <ControlTemplate x:Key="header">
                 <ScrollView>
-                <StackLayout>
-                    
-                        <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="5">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="50"/>
-                                <RowDefinition Height="1"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"></ColumnDefinition>
-                                <ColumnDefinition Width="10*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-                            <Image  Source="hamburger.png"   WidthRequest="50"  HorizontalOptions="CenterAndExpand" VerticalOptions="Start"    Grid.Column="0" Grid.Row="0"  >
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer
+                    <StackLayout>
+                    <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="1"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="10*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image  Source="hamburger.png"   WidthRequest="50"  HorizontalOptions="CenterAndExpand" VerticalOptions="Start"    Grid.Column="0" Grid.Row="0"  >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer
                                     Tapped="OnMenuTapped"
                                     NumberOfTapsRequired="1" />
-                                </Image.GestureRecognizers>
-                            </Image>
+                            </Image.GestureRecognizers>
+                        </Image>
 
-                            <Image  Source="logo.png"  HorizontalOptions="CenterAndExpand" HeightRequest="50"  WidthRequest="350" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3"  VerticalOptions="End"></Image>
-                            <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5"/>
-                            <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.ColumnSpan="5" />
-                        </Grid>
-                        <!-- Footer template-->
-                        <RelativeLayout VerticalOptions="End" HorizontalOptions="Fill" HeightRequest="50" >
-                            <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"  ></BoxView>
-                            <Grid Padding="10">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="40"></ColumnDefinition>
-                                    <ColumnDefinition Width="40"></ColumnDefinition>
-                                    <ColumnDefinition Width="40"></ColumnDefinition>
-                                    <ColumnDefinition Width="40"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
+                        <Image  Source="logo.png"  HorizontalOptions="CenterAndExpand" HeightRequest="50"  WidthRequest="350" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3"  VerticalOptions="End"></Image>
+                        <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="5"/>
+                        <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.ColumnSpan="5" />
+                    </Grid>
+                    <!-- Footer template-->
+                    <RelativeLayout VerticalOptions="End" HorizontalOptions="Fill" HeightRequest="50" >
+                        <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"  ></BoxView>
+                        <Grid Padding="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
 
-                                <Image Source="fb_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="0">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer
+                            <Image Source="fb_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="0">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
                                          Tapped="OnFaceBookTapped"
                                         NumberOfTapsRequired="1"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                                <Image Source="mail_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="1">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="mail_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="1">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
                                          Tapped="OnMailTapped"
                                         NumberOfTapsRequired="1"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                                <Image Source="linkedin_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="2">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="linkedin_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="2">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
                                          Tapped="OnLinkedInTapped"
                                         NumberOfTapsRequired="1"/>
 
-                                        </Image.GestureRecognizers>
-                                </Image>
-                                <Image Source="twitter_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="3">
-                                        <Image.GestureRecognizers>
-                                        <TapGestureRecognizer
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="twitter_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="3">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
                                          Tapped="OnTwitterTapped"
                                         NumberOfTapsRequired="1"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                                <Image Source="phone_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="4">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="phone_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="4">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
                                          Tapped="OnPhoneTapped"
                                         NumberOfTapsRequired="1"/>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </Grid>
-                        </RelativeLayout>
-                        <!-- End Footer template-->
-                   
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
+                    </RelativeLayout>
+                    <!-- End Footer template-->
+
                 </StackLayout>
                 </ScrollView>
             </ControlTemplate>

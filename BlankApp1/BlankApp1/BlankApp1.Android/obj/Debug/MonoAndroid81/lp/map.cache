@@ -5,9 +5,14 @@ EngineIoClientDotNet
 FluentValidation
 FormsViewGroup
 Newtonsoft.Json
+Plugin.CurrentActivity
+Plugin.Share.Abstractions
+Plugin.Share
 Prism
 Prism.DryIoc.Forms
 Prism.Forms
+Refractored.XamForms.PullToRefresh
+Refractored.XamForms.PullToRefresh.Droid
 SocketIoClientDotNet
 Stormlion.SNavigation.Android
 Stormlion.SNavigation
@@ -22,6 +27,7 @@ Xamarin.Android.Support.Annotations
 Xamarin.Android.Support.Compat
 Xamarin.Android.Support.Core.UI
 Xamarin.Android.Support.Core.Utils
+Xamarin.Android.Support.CustomTabs
 Xamarin.Android.Support.Design
 Xamarin.Android.Support.Fragment
 Xamarin.Android.Support.Media.Compat

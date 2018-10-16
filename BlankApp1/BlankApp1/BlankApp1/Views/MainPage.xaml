@@ -5,10 +5,10 @@
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:control="clr-namespace:Core.Controls"
-             xmlns:local="clr-namespace:Core.Converters"
+             xmlns:local="clr-namespace:Core.Converters" 
              prism:ViewModelLocator.AutowireViewModel="True"  x:Name="MainPage" NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}">
-    
+
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -21,7 +21,6 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:HtmlToTextConverter x:Key="HtmlToTextConverter" />
-          
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -36,11 +35,16 @@
 
             <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450"  >
 
-                <cv:CarouselView  Position="{Binding RSSArticlesPosition}"  ItemsSource="{Binding RSSArticles.channel.items}" HeightRequest="400">
-                
+                <cv:CarouselView   Position="{Binding RSSArticlesPosition ,Mode=TwoWay}"  ItemsSource="{Binding RSSArticles.channel.items}" HeightRequest="400">
                     <cv:CarouselView.ItemTemplate>
                         <DataTemplate>
+
                             <StackLayout BackgroundColor="Transparent" HeightRequest="400" >
+                                <Label 
+                                    FontSize="Medium" HorizontalTextAlignment="Center" FontAttributes="Bold" 
+                                    Text="{Binding title, Converter={StaticResource HtmlToTextConverter}}" 
+                                    HorizontalOptions="CenterAndExpand">
+                                </Label>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
 
@@ -49,16 +53,23 @@
                                         <ColumnDefinition Width="25"></ColumnDefinition>
 
                                     </Grid.ColumnDefinitions>
-                                    <Image Grid.Row="0" Grid.Column="0"   WidthRequest="25" HeightRequest="45" Source="left_arrow_carasoulView.png">
+                                    <Image IsVisible="{Binding BindingContext.IsArrowLeftVisible ,Source={x:Reference MainPage} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="0"   WidthRequest="25" HeightRequest="45" Source="left_arrow_carasoulView.png">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
                                                 Command="{Binding BindingContext.OnPrevRSSArticleCommand,Source={x:Reference MainPage}}"
                                                 NumberOfTapsRequired="1" />
                                         </Image.GestureRecognizers>
                                     </Image>
-                                    <Image  Grid.Row="0" Grid.Column="1"   HeightRequest="250" Aspect="AspectFill" Source="{Binding enclosure.url}"/>
+                                    <Image  Grid.Row="0" Grid.Column="1"   HeightRequest="250" Aspect="AspectFill" Source="{Binding enclosure.url}">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                                CommandParameter="{Binding .}"
+                                                ></TapGestureRecognizer>
+                                        </Image.GestureRecognizers>
+                                    </Image>
 
-                                    <Image Grid.Row="0" Grid.Column="2"    WidthRequest="25" HeightRequest="45" Source="right_arrow_carasoulView.png">
+                                    <Image IsVisible="{Binding BindingContext.IsArrowRightVisible ,Source={x:Reference MainPage} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="2"    WidthRequest="25" HeightRequest="45" Source="right_arrow_carasoulView.png">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
                                                 Command="{Binding BindingContext.OnNextRSSArticleCommand,Source={x:Reference MainPage}}"
@@ -66,14 +77,12 @@
                                         </Image.GestureRecognizers>
                                     </Image>
                                 </Grid>
-                                <Label  HeightRequest="100" Margin="22,0,18,0"  FontSize="Medium"  FontAttributes="Bold" Text="{Binding title}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
-                                    <ScrollView>
-                                        <Label  HeightRequest="100" LineBreakMode="WordWrap"
+                                <ScrollView>
+                                    <Label  HeightRequest="100" Margin="28,0,0,0"
                                                 Text="{Binding description , Converter={StaticResource HtmlToTextConverter}}"
-                                                HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
-                                        </Label>
-                               
-                                    </ScrollView>
+                                                HorizontalOptions="Center" LineBreakMode="WordWrap" VerticalOptions="CenterAndExpand">
+                                    </Label>
+                                </ScrollView>
                                 <Button Text="> Lees verder " 
                                                 Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
                                                 CommandParameter="{Binding .}" />
@@ -241,7 +250,7 @@
             <StackLayout HeightRequest="30"  HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold"  FontSize="Large" Text="Placeholder for Magzine | columnisten" HorizontalOptions="Center"></Label>
             </StackLayout>
-         
+
         </StackLayout>
     </ScrollView>
 </ContentPage>

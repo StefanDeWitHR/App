@@ -1,9 +1,11 @@
-﻿using Prism.Commands;
+﻿using Core.Helpers;
+using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
 using System;
 using System.Collections.Generic;
 using System.Text;
+
 
 namespace Core.ViewModels
 {
@@ -55,8 +57,10 @@ namespace Core.ViewModels
 
 
         public async void Login(object sender)
-        {          
-            if(string.IsNullOrEmpty(password) || string.IsNullOrEmpty(username) )
+        {
+            
+            // Validator instead of checks!
+            if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(username) )
             {
                await  _dialogService.DisplayAlertAsync("Gegevens onjuist", "Probeer opnieuw", "OK");
             }

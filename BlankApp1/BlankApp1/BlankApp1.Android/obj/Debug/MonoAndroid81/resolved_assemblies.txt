@@ -9,9 +9,14 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\a
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Mono.Android.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\mscorlib.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Newtonsoft.Json.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.CurrentActivity.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.Share.Abstractions.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Plugin.Share.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Prism.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Prism.DryIoc.Forms.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Prism.Forms.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Refractored.XamForms.PullToRefresh.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Refractored.XamForms.PullToRefresh.Droid.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\SocketIoClientDotNet.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Stormlion.SNavigation.Android.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Stormlion.SNavigation.dll
@@ -29,6 +34,7 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\a
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.Compat.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.Core.UI.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.Core.Utils.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.CustomTabs.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.Design.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.Fragment.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\Xamarin.Android.Support.Media.Compat.dll

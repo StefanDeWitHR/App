@@ -8,6 +8,8 @@
     <PackageReference Include="Corcav.Behaviors" Version="2.3.7" />
     <PackageReference Include="FluentValidation" Version="8.0.100" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Plugin.Share" Version="7.1.1" />
+    <PackageReference Include="Refractored.XamForms.PullToRefresh" Version="2.2.2" />
     <PackageReference Include="SNavigation.Forms" Version="0.1.2" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.0.122203" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.0.0.396" />

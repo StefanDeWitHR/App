@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "BlankApp1\BlankApp1\Core.csproj", "{277548F0-F971-4E6E-8A94-0A25CC2464DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "BlankApp1\BlankApp1\Core.csproj", "{277548F0-F971-4E6E-8A94-0A25CC2464DA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App.Android", "BlankApp1\BlankApp1.Android\App.Android.csproj", "{69CBD7D5-68D5-403C-8EEC-CAFC8AA222EB}"
 EndProject
@@ -97,7 +97,6 @@ Global
 		{8544B834-BF25-4782-9806-9D3A8E98233D}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
 		{8544B834-BF25-4782-9806-9D3A8E98233D}.Debug|Any CPU.ActiveCfg = Debug|iPhone
 		{8544B834-BF25-4782-9806-9D3A8E98233D}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{8544B834-BF25-4782-9806-9D3A8E98233D}.Debug|iPhone.Build.0 = Debug|iPhone
 		{8544B834-BF25-4782-9806-9D3A8E98233D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{8544B834-BF25-4782-9806-9D3A8E98233D}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{8544B834-BF25-4782-9806-9D3A8E98233D}.Release|Any CPU.ActiveCfg = Release|iPhone

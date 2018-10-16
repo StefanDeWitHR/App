@@ -61,6 +61,12 @@
     <PackageReference Include="Corcav.Behaviors">
       <Version>2.3.7</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.Share">
+      <Version>7.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Refractored.XamForms.PullToRefresh">
+      <Version>2.2.2</Version>
+    </PackageReference>
     <PackageReference Include="SNavigation.Forms">
       <Version>0.1.2</Version>
     </PackageReference>
@@ -80,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Renders\ShareRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -119,9 +126,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\me.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Renders\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logo.png" />
   </ItemGroup>

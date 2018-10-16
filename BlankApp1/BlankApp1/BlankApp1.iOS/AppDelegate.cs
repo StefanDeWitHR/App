@@ -2,6 +2,7 @@
 using Prism;
 using Prism.Ioc;
 using System.Reflection;
+using Refractored.XamForms.PullToRefresh.iOS;
 using UIKit;
 
 
@@ -26,6 +27,7 @@ namespace App.iOS
             global::Xamarin.Forms.Forms.Init();
             var cv = typeof(Xamarin.Forms.CarouselView);
             var assembly = Assembly.Load(cv.FullName);
+            //PullToRefreshLayoutRenderer.Init()
             LoadApplication(new Core.App(new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);

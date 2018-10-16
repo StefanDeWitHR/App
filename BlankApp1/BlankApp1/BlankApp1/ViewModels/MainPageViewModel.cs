@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 namespace Core.ViewModels
@@ -18,6 +19,7 @@ namespace Core.ViewModels
         private readonly INavigationService _navigationService;
         private readonly INewsArticlesService _newsArticleService;
         private readonly IRSSArticlesService _RSSArticlesService;
+
         // Commands
         public  DelegateCommand<object> GetNewsArticleCommand { get;  }
 
@@ -42,6 +44,10 @@ namespace Core.ViewModels
             OnNextRSSArticleCommand = new Command(OnNextRSSArticle);
             OnPrevRSSArticleCommand = new Command(OnPrevRSSArticle);
 
+
+            //Navigation arrow settings
+            IsArrowLeftVisible = false;
+            IsArrowRightVisible = true;
         }
         
         public async void MoreInfoNewsArticle(object param)
@@ -77,7 +83,28 @@ namespace Core.ViewModels
         public int RSSArticlesPosition
         {
             get { return _RSSArticlesPosition; }
-            set { _RSSArticlesPosition = value; RaisePropertyChanged(); }
+            set
+            {
+                _RSSArticlesPosition = value;
+                if (RSSArticlesPosition == 0)
+                {
+                    IsArrowLeftVisible = false;
+                }
+                else
+                {
+                    IsArrowLeftVisible = true;
+                }
+
+                if ((RSSArticlesPosition +1) == RSSArticles.channel.items.Count())
+                {
+                    IsArrowRightVisible = false;
+                }
+                else
+                {
+                    IsArrowRightVisible = true;
+                }
+                RaisePropertyChanged();
+            }
         }
         
 
@@ -86,7 +113,6 @@ namespace Core.ViewModels
             base.OnNavigatingTo(parameters);
             NewsArticles = await _newsArticleService.GetNewsArticles();
             RSSArticles = await _RSSArticlesService.GetRSSArticles();
-            RSSArticlesPosition = 0;
         }
 
         // Navigation carasoulView
@@ -115,6 +141,29 @@ namespace Core.ViewModels
                 RSSArticlesPosition--;
             }
         }
+        
+        // Navigation control 
+        private bool _IsArrowLeftVisible;
+        public bool IsArrowLeftVisible
+        {
+            get { return _IsArrowLeftVisible; }
+            set
+            {
+                _IsArrowLeftVisible = value;
+                RaisePropertyChanged();
+            }
+        }
+        private bool _IsArrowRightVisible;
+        public bool IsArrowRightVisible
+        {
+            get { return _IsArrowRightVisible; }
+            set
+            {
+                _IsArrowRightVisible = value;
+                RaisePropertyChanged();
+            }
+        }
+
 
     } 
 }

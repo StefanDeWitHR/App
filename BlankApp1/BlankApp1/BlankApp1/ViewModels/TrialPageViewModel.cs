@@ -7,6 +7,7 @@ using System.Linq;
 using Core.Models;
 using Core.Validators;
 using FluentValidation.Results;
+using Xamarin.Forms;
 
 
 namespace Core.ViewModels
@@ -15,9 +16,9 @@ namespace Core.ViewModels
     {
         private readonly INavigationService _navigationService;
 
-        public DelegateCommand<object> RequestTrialCommand { get; }
-       //  private DelegateCommand _command;
-       // public DelegateCommand Command => _command ?? (_command = new DelegateCommand(Execute, CanExecute));
+
+        public DelegateCommand RequestTrialCommand { get; private set; }
+
 
         //Validators
         private UserValidator validator = new UserValidator();
@@ -25,18 +26,24 @@ namespace Core.ViewModels
         public TrialPageViewModel(INavigationService navigationService) : base(navigationService)
         {
             _navigationService = navigationService;
-          
-            RequestTrialCommand = new DelegateCommand<object>(SaveTrialData,ValidateTrialData);
-
-            //Create an empty object
             User = new Users();
+
+            //Validation
+            RequestTrialCommand = new DelegateCommand(SaveTrialData, ValidateTrialData);
+            RequestTrialCommand.ObservesProperty(() => User.CompanyName);
+            RequestTrialCommand.ObservesProperty(() => User.Email);
+            RequestTrialCommand.ObservesProperty(() => User.FirstName);
+            RequestTrialCommand.ObservesProperty(() => User.LastName);
+            RequestTrialCommand.ObservesProperty(() => User.Gender);
+            RequestTrialCommand.ObservesProperty(() => User.PhoneNumber);
+
         }
 
-        private async void SaveTrialData(object data)
+        private  void SaveTrialData()
         {
-
+            // 
         }
-        private bool ValidateTrialData(object arg)
+        private bool ValidateTrialData()
         {
             ValidationResult result = validator.Validate(User);
             if (!result.IsValid)
@@ -51,10 +58,13 @@ namespace Core.ViewModels
         public Users User
         {
             get { return _User; }
-            set { _User = value;
-                  RaisePropertyChanged();
+            set
+            {
+                SetProperty(ref _User, value);
+                RaisePropertyChanged();
             }
         }
+
 
         // Binding for switch component
         private bool _IsFemale;
@@ -65,12 +75,14 @@ namespace Core.ViewModels
             {
                 _IsFemale = value;
                 if (_IsFemale == true)
+                {
                     User.Gender = "Vrouw";
                     IsMale = false;
+                    
+                }
                 RaisePropertyChanged();
             }
         }
-        // Binding for switch component
         private bool _IsMale;
         public bool IsMale
         {
@@ -79,8 +91,11 @@ namespace Core.ViewModels
             {
                 _IsMale = value;
                 if (_IsMale == true)
+                {
                     User.Gender = "Man";
                     IsFemale = false;
+                    
+                }
                 RaisePropertyChanged();
             }
         }

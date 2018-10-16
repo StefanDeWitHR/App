@@ -92,6 +92,20 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/Plugin.Share.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Plugin.Share.Abstractions.dll": {},
+          "lib/netstandard1.0/Plugin.Share.dll": {}
+        }
+      },
       "Prism.Core/7.0.0.396": {
         "type": "package",
         "compile": {
@@ -125,6 +139,18 @@
         },
         "runtime": {
           "lib/netstandard2.0/Prism.Forms.dll": {}
+        }
+      },
+      "Refractored.XamForms.PullToRefresh/2.2.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.0/Refractored.XamForms.PullToRefresh.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/Refractored.XamForms.PullToRefresh.dll": {}
         }
       },
       "SNavigation.Forms/0.1.2": {
@@ -766,6 +792,40 @@
         "newtonsoft.json.nuspec"
       ]
     },
+    "Plugin.Share/7.1.1": {
+      "sha512": "07mFq3H9eeX2TGNKitmByjDKZl/3KXZrT2jv/27mEEnY7me/lHQSX52mI0B1mVTZquCloNmZm12EcV1t4fFSSA==",
+      "type": "package",
+      "path": "plugin.share/7.1.1",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Share.dll",
+        "lib/MonoAndroid10/Plugin.Share.pdb",
+        "lib/MonoAndroid10/Plugin.Share.xml",
+        "lib/UAP10/Plugin.Share.Abstractions.dll",
+        "lib/UAP10/Plugin.Share.Abstractions.pdb",
+        "lib/UAP10/Plugin.Share.Abstractions.xml",
+        "lib/UAP10/Plugin.Share.XML",
+        "lib/UAP10/Plugin.Share.dll",
+        "lib/UAP10/Plugin.Share.pdb",
+        "lib/UAP10/Plugin.Share.pri",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Share.dll",
+        "lib/Xamarin.iOS10/Plugin.Share.xml",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Share.deps.json",
+        "lib/netstandard1.0/Plugin.Share.dll",
+        "lib/netstandard1.0/Plugin.Share.pdb",
+        "lib/netstandard1.0/Plugin.Share.xml",
+        "plugin.share.7.1.1.nupkg.sha512",
+        "plugin.share.nuspec"
+      ]
+    },
     "Prism.Core/7.0.0.396": {
       "sha512": "XxPmXiA+v/D6zUeAUwSz7GgWNIbzyLLgkP32vDr6fGfv/YPg8CRkmkf+MkP+cxXKdUsqezxXgRRwMUcjWRqWMw==",
       "type": "package",
@@ -808,6 +868,30 @@
         "lib/netstandard2.0/Prism.Forms.xml",
         "prism.forms.7.0.0.396.nupkg.sha512",
         "prism.forms.nuspec"
+      ]
+    },
+    "Refractored.XamForms.PullToRefresh/2.2.2": {
+      "sha512": "mjhwPYFXrln9z6wPpT3GB0OUw/GXBeLQ41k/dmX4XZk4wrEV3QXL/RKeD/WPVCNEl3fLQ1WlQ5EtlKgTZ41v0A==",
+      "type": "package",
+      "path": "refractored.xamforms.pulltorefresh/2.2.2",
+      "files": [
+        "lib/MonoAndroid10/Refractored.XamForms.PullToRefresh.Droid.dll",
+        "lib/MonoAndroid10/Refractored.XamForms.PullToRefresh.Droid.pdb",
+        "lib/MonoAndroid10/Refractored.XamForms.PullToRefresh.Droid.xml",
+        "lib/MonoAndroid10/Refractored.XamForms.PullToRefresh.dll",
+        "lib/MonoAndroid10/Refractored.XamForms.PullToRefresh.pdb",
+        "lib/MonoAndroid10/Refractored.XamForms.PullToRefresh.xml",
+        "lib/Xamarin.iOS10/Refractored.XamForms.PullToRefresh.dll",
+        "lib/Xamarin.iOS10/Refractored.XamForms.PullToRefresh.iOS.dll",
+        "lib/Xamarin.iOS10/Refractored.XamForms.PullToRefresh.iOS.xml",
+        "lib/Xamarin.iOS10/Refractored.XamForms.PullToRefresh.pdb",
+        "lib/Xamarin.iOS10/Refractored.XamForms.PullToRefresh.xml",
+        "lib/netstandard1.0/Refractored.XamForms.PullToRefresh.deps.json",
+        "lib/netstandard1.0/Refractored.XamForms.PullToRefresh.dll",
+        "lib/netstandard1.0/Refractored.XamForms.PullToRefresh.pdb",
+        "lib/netstandard1.0/Refractored.XamForms.PullToRefresh.xml",
+        "refractored.xamforms.pulltorefresh.2.2.2.nupkg.sha512",
+        "refractored.xamforms.pulltorefresh.nuspec"
       ]
     },
     "SNavigation.Forms/0.1.2": {
@@ -2744,7 +2828,9 @@
       "FluentValidation >= 8.0.100",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 11.0.2",
+      "Plugin.Share >= 7.1.1",
       "Prism.DryIoc.Forms >= 7.0.0.396",
+      "Refractored.XamForms.PullToRefresh >= 2.2.2",
       "SNavigation.Forms >= 0.1.2",
       "Xamarin.Forms >= 2.5.0.122203",
       "Xamarin.Forms.CarouselView >= 2.3.0-pre2"
@@ -2810,9 +2896,17 @@
             "target": "Package",
             "version": "[11.0.2, )"
           },
+          "Plugin.Share": {
+            "target": "Package",
+            "version": "[7.1.1, )"
+          },
           "Prism.DryIoc.Forms": {
             "target": "Package",
             "version": "[7.0.0.396, )"
+          },
+          "Refractored.XamForms.PullToRefresh": {
+            "target": "Package",
+            "version": "[2.2.2, )"
           },
           "SNavigation.Forms": {
             "target": "Package",

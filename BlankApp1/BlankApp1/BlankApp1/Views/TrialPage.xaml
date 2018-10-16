@@ -24,10 +24,10 @@
                     <Label Text="Man"></Label>
                     <Switch IsToggled="{Binding IsMale}"></Switch>
 
-                    <Label Text="Voornaam" WidthRequest="100"></Label>
-                    <Entry WidthRequest="100" Text="{Binding User.Firstname}"></Entry>
-                    <Label Text="Tussenvoegsel" WidthRequest="50"></Label>
-                    <Entry  Text="{Binding User.SecondName}" ></Entry>
+                    <Label Text="Voornaam"></Label>
+                    <Entry WidthRequest="100" Text="{Binding User.FirstName}"></Entry>
+                    <Label Text="Tussenvoegsel"></Label>
+                    <Entry WidthRequest="100"  Text="{Binding User.SecondName}" ></Entry>
                     <Label Text="Achternaam"></Label>
                     <Entry Text="{Binding User.LastName}"  WidthRequest="100"></Entry>
                     <Label Text="E-mail" ></Label>
@@ -37,7 +37,7 @@
                     <Label Text="Telefoonnummer" ></Label>
                     <Entry Keyboard="Telephone" WidthRequest="100"  Text="{Binding User.PhoneNumber}"></Entry>
 
-                    <Button Text="Aanvragen" Command="{Binding  RequestTrialCommand }"></Button>
+                    <Button Text="Aanvragen" Command="{Binding  RequestTrialCommand ,Mode=TwoWay }"></Button>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
