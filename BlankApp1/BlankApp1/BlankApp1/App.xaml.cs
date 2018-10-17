@@ -52,6 +52,7 @@ namespace Core
             containerRegistry.Register<IRSSArticlesService, RSSArticlesService>();
             containerRegistry.Register<IHttpManager, HttpManager>();
 
+            containerRegistry.RegisterForNavigation<RedactorPage, RedactorPageViewModel>();
         }
 
 

@@ -14,7 +14,7 @@ using Xamarin.Forms;
 namespace Core.ViewModels
 {
 
-        public class MainPageViewModel : ViewModelBase
+        public class MainPageViewModel : ViewModelBase , INavigatedAware
     {
         private readonly INavigationService _navigationService;
         private readonly INewsArticlesService _newsArticleService;
@@ -108,12 +108,6 @@ namespace Core.ViewModels
         }
         
 
-        public async override void OnNavigatingTo(NavigationParameters parameters)
-        {
-            base.OnNavigatingTo(parameters);
-            NewsArticles = await _newsArticleService.GetNewsArticles();
-            RSSArticles = await _RSSArticlesService.GetRSSArticles();
-        }
 
         // Navigation carasoulView
         void OnNextRSSArticle()
@@ -165,6 +159,18 @@ namespace Core.ViewModels
         }
 
 
+        public void OnNavigatedFrom(INavigationParameters parameters)
+        {
+            throw new NotImplementedException();
+        }
+
+        public async void OnNavigatedTo(INavigationParameters parameters)
+        {
+            // base.OnNavigatingTo(parameters);
+            NewsArticles = await _newsArticleService.GetNewsArticles();
+            RSSArticles = await _RSSArticlesService.GetRSSArticles();
+        
+        }
     } 
 }
 

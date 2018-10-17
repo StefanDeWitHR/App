@@ -5,7 +5,8 @@ using App.Droid;
 using Prism;
 using Prism.Ioc;
 using System.Reflection;
-using Refractored.XamForms.PullToRefresh.Droid;
+using Android.Content;
+using Plugin.FacebookClient;
 
 namespace App.Droid
 {
@@ -18,9 +19,10 @@ namespace App.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             base.OnCreate(bundle);
-            Stormlion.SNavigation.Droid.Platform.Init(this);
+      
+            FacebookClientManager.Initialize(this);
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            //PullToRefreshLayoutRenderer.Init();
+            
             var cv = typeof(Xamarin.Forms.CarouselView);
             var assembly = Assembly.Load(cv.FullName); // https://blog.xamarin.com/flip-through-items-with-xamarin-forms-carouselview/
             app = new Core.App(new AndroidInitializer());
@@ -33,6 +35,11 @@ namespace App.Droid
             {
                 base.OnBackPressed();
             }
+        }
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent intent)
+        {
+            base.OnActivityResult(requestCode, resultCode, intent);
+            FacebookClientManager.OnActivityResult(requestCode, resultCode, intent);
         }
 
     }

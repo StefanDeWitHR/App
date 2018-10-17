@@ -94,13 +94,14 @@
                     </Grid.ColumnDefinitions>
                     <Label Text="De stad Utrecht, de snelste groeiende gemeente in Nederland, wil met ontwikkelaars, corporaties en beleggers tot een Stadsakkoord Wonen komen."></Label>
                 </Grid>
-
+                <Button Text="Delen op facebook" BackgroundColor="Blue" Command="{Binding BindingContext.ShareItemOnFBCommand,Source={x:Reference DetailNewsArticlePage}}"></Button>
                 <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
 
                 <Label FontAttributes="Bold" Text="Geplaats door: Stefan de Wit" HorizontalOptions="Center"></Label>
                 <StackLayout HorizontalOptions="CenterAndExpand">
                     <Image Source="https://propertynl.com/images/Editors/Ronald-de-Blauw.jpg" WidthRequest="250" HeightRequest="200"></Image>
-                    <Button  Text="Profiel"></Button>
+                    <Button Command="{Binding BindingContext.NavigateToRedactorPageCommand,Source={x:Reference DetailNewsArticlePage}}"  
+                            CommandParameter="Stefan"  Text="Profiel"></Button>
                 </StackLayout>
             </StackLayout>
 

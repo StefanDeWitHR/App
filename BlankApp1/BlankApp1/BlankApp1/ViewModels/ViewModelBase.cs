@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Core.ViewModels
 {
-    public class ViewModelBase : BindableBase, INavigationAware, IDestructible
+    public class ViewModelBase : BindableBase
     {
         protected INavigationService NavigationService { get; private set; }
 
@@ -23,24 +23,6 @@ namespace Core.ViewModels
             NavigationService = navigationService;
         }
 
-        public virtual void OnNavigatedFrom(NavigationParameters parameters)
-        {
 
-        }
-
-        public virtual void OnNavigatedTo(NavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void OnNavigatingTo(NavigationParameters parameters)
-        {
-
-        }
-
-        public virtual void Destroy()
-        {
-
-        }
     }
 }

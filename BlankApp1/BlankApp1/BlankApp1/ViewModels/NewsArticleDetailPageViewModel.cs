@@ -7,13 +7,16 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Windows.Input;
+using Plugin.FacebookClient;
+using Plugin.FacebookClient.Abstractions;
 using Xamarin.Forms;
 
 namespace Core.ViewModels
 {
-    public class NewsArticleDetailPageViewModel : ViewModelBase, INavigationAware
+    public class NewsArticleDetailPageViewModel : ViewModelBase , INavigatedAware
     {
         private readonly INavigationService   _navigationService;
         private readonly INewsArticlesService _newsArticlesService;
@@ -21,8 +24,8 @@ namespace Core.ViewModels
         //Commands
         public ICommand OnCategoryTappedCommand { get; }
         public ICommand OnBackNavigationCommand { get; }
-
-
+        public DelegateCommand<object> NavigateToRedactorPageCommand { get; }
+        public ICommand ShareItemOnFBCommand { get; }
 
         public NewsArticleDetailPageViewModel(INavigationService navigationService , INewsArticlesService newsArticlesService) : base(navigationService)
         {
@@ -31,8 +34,31 @@ namespace Core.ViewModels
 
             OnCategoryTappedCommand = new Command(NavigateToNewsArticleCategory);
             OnBackNavigationCommand = new Command(NavigateBack);
+            NavigateToRedactorPageCommand = new DelegateCommand<object>(NavigateToRedactorPage);
+            ShareItemOnFBCommand = new Command(ShareItemOnFacebook);
         }
 
+        public async  void ShareItemOnFacebook()
+        {
+            // Example of image
+            var webClient = new WebClient();
+            byte[] imageBytes = webClient.DownloadData("https://propertynl.com/media/newsarticle/photos/105168/27784/Frank_Mulders-20KPMG.jpg?w=690");
+
+            FacebookResponse<bool> response = await CrossFacebookClient.Current.LoginAsync(new string[] { "email", "public_profile" });
+            FacebookSharePhoto[] photos = new FacebookSharePhoto[] { new FacebookSharePhoto("test", imageBytes) };
+            FacebookSharePhotoContent photoContent = new FacebookSharePhotoContent(photos);
+            await CrossFacebookClient.Current.ShareAsync(photoContent);
+        }
+        public async void NavigateToRedactorPage(object RedactorId)
+        {
+            var parameters = new NavigationParameters
+            {
+
+                {"RedactorId", RedactorId}
+            };
+            await _navigationService.NavigateAsync(new Uri("RedactorPage", UriKind.Relative), parameters);
+
+        }
         public async void NavigateBack()
         {
             await _navigationService.GoBackAsync();
@@ -60,12 +86,12 @@ namespace Core.ViewModels
             }
         }
 
-        public override void OnNavigatedFrom(NavigationParameters parameters)
+        public  void OnNavigatedFrom(INavigationParameters parameters)
         {
             //
         }
   
-        public override void OnNavigatedTo(NavigationParameters parameters)
+        public  void OnNavigatedTo(INavigationParameters parameters)
         {
             if (parameters.ContainsKey("UniqueId"))
                 Title = (string)parameters["title"];
@@ -73,5 +99,6 @@ namespace Core.ViewModels
                 //NewsArticle = _newsArticlesService.GetNewsArticleById(UniqueId);   
 
         }
+
     }
 }

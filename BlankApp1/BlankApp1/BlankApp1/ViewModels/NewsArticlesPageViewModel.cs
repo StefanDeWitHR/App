@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace Core.ViewModels
 {
-    public class NewsArticlesPageViewModel : ViewModelBase, INavigationAware
+    public class NewsArticlesPageViewModel : ViewModelBase, INavigatedAware
     {
         private readonly INavigationService _navigationService;
         private readonly INewsArticlesService _newsArticlesService;
@@ -58,9 +58,9 @@ namespace Core.ViewModels
                 RaisePropertyChanged();
             }
         }
-        public async override void OnNavigatingTo(NavigationParameters parameters)
+        public async void OnNavigatedTo(INavigationParameters parameters)
         {
-            base.OnNavigatingTo(parameters);
+        //    base.OnNavigatingTo(parameters);
             NewsArticles = await _newsArticlesService.GetNewsArticles(); //Copy of the list
             OC_NewsArticles = new ObservableCollection<NewsArticles>(NewsArticles);
         }
@@ -85,5 +85,12 @@ namespace Core.ViewModels
                 }));
             }
         }
+
+        public void OnNavigatedFrom(INavigationParameters parameters)
+        {
+            throw new NotImplementedException();
+        }
+
+       
     }
 }

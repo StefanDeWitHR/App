@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:Core.Converters"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Core.Views.NewsArticlesPage"   NavigationPage.HasNavigationBar="false" 
-             ControlTemplate="{StaticResource header}" x:Name="NewsArticlesPage">
+             ControlTemplate="{StaticResource header}" x:Name="NewsArticlesPageId">
     
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -18,7 +18,10 @@
     <ContentPage.Content>
         <!--<ScrollView>-->
         <StackLayout Padding="0" Margin="0">
-
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="Nieuwsartikelen" FontSize="Large"></Label>
+                <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*"></ColumnDefinition>
@@ -45,7 +48,7 @@
                                 <Image Source="{Binding Image}"  HeightRequest="375" Aspect="AspectFill" ></Image>
                                 <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 <Button Text="Lees meer" 
-                                        Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference NewsArticlesPage}}"
+                                        Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference NewsArticlesPageId}}"
                                         CommandParameter="{Binding .}" />
                             </StackLayout>
                         </ViewCell>

@@ -4,7 +4,7 @@
              x:Class="Core.Views.LoginPage"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
-             x:Name="LoginPage" NavigationPage.HasNavigationBar="false" 
+             x:Name="LoginPageId" NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}">
 
     <ContentPage.Padding>

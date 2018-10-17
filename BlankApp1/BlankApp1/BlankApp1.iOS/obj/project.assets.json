@@ -14,13 +14,13 @@
           "lib/dotnet/Corcav.Behaviors.dll": {}
         }
       },
-      "DryIoc.dll/2.12.6": {
+      "DryIoc.dll/3.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll": {}
+          "lib/netstandard2.0/DryIoc.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll": {}
+          "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
       "EngineIoClientDotNet/1.0.3": {
@@ -62,6 +62,20 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.FacebookClient/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.iOS": "4.33.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.dll": {}
+        }
+      },
       "Plugin.Share/7.1.1": {
         "type": "package",
         "compile": {
@@ -73,7 +87,7 @@
           "lib/Xamarin.iOS10/Plugin.Share.dll": {}
         }
       },
-      "Prism.Core/7.0.0.396": {
+      "Prism.Core/7.1.0.431": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Prism.dll": {}
@@ -82,11 +96,11 @@
           "lib/netstandard2.0/Prism.dll": {}
         }
       },
-      "Prism.DryIoc.Forms/7.0.0.396": {
+      "Prism.DryIoc.Forms/7.1.0.431": {
         "type": "package",
         "dependencies": {
-          "DryIoc.dll": "2.12.6",
-          "Prism.Forms": "7.0.0.396"
+          "DryIoc.dll": "3.0.2",
+          "Prism.Forms": "7.1.0.431"
         },
         "compile": {
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {}
@@ -95,11 +109,11 @@
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {}
         }
       },
-      "Prism.Forms/7.0.0.396": {
+      "Prism.Forms/7.1.0.431": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "7.0.0.396",
-          "Xamarin.Forms": "2.5.0.122203"
+          "Prism.Core": "7.1.0.431",
+          "Xamarin.Forms": "3.2.0.839982"
         },
         "compile": {
           "lib/netstandard2.0/Prism.Forms.dll": {}
@@ -400,7 +414,16 @@
           "lib/netstandard1.3/WebSocket4Net.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.122203": {
+      "Xamarin.Facebook.iOS/4.33.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.dll": {}
+        }
+      },
+      "Xamarin.Forms/3.2.0.839982": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -519,8 +542,8 @@
           }
         },
         "build": {
-          "build/netstandard1.0/Xamarin.Forms.props": {},
-          "build/netstandard1.0/Xamarin.Forms.targets": {}
+          "build/netstandard2.0/Xamarin.Forms.props": {},
+          "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
       "Xamarin.Forms.CarouselView/2.3.0-pre2": {
@@ -542,11 +565,9 @@
           "Corcav.Behaviors": "2.3.7",
           "FluentValidation": "8.0.100",
           "Newtonsoft.Json": "11.0.2",
-          "Plugin.Share": "7.1.1",
-          "Prism.DryIoc.Forms": "7.0.0.396",
-          "Refractored.XamForms.PullToRefresh": "2.2.2",
-          "SNavigation.Forms": "0.1.2",
-          "Xamarin.Forms": "2.5.0.122203",
+          "Plugin.FacebookClient": "1.4.0",
+          "Prism.DryIoc.Forms": "7.1.0.431",
+          "Prism.Forms": "7.1.0.431",
           "Xamarin.Forms.CarouselView": "2.3.0-pre2"
         },
         "compile": {
@@ -570,13 +591,13 @@
           "lib/dotnet/Corcav.Behaviors.dll": {}
         }
       },
-      "DryIoc.dll/2.12.6": {
+      "DryIoc.dll/3.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll": {}
+          "lib/netstandard2.0/DryIoc.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll": {}
+          "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
       "EngineIoClientDotNet/1.0.3": {
@@ -618,6 +639,20 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.FacebookClient/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.iOS": "4.33.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.dll": {}
+        }
+      },
       "Plugin.Share/7.1.1": {
         "type": "package",
         "compile": {
@@ -629,7 +664,7 @@
           "lib/Xamarin.iOS10/Plugin.Share.dll": {}
         }
       },
-      "Prism.Core/7.0.0.396": {
+      "Prism.Core/7.1.0.431": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Prism.dll": {}
@@ -638,11 +673,11 @@
           "lib/netstandard2.0/Prism.dll": {}
         }
       },
-      "Prism.DryIoc.Forms/7.0.0.396": {
+      "Prism.DryIoc.Forms/7.1.0.431": {
         "type": "package",
         "dependencies": {
-          "DryIoc.dll": "2.12.6",
-          "Prism.Forms": "7.0.0.396"
+          "DryIoc.dll": "3.0.2",
+          "Prism.Forms": "7.1.0.431"
         },
         "compile": {
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {}
@@ -651,11 +686,11 @@
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {}
         }
       },
-      "Prism.Forms/7.0.0.396": {
+      "Prism.Forms/7.1.0.431": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "7.0.0.396",
-          "Xamarin.Forms": "2.5.0.122203"
+          "Prism.Core": "7.1.0.431",
+          "Xamarin.Forms": "3.2.0.839982"
         },
         "compile": {
           "lib/netstandard2.0/Prism.Forms.dll": {}
@@ -916,7 +951,16 @@
           "lib/netstandard1.3/WebSocket4Net.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.122203": {
+      "Xamarin.Facebook.iOS/4.33.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.dll": {}
+        }
+      },
+      "Xamarin.Forms/3.2.0.839982": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1035,8 +1079,8 @@
           }
         },
         "build": {
-          "build/netstandard1.0/Xamarin.Forms.props": {},
-          "build/netstandard1.0/Xamarin.Forms.targets": {}
+          "build/netstandard2.0/Xamarin.Forms.props": {},
+          "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
       "Xamarin.Forms.CarouselView/2.3.0-pre2": {
@@ -1058,11 +1102,9 @@
           "Corcav.Behaviors": "2.3.7",
           "FluentValidation": "8.0.100",
           "Newtonsoft.Json": "11.0.2",
-          "Plugin.Share": "7.1.1",
-          "Prism.DryIoc.Forms": "7.0.0.396",
-          "Refractored.XamForms.PullToRefresh": "2.2.2",
-          "SNavigation.Forms": "0.1.2",
-          "Xamarin.Forms": "2.5.0.122203",
+          "Plugin.FacebookClient": "1.4.0",
+          "Prism.DryIoc.Forms": "7.1.0.431",
+          "Prism.Forms": "7.1.0.431",
           "Xamarin.Forms.CarouselView": "2.3.0-pre2"
         },
         "compile": {
@@ -1086,13 +1128,13 @@
           "lib/dotnet/Corcav.Behaviors.dll": {}
         }
       },
-      "DryIoc.dll/2.12.6": {
+      "DryIoc.dll/3.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll": {}
+          "lib/netstandard2.0/DryIoc.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll": {}
+          "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
       "EngineIoClientDotNet/1.0.3": {
@@ -1134,6 +1176,20 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.FacebookClient/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.iOS": "4.33.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.dll": {}
+        }
+      },
       "Plugin.Share/7.1.1": {
         "type": "package",
         "compile": {
@@ -1145,7 +1201,7 @@
           "lib/Xamarin.iOS10/Plugin.Share.dll": {}
         }
       },
-      "Prism.Core/7.0.0.396": {
+      "Prism.Core/7.1.0.431": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Prism.dll": {}
@@ -1154,11 +1210,11 @@
           "lib/netstandard2.0/Prism.dll": {}
         }
       },
-      "Prism.DryIoc.Forms/7.0.0.396": {
+      "Prism.DryIoc.Forms/7.1.0.431": {
         "type": "package",
         "dependencies": {
-          "DryIoc.dll": "2.12.6",
-          "Prism.Forms": "7.0.0.396"
+          "DryIoc.dll": "3.0.2",
+          "Prism.Forms": "7.1.0.431"
         },
         "compile": {
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {}
@@ -1167,11 +1223,11 @@
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {}
         }
       },
-      "Prism.Forms/7.0.0.396": {
+      "Prism.Forms/7.1.0.431": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "7.0.0.396",
-          "Xamarin.Forms": "2.5.0.122203"
+          "Prism.Core": "7.1.0.431",
+          "Xamarin.Forms": "3.2.0.839982"
         },
         "compile": {
           "lib/netstandard2.0/Prism.Forms.dll": {}
@@ -1432,7 +1488,16 @@
           "lib/netstandard1.3/WebSocket4Net.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.122203": {
+      "Xamarin.Facebook.iOS/4.33.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.dll": {}
+        }
+      },
+      "Xamarin.Forms/3.2.0.839982": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -1551,8 +1616,8 @@
           }
         },
         "build": {
-          "build/netstandard1.0/Xamarin.Forms.props": {},
-          "build/netstandard1.0/Xamarin.Forms.targets": {}
+          "build/netstandard2.0/Xamarin.Forms.props": {},
+          "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
       "Xamarin.Forms.CarouselView/2.3.0-pre2": {
@@ -1574,11 +1639,9 @@
           "Corcav.Behaviors": "2.3.7",
           "FluentValidation": "8.0.100",
           "Newtonsoft.Json": "11.0.2",
-          "Plugin.Share": "7.1.1",
-          "Prism.DryIoc.Forms": "7.0.0.396",
-          "Refractored.XamForms.PullToRefresh": "2.2.2",
-          "SNavigation.Forms": "0.1.2",
-          "Xamarin.Forms": "2.5.0.122203",
+          "Plugin.FacebookClient": "1.4.0",
+          "Prism.DryIoc.Forms": "7.1.0.431",
+          "Prism.Forms": "7.1.0.431",
           "Xamarin.Forms.CarouselView": "2.3.0-pre2"
         },
         "compile": {
@@ -1602,13 +1665,13 @@
           "lib/dotnet/Corcav.Behaviors.dll": {}
         }
       },
-      "DryIoc.dll/2.12.6": {
+      "DryIoc.dll/3.0.2": {
         "type": "package",
         "compile": {
-          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll": {}
+          "lib/netstandard2.0/DryIoc.dll": {}
         },
         "runtime": {
-          "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll": {}
+          "lib/netstandard2.0/DryIoc.dll": {}
         }
       },
       "EngineIoClientDotNet/1.0.3": {
@@ -1650,6 +1713,20 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Plugin.FacebookClient/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Facebook.iOS": "4.33.0"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll": {},
+          "lib/Xamarin.iOS10/Plugin.FacebookClient.dll": {}
+        }
+      },
       "Plugin.Share/7.1.1": {
         "type": "package",
         "compile": {
@@ -1661,7 +1738,7 @@
           "lib/Xamarin.iOS10/Plugin.Share.dll": {}
         }
       },
-      "Prism.Core/7.0.0.396": {
+      "Prism.Core/7.1.0.431": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Prism.dll": {}
@@ -1670,11 +1747,11 @@
           "lib/netstandard2.0/Prism.dll": {}
         }
       },
-      "Prism.DryIoc.Forms/7.0.0.396": {
+      "Prism.DryIoc.Forms/7.1.0.431": {
         "type": "package",
         "dependencies": {
-          "DryIoc.dll": "2.12.6",
-          "Prism.Forms": "7.0.0.396"
+          "DryIoc.dll": "3.0.2",
+          "Prism.Forms": "7.1.0.431"
         },
         "compile": {
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {}
@@ -1683,11 +1760,11 @@
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {}
         }
       },
-      "Prism.Forms/7.0.0.396": {
+      "Prism.Forms/7.1.0.431": {
         "type": "package",
         "dependencies": {
-          "Prism.Core": "7.0.0.396",
-          "Xamarin.Forms": "2.5.0.122203"
+          "Prism.Core": "7.1.0.431",
+          "Xamarin.Forms": "3.2.0.839982"
         },
         "compile": {
           "lib/netstandard2.0/Prism.Forms.dll": {}
@@ -1948,7 +2025,16 @@
           "lib/netstandard1.3/WebSocket4Net.dll": {}
         }
       },
-      "Xamarin.Forms/2.5.0.122203": {
+      "Xamarin.Facebook.iOS/4.33.0": {
+        "type": "package",
+        "compile": {
+          "lib/Xamarin.iOS10/Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/Facebook.dll": {}
+        }
+      },
+      "Xamarin.Forms/3.2.0.839982": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {},
@@ -2067,8 +2153,8 @@
           }
         },
         "build": {
-          "build/netstandard1.0/Xamarin.Forms.props": {},
-          "build/netstandard1.0/Xamarin.Forms.targets": {}
+          "build/netstandard2.0/Xamarin.Forms.props": {},
+          "build/netstandard2.0/Xamarin.Forms.targets": {}
         }
       },
       "Xamarin.Forms.CarouselView/2.3.0-pre2": {
@@ -2090,11 +2176,9 @@
           "Corcav.Behaviors": "2.3.7",
           "FluentValidation": "8.0.100",
           "Newtonsoft.Json": "11.0.2",
-          "Plugin.Share": "7.1.1",
-          "Prism.DryIoc.Forms": "7.0.0.396",
-          "Refractored.XamForms.PullToRefresh": "2.2.2",
-          "SNavigation.Forms": "0.1.2",
-          "Xamarin.Forms": "2.5.0.122203",
+          "Plugin.FacebookClient": "1.4.0",
+          "Prism.DryIoc.Forms": "7.1.0.431",
+          "Prism.Forms": "7.1.0.431",
           "Xamarin.Forms.CarouselView": "2.3.0-pre2"
         },
         "compile": {
@@ -2122,14 +2206,16 @@
         "lib/dotnet/Corcav.Behaviors.pdb"
       ]
     },
-    "DryIoc.dll/2.12.6": {
-      "sha512": "jmqwiN8591mEgDp7FU/HrOEzrHsrL0STNZQRMVh5BgvyNiaSu0hoxVXcZC9BwbEugCcOLdO6mUrcJPY3q/dYEQ==",
+    "DryIoc.dll/3.0.2": {
+      "sha512": "9R8iJjsJhjHwKj98aDadcmsiGVEoxoYx5jcOumaVfwK672bMprYVLJqwDlv3Sgb+meQ7WHTYaIf/Nxq9llnUwg==",
       "type": "package",
-      "path": "dryioc.dll/2.12.6",
+      "path": "dryioc.dll/3.0.2",
       "files": [
+        ".signature.p7s",
         "DryIoc.snk",
         "LICENSE.txt",
-        "dryioc.dll.2.12.6.nupkg.sha512",
+        "README.md",
+        "dryioc.dll.3.0.2.nupkg.sha512",
         "dryioc.dll.nuspec",
         "lib/net35/DryIoc.XML",
         "lib/net35/DryIoc.dll",
@@ -2139,6 +2225,10 @@
         "lib/net45/DryIoc.dll",
         "lib/netstandard1.0/DryIoc.XML",
         "lib/netstandard1.0/DryIoc.dll",
+        "lib/netstandard1.3/DryIoc.XML",
+        "lib/netstandard1.3/DryIoc.dll",
+        "lib/netstandard2.0/DryIoc.XML",
+        "lib/netstandard2.0/DryIoc.dll",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.XML",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.dll",
         "lib/portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/DryIoc.XML",
@@ -2206,6 +2296,32 @@
         "newtonsoft.json.nuspec"
       ]
     },
+    "Plugin.FacebookClient/1.4.0": {
+      "sha512": "u7tYffa5huHm0szBUXsxRdDOM1lSd5B6QOEH9JV+TzcYP9s+tTpfOT/OdMQQgb4JMnRJx3cHdnYWDueI9cH6Uw==",
+      "type": "package",
+      "path": "plugin.facebookclient/1.4.0",
+      "files": [
+        "lib/MonoAndroid81/Plugin.FacebookClient.Abstractions.dll",
+        "lib/MonoAndroid81/Plugin.FacebookClient.Abstractions.pdb",
+        "lib/MonoAndroid81/Plugin.FacebookClient.Abstractions.xml",
+        "lib/MonoAndroid81/Plugin.FacebookClient.XML",
+        "lib/MonoAndroid81/Plugin.FacebookClient.dll",
+        "lib/MonoAndroid81/Plugin.FacebookClient.pdb",
+        "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.FacebookClient.XML",
+        "lib/Xamarin.iOS10/Plugin.FacebookClient.dll",
+        "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.FacebookClient.deps.json",
+        "lib/netstandard1.0/Plugin.FacebookClient.dll",
+        "lib/netstandard1.0/Plugin.FacebookClient.xml",
+        "plugin.facebookclient.1.4.0.nupkg.sha512",
+        "plugin.facebookclient.nuspec"
+      ]
+    },
     "Plugin.Share/7.1.1": {
       "sha512": "07mFq3H9eeX2TGNKitmByjDKZl/3KXZrT2jv/27mEEnY7me/lHQSX52mI0B1mVTZquCloNmZm12EcV1t4fFSSA==",
       "type": "package",
@@ -2240,47 +2356,65 @@
         "plugin.share.nuspec"
       ]
     },
-    "Prism.Core/7.0.0.396": {
-      "sha512": "XxPmXiA+v/D6zUeAUwSz7GgWNIbzyLLgkP32vDr6fGfv/YPg8CRkmkf+MkP+cxXKdUsqezxXgRRwMUcjWRqWMw==",
+    "Prism.Core/7.1.0.431": {
+      "sha512": "tBkEf4cDYn2oQfW1wPem4jJK/H1Z4mJsnndO04n2oZyIql7Bj3OVlpfQ6vbPgbtlkEN0oyn02XVurZba3DYqmQ==",
       "type": "package",
-      "path": "prism.core/7.0.0.396",
+      "path": "prism.core/7.1.0.431",
       "files": [
+        ".signature.p7s",
         "lib/net45/Prism.dll",
+        "lib/net45/Prism.pdb",
         "lib/net45/Prism.xml",
         "lib/netstandard1.0/Prism.dll",
+        "lib/netstandard1.0/Prism.pdb",
         "lib/netstandard1.0/Prism.xml",
         "lib/netstandard2.0/Prism.dll",
+        "lib/netstandard2.0/Prism.pdb",
         "lib/netstandard2.0/Prism.xml",
-        "lib/uap10.0/Prism.dll",
-        "lib/uap10.0/Prism.pri",
-        "lib/uap10.0/Prism.xml",
-        "prism.core.7.0.0.396.nupkg.sha512",
+        "lib/uap10.0.15063/Prism.dll",
+        "lib/uap10.0.15063/Prism.pdb",
+        "lib/uap10.0.15063/Prism.pri",
+        "lib/uap10.0.15063/Prism.xml",
+        "lib/uap10.0.16299/Prism.dll",
+        "lib/uap10.0.16299/Prism.pdb",
+        "lib/uap10.0.16299/Prism.pri",
+        "lib/uap10.0.16299/Prism.xml",
+        "prism.core.7.1.0.431.nupkg.sha512",
         "prism.core.nuspec"
       ]
     },
-    "Prism.DryIoc.Forms/7.0.0.396": {
-      "sha512": "Yr5XYU98h4xXeNKFmVrWCNP8DFXZTBSehr47TWjR27Oy/xMMkzYZDaHvcaU0X+CBoQcsH4ZACvv00w2z+VnqNw==",
+    "Prism.DryIoc.Forms/7.1.0.431": {
+      "sha512": "NSl5T0XIYJ35MceKd7rKEwyDel5pAKU3RY/++eGWQG44hWaacJmzI2WMJqYdbqYrBNiUZlhaBVKW1KlwTMSNGA==",
       "type": "package",
-      "path": "prism.dryioc.forms/7.0.0.396",
+      "path": "prism.dryioc.forms/7.1.0.431",
       "files": [
+        ".signature.p7s",
+        "lib/monoandroid71/Prism.DryIoc.Forms.dll",
+        "lib/monoandroid71/Prism.DryIoc.Forms.pdb",
+        "lib/monoandroid71/Prism.DryIoc.Forms.xml",
         "lib/netstandard1.0/Prism.DryIoc.Forms.dll",
+        "lib/netstandard1.0/Prism.DryIoc.Forms.pdb",
         "lib/netstandard1.0/Prism.DryIoc.Forms.xml",
         "lib/netstandard2.0/Prism.DryIoc.Forms.dll",
+        "lib/netstandard2.0/Prism.DryIoc.Forms.pdb",
         "lib/netstandard2.0/Prism.DryIoc.Forms.xml",
-        "prism.dryioc.forms.7.0.0.396.nupkg.sha512",
+        "prism.dryioc.forms.7.1.0.431.nupkg.sha512",
         "prism.dryioc.forms.nuspec"
       ]
     },
-    "Prism.Forms/7.0.0.396": {
-      "sha512": "QWnC4tfyLgIDKl+7wSm+lASOpU14enpl1RV27QbeIoORYXyoBsNA8omF+gfH2JH12VQ9Xpb1q3YLFA98d8+NmA==",
+    "Prism.Forms/7.1.0.431": {
+      "sha512": "sbwu3Ao4yUPVQ4gln1EA5N9vOj/NkaOEYNoCvuY5BOGlkTQod5gPnGJST2ZFsj1gHLJHSdvlT5OP+RKEeqo7pQ==",
       "type": "package",
-      "path": "prism.forms/7.0.0.396",
+      "path": "prism.forms/7.1.0.431",
       "files": [
+        ".signature.p7s",
         "lib/netstandard1.0/Prism.Forms.dll",
+        "lib/netstandard1.0/Prism.Forms.pdb",
         "lib/netstandard1.0/Prism.Forms.xml",
         "lib/netstandard2.0/Prism.Forms.dll",
+        "lib/netstandard2.0/Prism.Forms.pdb",
         "lib/netstandard2.0/Prism.Forms.xml",
-        "prism.forms.7.0.0.396.nupkg.sha512",
+        "prism.forms.7.1.0.431.nupkg.sha512",
         "prism.forms.nuspec"
       ]
     },
@@ -3365,15 +3499,29 @@
         "websocket4net.nuspec"
       ]
     },
-    "Xamarin.Forms/2.5.0.122203": {
-      "sha512": "qg7A2IXbVV/5u9qqeiDhRMwpVEsbWKBxzeAtD0rTuntmaDB1Z7WuBg5IK2VBklJbKe2Ps8V9zBfEwgJIqPVJUw==",
+    "Xamarin.Facebook.iOS/4.33.0": {
+      "sha512": "zb5M7oKdLn8JULBAnDmmDWmGO5CfukuIQP82/0b1/xpJb4d0Ivud86GhyysfOHMppds9B2/jtwbX1C8Oe5X8qg==",
       "type": "package",
-      "path": "xamarin.forms/2.5.0.122203",
+      "path": "xamarin.facebook.ios/4.33.0",
       "files": [
+        ".signature.p7s",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/Xamarin.iOS10/Facebook.dll",
+        "xamarin.facebook.ios.4.33.0.nupkg.sha512",
+        "xamarin.facebook.ios.nuspec"
+      ]
+    },
+    "Xamarin.Forms/3.2.0.839982": {
+      "sha512": "BtiTMpmTqkzPPlGvQEVrO51kC1e/vieOaGHB+bKUULER0ruf2EQ92zVRwuvLop60g0WQQJ0Arj45TNCu6qCINQ==",
+      "type": "package",
+      "path": "xamarin.forms/3.2.0.839982",
+      "files": [
+        ".signature.p7s",
         "build/netstandard1.0/Mono.Cecil.Mdb.dll",
         "build/netstandard1.0/Mono.Cecil.Pdb.dll",
         "build/netstandard1.0/Mono.Cecil.Rocks.dll",
         "build/netstandard1.0/Mono.Cecil.dll",
+        "build/netstandard1.0/System.CodeDom.dll",
         "build/netstandard1.0/Xamarin.Forms.Build.Tasks.dll",
         "build/netstandard1.0/Xamarin.Forms.Core.dll",
         "build/netstandard1.0/Xamarin.Forms.DefaultItems.props",
@@ -3381,38 +3529,35 @@
         "build/netstandard1.0/Xamarin.Forms.Xaml.dll",
         "build/netstandard1.0/Xamarin.Forms.props",
         "build/netstandard1.0/Xamarin.Forms.targets",
-        "build/portable-win+net45+wp80+win81+wpa81/Mono.Cecil.Mdb.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Mono.Cecil.Pdb.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Mono.Cecil.Rocks.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Mono.Cecil.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Build.Tasks.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.DefaultItems.targets",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll",
-        "build/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.targets",
+        "build/netstandard2.0/Mono.Cecil.Mdb.dll",
+        "build/netstandard2.0/Mono.Cecil.Pdb.dll",
+        "build/netstandard2.0/Mono.Cecil.Rocks.dll",
+        "build/netstandard2.0/Mono.Cecil.dll",
+        "build/netstandard2.0/System.CodeDom.dll",
+        "build/netstandard2.0/Xamarin.Forms.Build.Tasks.dll",
+        "build/netstandard2.0/Xamarin.Forms.Core.dll",
+        "build/netstandard2.0/Xamarin.Forms.DefaultItems.props",
+        "build/netstandard2.0/Xamarin.Forms.DefaultItems.targets",
+        "build/netstandard2.0/Xamarin.Forms.Xaml.dll",
+        "build/netstandard2.0/Xamarin.Forms.props",
+        "build/netstandard2.0/Xamarin.Forms.targets",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/MonoAndroid10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/MonoAndroid10/FormsViewGroup.dll",
+        "lib/MonoAndroid10/FormsViewGroup.dll.mdb",
         "lib/MonoAndroid10/FormsViewGroup.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Core.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Core.xml",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll",
+        "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.dll.mdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.Android.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Platform.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.dll",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.pdb",
         "lib/MonoAndroid10/Xamarin.Forms.Xaml.xml",
-        "lib/WP80/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/WP80/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/WP80/Xamarin.Forms.Core.dll",
-        "lib/WP80/Xamarin.Forms.Core.pdb",
-        "lib/WP80/Xamarin.Forms.Core.xml",
-        "lib/WP80/Xamarin.Forms.Platform.WP8.dll",
-        "lib/WP80/Xamarin.Forms.Platform.dll",
-        "lib/WP80/Xamarin.Forms.Xaml.dll",
-        "lib/WP80/Xamarin.Forms.Xaml.pdb",
-        "lib/WP80/Xamarin.Forms.Xaml.xml",
+        "lib/Xamarin.Mac/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/Xamarin.Mac/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/Xamarin.Mac/Xamarin.Forms.Core.dll",
         "lib/Xamarin.Mac/Xamarin.Forms.Platform.dll",
         "lib/Xamarin.Mac/Xamarin.Forms.Platform.macOS.dll",
@@ -3420,14 +3565,12 @@
         "lib/Xamarin.iOS10/Design/Xamarin.Forms.Core.Design.dll",
         "lib/Xamarin.iOS10/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll.mdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Core.pdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Core.xml",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll",
         "lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.pdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll",
-        "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll.mdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.pdb",
         "lib/Xamarin.iOS10/Xamarin.Forms.Xaml.xml",
         "lib/Xamarin.iOS10/ar/Xamarin.Forms.Platform.iOS.resources.dll",
@@ -3467,25 +3610,32 @@
         "lib/netstandard1.0/Design/Xamarin.Forms.Core.Design.dll",
         "lib/netstandard1.0/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/netstandard1.0/Xamarin.Forms.Core.dll",
-        "lib/netstandard1.0/Xamarin.Forms.Core.dll.mdb",
         "lib/netstandard1.0/Xamarin.Forms.Core.pdb",
         "lib/netstandard1.0/Xamarin.Forms.Core.xml",
         "lib/netstandard1.0/Xamarin.Forms.Platform.dll",
         "lib/netstandard1.0/Xamarin.Forms.Xaml.dll",
-        "lib/netstandard1.0/Xamarin.Forms.Xaml.dll.mdb",
         "lib/netstandard1.0/Xamarin.Forms.Xaml.pdb",
         "lib/netstandard1.0/Xamarin.Forms.Xaml.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.dll.mdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.pdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Core.xml",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Platform.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.dll.mdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.pdb",
-        "lib/portable-win+net45+wp80+win81+wpa81/Xamarin.Forms.Xaml.xml",
+        "lib/netstandard2.0/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/netstandard2.0/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Core.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Core.pdb",
+        "lib/netstandard2.0/Xamarin.Forms.Core.xml",
+        "lib/netstandard2.0/Xamarin.Forms.Platform.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.dll",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.pdb",
+        "lib/netstandard2.0/Xamarin.Forms.Xaml.xml",
+        "lib/tizen40/Design/Xamarin.Forms.Core.Design.dll",
+        "lib/tizen40/Design/Xamarin.Forms.Xaml.Design.dll",
+        "lib/tizen40/Xamarin.Forms.Core.dll",
+        "lib/tizen40/Xamarin.Forms.Core.pdb",
+        "lib/tizen40/Xamarin.Forms.Core.xml",
+        "lib/tizen40/Xamarin.Forms.Platform.Tizen.dll",
+        "lib/tizen40/Xamarin.Forms.Platform.Tizen.pdb",
+        "lib/tizen40/Xamarin.Forms.Platform.dll",
+        "lib/tizen40/Xamarin.Forms.Xaml.dll",
+        "lib/tizen40/Xamarin.Forms.Xaml.pdb",
+        "lib/tizen40/Xamarin.Forms.Xaml.xml",
         "lib/uap10.0/Design/Xamarin.Forms.Core.Design.dll",
         "lib/uap10.0/Design/Xamarin.Forms.Xaml.Design.dll",
         "lib/uap10.0/Xamarin.Forms.Core.dll",
@@ -3495,55 +3645,20 @@
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/AutoSuggestStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsCommandBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsEmbeddedPageWrapper.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsFlyout.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsProgressBarStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/FormsTextBoxStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/MasterDetailControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/PageControlStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Properties/Xamarin.Forms.Platform.UAP.rd.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Resources.xbf",
+        "lib/uap10.0/Xamarin.Forms.Platform.UAP/SliderStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/TabbedPageStyle.xbf",
         "lib/uap10.0/Xamarin.Forms.Platform.UAP/Xamarin.Forms.Platform.UAP.xr.xml",
         "lib/uap10.0/Xamarin.Forms.Platform.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0/Xamarin.Forms.Xaml.xml",
-        "lib/win81/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/win81/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/win81/Xamarin.Forms.Core.dll",
-        "lib/win81/Xamarin.Forms.Core.xml",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet.dll",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet.pri",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/FormsProgressBarStyle.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/FormsTextBoxStyle.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/Resources.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/TabletResources.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.Tablet/Xamarin.Forms.Platform.WinRT.Tablet.xr.xml",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.dll",
-        "lib/win81/Xamarin.Forms.Platform.WinRT.pri",
-        "lib/win81/Xamarin.Forms.Platform.WinRT/StepperControl.xbf",
-        "lib/win81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
-        "lib/win81/Xamarin.Forms.Platform.dll",
-        "lib/win81/Xamarin.Forms.Xaml.dll",
-        "lib/win81/Xamarin.Forms.Xaml.xml",
-        "lib/wpa81/Design/Xamarin.Forms.Core.Design.dll",
-        "lib/wpa81/Design/Xamarin.Forms.Xaml.Design.dll",
-        "lib/wpa81/Xamarin.Forms.Core.dll",
-        "lib/wpa81/Xamarin.Forms.Core.xml",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone.dll",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone.pri",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/FormsProgressBarStyle.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/FormsTextBoxStyle.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/PhoneResources.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/Resources.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/SearchBox.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.Phone/Xamarin.Forms.Platform.WinRT.Phone.xr.xml",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.dll",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT.pri",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT/StepperControl.xbf",
-        "lib/wpa81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
-        "lib/wpa81/Xamarin.Forms.Platform.dll",
-        "lib/wpa81/Xamarin.Forms.Xaml.dll",
-        "lib/wpa81/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.2.5.0.122203.nupkg.sha512",
+        "xamarin.forms.3.2.0.839982.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -3573,12 +3688,13 @@
     "Xamarin.iOS,Version=v1.0": [
       "Corcav.Behaviors >= 2.3.7",
       "Core >= 1.0.0",
+      "Plugin.FacebookClient >= 1.4.0",
       "Plugin.Share >= 7.1.1",
-      "Prism.DryIoc.Forms >= 7.0.0.396",
+      "Prism.DryIoc.Forms >= 7.1.0.431",
+      "Prism.Forms >= 7.1.0.431",
       "Refractored.XamForms.PullToRefresh >= 2.2.2",
       "SNavigation.Forms >= 0.1.2",
       "UXDivers.GorillaPlayer.SDK >= 1.2.2",
-      "Xamarin.Forms >= 2.5.0.122203",
       "Xamarin.Forms.CarouselView >= 2.3.0-pre2"
     ]
   },
@@ -3624,13 +3740,21 @@
             "target": "Package",
             "version": "[2.3.7, )"
           },
+          "Plugin.FacebookClient": {
+            "target": "Package",
+            "version": "[1.4.0, )"
+          },
           "Plugin.Share": {
             "target": "Package",
             "version": "[7.1.1, )"
           },
           "Prism.DryIoc.Forms": {
             "target": "Package",
-            "version": "[7.0.0.396, )"
+            "version": "[7.1.0.431, )"
+          },
+          "Prism.Forms": {
+            "target": "Package",
+            "version": "[7.1.0.431, )"
           },
           "Refractored.XamForms.PullToRefresh": {
             "target": "Package",
@@ -3643,10 +3767,6 @@
           "UXDivers.GorillaPlayer.SDK": {
             "target": "Package",
             "version": "[1.2.2, )"
-          },
-          "Xamarin.Forms": {
-            "target": "Package",
-            "version": "[2.5.0.122203, )"
           },
           "Xamarin.Forms.CarouselView": {
             "target": "Package",
@@ -3666,5 +3786,20 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "SNavigation.Forms 0.1.2 depends on Xamarin.Forms (>= 2.5.0) but Xamarin.Forms 2.5.0 was not found. An approximate best match of Xamarin.Forms 2.5.0.77107 was resolved.",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

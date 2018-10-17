@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "11a9e9edd988845d64ed1f90c1e875fbc85487aa"
+    "signature": "8ffb02dbac469c2eaf138d58263985cc0689a916"
   },
   "compilationOptions": {},
   "targets": {
@@ -13,11 +13,9 @@
           "FluentValidation": "8.0.100",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "11.0.2",
-          "Plugin.Share": "7.1.1",
-          "Prism.DryIoc.Forms": "7.0.0.396",
-          "Refractored.XamForms.PullToRefresh": "2.2.2",
-          "SNavigation.Forms": "0.1.2",
-          "Xamarin.Forms": "2.5.0.122203",
+          "Plugin.FacebookClient": "1.4.0",
+          "Prism.DryIoc.Forms": "7.1.0.431",
+          "Prism.Forms": "7.1.0.431",
           "Xamarin.Forms.CarouselView": "2.3.0-pre2"
         },
         "runtime": {
@@ -26,7 +24,7 @@
       },
       "Corcav.Behaviors/2.3.7": {
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203"
+          "Xamarin.Forms": "3.2.0.839982"
         },
         "runtime": {
           "lib/Corcav.Behaviors.dll": {
@@ -35,23 +33,11 @@
           }
         }
       },
-      "DryIoc.dll/2.12.6": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Diagnostics.Tools": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Linq.Expressions": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Extensions": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
+      "DryIoc.dll/3.0.2": {
         "runtime": {
-          "lib/netstandard1.0/DryIoc.dll": {
-            "assemblyVersion": "2.12.6.0",
-            "fileVersion": "2.12.6.0"
+          "lib/netstandard2.0/DryIoc.dll": {
+            "assemblyVersion": "3.0.2.0",
+            "fileVersion": "3.0.2.0"
           }
         }
       },
@@ -84,72 +70,50 @@
           }
         }
       },
-      "Plugin.Share/7.1.1": {
+      "Plugin.FacebookClient/1.4.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
-          "lib/netstandard1.0/Plugin.Share.Abstractions.dll": {
-            "assemblyVersion": "7.1.1.0",
-            "fileVersion": "7.1.1.0"
+          "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           },
-          "lib/netstandard1.0/Plugin.Share.dll": {
-            "assemblyVersion": "7.1.1.0",
-            "fileVersion": "7.1.1.0"
+          "lib/netstandard1.0/Plugin.FacebookClient.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Prism.Core/7.0.0.396": {
+      "Prism.Core/7.1.0.431": {
         "runtime": {
           "lib/netstandard2.0/Prism.dll": {
-            "assemblyVersion": "7.0.0.396",
-            "fileVersion": "7.0.0.396"
+            "assemblyVersion": "7.1.0.431",
+            "fileVersion": "7.1.0.431"
           }
         }
       },
-      "Prism.DryIoc.Forms/7.0.0.396": {
+      "Prism.DryIoc.Forms/7.1.0.431": {
         "dependencies": {
-          "DryIoc.dll": "2.12.6",
-          "Prism.Forms": "7.0.0.396"
+          "DryIoc.dll": "3.0.2",
+          "Prism.Forms": "7.1.0.431"
         },
         "runtime": {
           "lib/netstandard2.0/Prism.DryIoc.Forms.dll": {
-            "assemblyVersion": "7.0.0.396",
-            "fileVersion": "7.0.0.396"
+            "assemblyVersion": "7.1.0.431",
+            "fileVersion": "7.1.0.431"
           }
         }
       },
-      "Prism.Forms/7.0.0.396": {
+      "Prism.Forms/7.1.0.431": {
         "dependencies": {
-          "Prism.Core": "7.0.0.396",
-          "Xamarin.Forms": "2.5.0.122203"
+          "Prism.Core": "7.1.0.431",
+          "Xamarin.Forms": "3.2.0.839982"
         },
         "runtime": {
           "lib/netstandard2.0/Prism.Forms.dll": {
-            "assemblyVersion": "7.0.0.396",
-            "fileVersion": "7.0.0.396"
-          }
-        }
-      },
-      "Refractored.XamForms.PullToRefresh/2.2.2": {
-        "dependencies": {
-          "NETStandard.Library": "2.0.3"
-        },
-        "runtime": {
-          "lib/netstandard1.0/Refractored.XamForms.PullToRefresh.dll": {
-            "assemblyVersion": "2.2.2.0",
-            "fileVersion": "2.2.2.0"
-          }
-        }
-      },
-      "SNavigation.Forms/0.1.2": {
-        "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Stormlion.SNavigation.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "7.1.0.431",
+            "fileVersion": "7.1.0.431"
           }
         }
       },
@@ -219,13 +183,6 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Diagnostics.Tools/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
       "System.Diagnostics.Tracing/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -249,63 +206,6 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Linq/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.6/System.Linq.dll": {
-            "assemblyVersion": "4.1.1.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        }
-      },
-      "System.Linq.Expressions/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.ObjectModel": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Emit.Lightweight": "4.3.0",
-          "System.Reflection.Extensions": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.6/System.Linq.Expressions.dll": {
-            "assemblyVersion": "4.1.1.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        }
-      },
-      "System.ObjectModel/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Diagnostics.Debug": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.ObjectModel.dll": {
-            "assemblyVersion": "4.0.13.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        }
-      },
       "System.Reflection/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -315,73 +215,11 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Emit/4.3.0": {
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        }
-      },
-      "System.Reflection.Emit.ILGeneration/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.ILGeneration.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        }
-      },
-      "System.Reflection.Emit.Lightweight/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {
-            "assemblyVersion": "4.0.2.0",
-            "fileVersion": "4.6.24705.1"
-          }
-        }
-      },
-      "System.Reflection.Extensions/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "System.Reflection": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
           "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
-        }
-      },
-      "System.Reflection.TypeExtensions/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.Reflection.TypeExtensions.dll": {
-            "assemblyVersion": "4.1.1.0",
-            "fileVersion": "4.6.24705.1"
-          }
         }
       },
       "System.Resources.ResourceManager/4.3.0": {
@@ -433,17 +271,17 @@
         }
       },
       "System.ValueTuple/4.5.0": {},
-      "Xamarin.Forms/2.5.0.122203": {
+      "Xamarin.Forms/3.2.0.839982": {
         "runtime": {
-          "lib/netstandard1.0/Xamarin.Forms.Core.dll": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.0.0"
           },
-          "lib/netstandard1.0/Xamarin.Forms.Platform.dll": {
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           },
-          "lib/netstandard1.0/Xamarin.Forms.Xaml.dll": {
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.0.0"
           }
@@ -451,7 +289,7 @@
       },
       "Xamarin.Forms.CarouselView/2.3.0-pre2": {
         "dependencies": {
-          "Xamarin.Forms": "2.5.0.122203"
+          "Xamarin.Forms": "3.2.0.839982"
         },
         "runtime": {
           "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10/Xamarin.Forms.CarouselView.dll": {
@@ -475,12 +313,12 @@
       "path": "corcav.behaviors/2.3.7",
       "hashPath": "corcav.behaviors.2.3.7.nupkg.sha512"
     },
-    "DryIoc.dll/2.12.6": {
+    "DryIoc.dll/3.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jmqwiN8591mEgDp7FU/HrOEzrHsrL0STNZQRMVh5BgvyNiaSu0hoxVXcZC9BwbEugCcOLdO6mUrcJPY3q/dYEQ==",
-      "path": "dryioc.dll/2.12.6",
-      "hashPath": "dryioc.dll.2.12.6.nupkg.sha512"
+      "sha512": "sha512-9R8iJjsJhjHwKj98aDadcmsiGVEoxoYx5jcOumaVfwK672bMprYVLJqwDlv3Sgb+meQ7WHTYaIf/Nxq9llnUwg==",
+      "path": "dryioc.dll/3.0.2",
+      "hashPath": "dryioc.dll.3.0.2.nupkg.sha512"
     },
     "FluentValidation/8.0.100": {
       "type": "package",
@@ -517,47 +355,33 @@
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
-    "Plugin.Share/7.1.1": {
+    "Plugin.FacebookClient/1.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-07mFq3H9eeX2TGNKitmByjDKZl/3KXZrT2jv/27mEEnY7me/lHQSX52mI0B1mVTZquCloNmZm12EcV1t4fFSSA==",
-      "path": "plugin.share/7.1.1",
-      "hashPath": "plugin.share.7.1.1.nupkg.sha512"
+      "sha512": "sha512-u7tYffa5huHm0szBUXsxRdDOM1lSd5B6QOEH9JV+TzcYP9s+tTpfOT/OdMQQgb4JMnRJx3cHdnYWDueI9cH6Uw==",
+      "path": "plugin.facebookclient/1.4.0",
+      "hashPath": "plugin.facebookclient.1.4.0.nupkg.sha512"
     },
-    "Prism.Core/7.0.0.396": {
+    "Prism.Core/7.1.0.431": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XxPmXiA+v/D6zUeAUwSz7GgWNIbzyLLgkP32vDr6fGfv/YPg8CRkmkf+MkP+cxXKdUsqezxXgRRwMUcjWRqWMw==",
-      "path": "prism.core/7.0.0.396",
-      "hashPath": "prism.core.7.0.0.396.nupkg.sha512"
+      "sha512": "sha512-tBkEf4cDYn2oQfW1wPem4jJK/H1Z4mJsnndO04n2oZyIql7Bj3OVlpfQ6vbPgbtlkEN0oyn02XVurZba3DYqmQ==",
+      "path": "prism.core/7.1.0.431",
+      "hashPath": "prism.core.7.1.0.431.nupkg.sha512"
     },
-    "Prism.DryIoc.Forms/7.0.0.396": {
+    "Prism.DryIoc.Forms/7.1.0.431": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Yr5XYU98h4xXeNKFmVrWCNP8DFXZTBSehr47TWjR27Oy/xMMkzYZDaHvcaU0X+CBoQcsH4ZACvv00w2z+VnqNw==",
-      "path": "prism.dryioc.forms/7.0.0.396",
-      "hashPath": "prism.dryioc.forms.7.0.0.396.nupkg.sha512"
+      "sha512": "sha512-NSl5T0XIYJ35MceKd7rKEwyDel5pAKU3RY/++eGWQG44hWaacJmzI2WMJqYdbqYrBNiUZlhaBVKW1KlwTMSNGA==",
+      "path": "prism.dryioc.forms/7.1.0.431",
+      "hashPath": "prism.dryioc.forms.7.1.0.431.nupkg.sha512"
     },
-    "Prism.Forms/7.0.0.396": {
+    "Prism.Forms/7.1.0.431": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QWnC4tfyLgIDKl+7wSm+lASOpU14enpl1RV27QbeIoORYXyoBsNA8omF+gfH2JH12VQ9Xpb1q3YLFA98d8+NmA==",
-      "path": "prism.forms/7.0.0.396",
-      "hashPath": "prism.forms.7.0.0.396.nupkg.sha512"
-    },
-    "Refractored.XamForms.PullToRefresh/2.2.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-mjhwPYFXrln9z6wPpT3GB0OUw/GXBeLQ41k/dmX4XZk4wrEV3QXL/RKeD/WPVCNEl3fLQ1WlQ5EtlKgTZ41v0A==",
-      "path": "refractored.xamforms.pulltorefresh/2.2.2",
-      "hashPath": "refractored.xamforms.pulltorefresh.2.2.2.nupkg.sha512"
-    },
-    "SNavigation.Forms/0.1.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-CHeKBl6CBFJd4J2Sg9jgbvbMZi76SePdNkoHE+lhVxubDcSKH2S1LCX4cgq1T387jfcCL1xAPR0YIIbjxTGoqg==",
-      "path": "snavigation.forms/0.1.2",
-      "hashPath": "snavigation.forms.0.1.2.nupkg.sha512"
+      "sha512": "sha512-sbwu3Ao4yUPVQ4gln1EA5N9vOj/NkaOEYNoCvuY5BOGlkTQod5gPnGJST2ZFsj1gHLJHSdvlT5OP+RKEeqo7pQ==",
+      "path": "prism.forms/7.1.0.431",
+      "hashPath": "prism.forms.7.1.0.431.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -601,13 +425,6 @@
       "path": "system.diagnostics.debug/4.3.0",
       "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
     },
-    "System.Diagnostics.Tools/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Aa+JYPeOQjK9f6pIiSd8GZs9dHkdXtBNxhegf4kUeSKVuCZjaWmkhU1s1P1yhbZ4VagXyTqCmKk8PvkRm5h2GA==",
-      "path": "system.diagnostics.tools/4.3.0",
-      "hashPath": "system.diagnostics.tools.4.3.0.nupkg.sha512"
-    },
     "System.Diagnostics.Tracing/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -629,27 +446,6 @@
       "path": "system.io/4.3.0",
       "hashPath": "system.io.4.3.0.nupkg.sha512"
     },
-    "System.Linq/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-XjS6IEYkcXj1vwxVSryNlC4spg3nah9pMS9QMn4stMTc06PWT/mkHumAh4qGcZll5FukdsC72j6j5fQe8OTZRg==",
-      "path": "system.linq/4.3.0",
-      "hashPath": "system.linq.4.3.0.nupkg.sha512"
-    },
-    "System.Linq.Expressions/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ic+Q+hTxF87Jn+IFs+9B0yqKaIqMJ1TmmLzCfgxREXJ8+JBSHJXprqw6vsJOyEPwlya1M/RM7i4YujuK3y3JRQ==",
-      "path": "system.linq.expressions/4.3.0",
-      "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
-    },
-    "System.ObjectModel/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-qaRcmEVci5nfUOWkffcHm0Y1eJ4UJFyB0/WlPAz64Eg75ZQwBIfN76uoySWPTX5xU026UHEUPo+K4ZSmtEsBZA==",
-      "path": "system.objectmodel/4.3.0",
-      "hashPath": "system.objectmodel.4.3.0.nupkg.sha512"
-    },
     "System.Reflection/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -657,47 +453,12 @@
       "path": "system.reflection/4.3.0",
       "hashPath": "system.reflection.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.Emit/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Raz5aX7adhuLNaaUhisP1iFd+pck9FjhZoxgM0IGMHGjtQue6hWzXcLqqkMza3hZmXN+QQiLWJ3y2l3Z5d7CCQ==",
-      "path": "system.reflection.emit/4.3.0",
-      "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.Emit.ILGeneration/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-czxbDQrLtuQQ7DwENgOa0VSPWTzigcabvzHb042/q96yEHg2bplwgJ/px5Lxpt3VF8FIcrqhvDbF6y06dHDF3Q==",
-      "path": "system.reflection.emit.ilgeneration/4.3.0",
-      "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.Emit.Lightweight/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Ki6jso5zc8F+6Zd/+QNzx+yOrJE78roeblIYjQsh21NwU7ZSYy6Z4yzLZC1dI9jRswAZk/al+YYwRdSxjUlZRw==",
-      "path": "system.reflection.emit.lightweight/4.3.0",
-      "hashPath": "system.reflection.emit.lightweight.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.Extensions/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pKsGYSRHR3fcu8WEdBSmbvnMVMdX1hZddiYJ2ZtQbMPKvVUqaz0klGzwYCnelmGZoVN8wAafQwYYvxaFxyGiNw==",
-      "path": "system.reflection.extensions/4.3.0",
-      "hashPath": "system.reflection.extensions.4.3.0.nupkg.sha512"
-    },
     "System.Reflection.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-jkSnmARGlJXD5qu9ZjZf4Xapig3ODKpx54a8Kb2zlvU9keMf9K1YLLWprzlW5rMWbFgXiFUjiv8kvcjfgQrzng==",
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.TypeExtensions/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-OYYujRmHmlgK9YYCsE7KCvpmrgY7bFTc+PitBoMMSaZjTSUT2mKS+I1iA/P8D+STTA4grnEeuO0fbAVhU2PWKg==",
-      "path": "system.reflection.typeextensions/4.3.0",
-      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",
@@ -748,12 +509,12 @@
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
     },
-    "Xamarin.Forms/2.5.0.122203": {
+    "Xamarin.Forms/3.2.0.839982": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-qg7A2IXbVV/5u9qqeiDhRMwpVEsbWKBxzeAtD0rTuntmaDB1Z7WuBg5IK2VBklJbKe2Ps8V9zBfEwgJIqPVJUw==",
-      "path": "xamarin.forms/2.5.0.122203",
-      "hashPath": "xamarin.forms.2.5.0.122203.nupkg.sha512"
+      "sha512": "sha512-BtiTMpmTqkzPPlGvQEVrO51kC1e/vieOaGHB+bKUULER0ruf2EQ92zVRwuvLop60g0WQQJ0Arj45TNCu6qCINQ==",
+      "path": "xamarin.forms/3.2.0.839982",
+      "hashPath": "xamarin.forms.3.2.0.839982.nupkg.sha512"
     },
     "Xamarin.Forms.CarouselView/2.3.0-pre2": {
       "type": "package",

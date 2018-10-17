@@ -111,3 +111,11 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\opt
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\login_icon_nav.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\logout_icon_nav.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\optimized\newsarticle_icon_nav.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\bin\iPhoneSimulator\Debug\Plugin.FacebookClient.Abstractions.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\bin\iPhoneSimulator\Debug\Plugin.FacebookClient.Abstractions.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\bin\iPhoneSimulator\Debug\Plugin.FacebookClient.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\bin\iPhoneSimulator\Debug\Prism.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\bin\iPhoneSimulator\Debug\Prism.DryIoc.Forms.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\bin\iPhoneSimulator\Debug\Prism.Forms.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\bin\iPhoneSimulator\Debug\Facebook.dll
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.iOS\obj\iPhoneSimulator\Debug\XamlC.stamp

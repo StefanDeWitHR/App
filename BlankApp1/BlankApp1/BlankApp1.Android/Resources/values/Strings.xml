@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">BlankApp1.Droid</string>
+  <string name="facebook_app_name">MyFacebookAppName</string>
+  <string name="facebook_app_id">721760024858738</string>
+  <string name="fb_login_protocol_scheme">fb721760024858738</string>
+  <string name="authority">com.facebook.app.FacebookContentProvider721760024858738</string>
 </resources>

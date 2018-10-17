@@ -6,7 +6,7 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:control="clr-namespace:Core.Controls"
              xmlns:local="clr-namespace:Core.Converters" 
-             prism:ViewModelLocator.AutowireViewModel="True"  x:Name="MainPage" NavigationPage.HasNavigationBar="false" 
+             prism:ViewModelLocator.AutowireViewModel="True"  x:Name="MainPageId" NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}">
 
 
@@ -31,8 +31,6 @@
             <StackLayout HeightRequest="50" Padding="5" HorizontalOptions="FillAndExpand"  BackgroundColor="{StaticResource lblHeader}">
                 <Label FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  FontSize="Medium"  Text="{Binding RSSArticles.channel.description}" HorizontalOptions="Center"></Label>
             </StackLayout>
-
-
             <StackLayout VerticalOptions="StartAndExpand"  HorizontalOptions="FillAndExpand" HeightRequest="450"  >
 
                 <cv:CarouselView   Position="{Binding RSSArticlesPosition ,Mode=TwoWay}"  ItemsSource="{Binding RSSArticles.channel.items}" HeightRequest="400">
@@ -53,26 +51,26 @@
                                         <ColumnDefinition Width="25"></ColumnDefinition>
 
                                     </Grid.ColumnDefinitions>
-                                    <Image IsVisible="{Binding BindingContext.IsArrowLeftVisible ,Source={x:Reference MainPage} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="0"   WidthRequest="25" HeightRequest="45" Source="left_arrow_carasoulView.png">
+                                    <Image IsVisible="{Binding BindingContext.IsArrowLeftVisible ,Source={x:Reference MainPageId} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="0"   WidthRequest="25" HeightRequest="45" Source="left_arrow_carasoulView.png">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
-                                                Command="{Binding BindingContext.OnPrevRSSArticleCommand,Source={x:Reference MainPage}}"
+                                                Command="{Binding BindingContext.OnPrevRSSArticleCommand,Source={x:Reference MainPageId}}"
                                                 NumberOfTapsRequired="1" />
                                         </Image.GestureRecognizers>
                                     </Image>
                                     <Image  Grid.Row="0" Grid.Column="1"   HeightRequest="250" Aspect="AspectFill" Source="{Binding enclosure.url}">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
-                                                Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                                Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPageId}}"
                                                 CommandParameter="{Binding .}"
                                                 ></TapGestureRecognizer>
                                         </Image.GestureRecognizers>
                                     </Image>
 
-                                    <Image IsVisible="{Binding BindingContext.IsArrowRightVisible ,Source={x:Reference MainPage} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="2"    WidthRequest="25" HeightRequest="45" Source="right_arrow_carasoulView.png">
+                                    <Image IsVisible="{Binding BindingContext.IsArrowRightVisible ,Source={x:Reference MainPageId} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="2"    WidthRequest="25" HeightRequest="45" Source="right_arrow_carasoulView.png">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
-                                                Command="{Binding BindingContext.OnNextRSSArticleCommand,Source={x:Reference MainPage}}"
+                                                Command="{Binding BindingContext.OnNextRSSArticleCommand,Source={x:Reference MainPageId}}"
                                                 NumberOfTapsRequired="1" />
                                         </Image.GestureRecognizers>
                                     </Image>
@@ -84,7 +82,7 @@
                                     </Label>
                                 </ScrollView>
                                 <Button Text="> Lees verder " 
-                                                Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                                Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPageId}}"
                                                 CommandParameter="{Binding .}" />
                             </StackLayout>
                         </DataTemplate>
@@ -148,7 +146,7 @@
                                     <Label  HeightRequest="75"  Text="{Binding description}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 </ScrollView>
                                 <Button Text="> Lees verder " 
-                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPageId}}"
                                             CommandParameter="{Binding .}" />
 
 
@@ -175,7 +173,7 @@
                                 <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
                                 <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 <Button Text="Lees meer" 
-                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPageId}}"
                                             CommandParameter="{Binding .}" />
                             </StackLayout>
                         </DataTemplate>
@@ -196,7 +194,7 @@
                                 <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
                                 <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 <Button Text="Lees meer" 
-                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPageId}}"
                                             CommandParameter="{Binding .}" />
                             </StackLayout>
                         </DataTemplate>
@@ -217,7 +215,7 @@
                                 <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
                                 <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 <Button Text="Lees meer" 
-                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPageId}}"
                                             CommandParameter="{Binding .}" />
                             </StackLayout>
                         </DataTemplate>
@@ -237,7 +235,7 @@
                                 <Image   HeightRequest="375" Aspect="AspectFill" Source="{Binding Image}"/>
                                 <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
                                 <Button Text="Lees meer" 
-                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPage}}"
+                                            Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPageId}}"
                                             CommandParameter="{Binding .}" />
                             </StackLayout>
                         </DataTemplate>

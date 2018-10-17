@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:converters="clr-namespace:Core.Converters;assembly=Core"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Core.Views.RedactorPage" NavigationPage.HasNavigationBar="false"
+             ControlTemplate="{StaticResource header}">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="20, 40, 20, 20" />
+            <On Platform="Android, UWP" Value="20" />
+        </OnPlatform>
+    </ContentPage.Padding>
+
+
+    <ContentPage.Content>
+        <!--<ScrollView>-->
+        <StackLayout Padding="0" Margin="0">
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="{Binding Redactor.Name }" FontSize="Large"></Label>
+                <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                    <ColumnDefinition Width="5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <SearchBar x:Name="SearchBar" Grid.Column="0" SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar} ,Mode=TwoWay}" 
+                           SearchCommand="{Binding SearchNewsArticleCommand}"  WidthRequest="175" Placeholder="Zoeken" Margin="0">
+                    <SearchBar.Behaviors>
+                        <converters:TextChangedBehavior />
+                    </SearchBar.Behaviors>
+                </SearchBar>
+                <Picker Grid.Column="1" WidthRequest="200"   Title="Categorie"></Picker>
+
+            </Grid>
+            <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+
+
+            <ListView ItemsSource="{Binding OC_NewsArticles , Mode=TwoWay}" HasUnevenRows="true" HeightRequest="800" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Image Source="{Binding Image}"  HeightRequest="375" Aspect="AspectFill" ></Image>
+                                <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                                <Button Text="Lees meer" 
+                                        Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference NewsArticlesPage}}"
+                                        CommandParameter="{Binding .}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
