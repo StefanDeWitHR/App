@@ -61,31 +61,32 @@
                         <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand" Grid.Row="1" Grid.ColumnSpan="5" />
                     </Grid>
                     <!-- Footer template-->
-                    <RelativeLayout VerticalOptions="End" HorizontalOptions="Fill" HeightRequest="50" >
+                        <RelativeLayout VerticalOptions="End" HorizontalOptions="FillAndExpand" HeightRequest="50" >
                         <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width}"  ></BoxView>
-                        <Grid Padding="10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="40"></ColumnDefinition>
-                                <ColumnDefinition Width="40"></ColumnDefinition>
-                                <ColumnDefinition Width="40"></ColumnDefinition>
-                                <ColumnDefinition Width="40"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
+                            <Grid Padding="10" HorizontalOptions="FillAndExpand">
+                                <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
 
-                            <Image Source="fb_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="0">
+                            <Image Source="fb_icon.png" Margin="10,0,5,0" HeightRequest="40" Grid.Column="0">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                          Tapped="OnFaceBookTapped"
                                         NumberOfTapsRequired="1"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Image Source="mail_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="1">
+                            <Image Source="mail_icon.png" Margin="5,0,5,0" HeightRequest="40" Grid.Column="1">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                          Tapped="OnMailTapped"
                                         NumberOfTapsRequired="1"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Image Source="linkedin_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="2">
+                                <Image Source="linkedin_icon.png" Margin="5,0,5,0"  HeightRequest="40" Grid.Column="2">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                          Tapped="OnLinkedInTapped"
@@ -93,14 +94,14 @@
 
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Image Source="twitter_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="3">
+                                <Image Source="twitter_icon.png"  Margin="5,0,5,0" HeightRequest="40" Grid.Column="3">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                          Tapped="OnTwitterTapped"
                                         NumberOfTapsRequired="1"/>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Image Source="phone_icon.png" WidthRequest="40" HeightRequest="40" Grid.Column="4">
+                                <Image Source="phone_icon.png" Margin="5,0,0,0"  HeightRequest="40" Grid.Column="4">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                          Tapped="OnPhoneTapped"

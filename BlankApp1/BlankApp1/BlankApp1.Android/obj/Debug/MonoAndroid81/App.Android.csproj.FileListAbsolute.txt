@@ -44,6 +44,7 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\BlankApp1.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Mono.Android.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Mono.Security.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\mscorlib.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Plugin.Share.Abstractions.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Refractored.XamForms.PullToRefresh.Droid.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Refractored.XamForms.PullToRefresh.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\System.ComponentModel.Composition.pdb
@@ -66,10 +67,10 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\BlankApp1.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\BlankApp1.Android.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Corcav.Behaviors.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\FormsViewGroup.dll.mdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Plugin.Share.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Xamarin.Forms.Core.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Xamarin.Forms.Xaml.dll.mdb
-C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Plugin.Share.Abstractions.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\Core.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Android.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\mscorlib.pdb
@@ -92,7 +93,6 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\l
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\System.Web.Services.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\System.ComponentModel.DataAnnotations.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\Mono.Security.pdb
-C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\Plugin.Share.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\App.Android.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\Corcav.Behaviors.dll.mdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\FormsViewGroup.dll.mdb
@@ -130,6 +130,14 @@ C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\a
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\System.Web.Services.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.Linq.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\android\assets\System.Xml.pdb
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\stefan_placeholder.jpg
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\home_icon_nav.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\newsarticle_icon_nav.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\trial_icon_nav.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\aboutus_icon_nav.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\contactus_icon_nav.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\login_icon_nav.png
+C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\res\drawable\logout_icon_nav.png
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\bin\Debug\App.Android.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\Core.pdb
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1.Android\obj\Debug\MonoAndroid81\linksrc\App.Android.dll.mdb

@@ -31,7 +31,8 @@ namespace Core
            
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            await NavigationService.NavigateAsync(new System.Uri("/MenuPage/NavigationPage/MainPage", System.UriKind.Absolute));
+         
+             await NavigationService.NavigateAsync(new System.Uri("/MenuPage/NavigationPage/MainPage", System.UriKind.Absolute));
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

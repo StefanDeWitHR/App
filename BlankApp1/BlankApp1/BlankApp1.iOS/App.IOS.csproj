@@ -272,5 +272,29 @@
   <ItemGroup>
     <BundleResource Include="Resources\navigate_back.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\home_icon_nav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\stefan_placeholder.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\trial_icon_nav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\aboutus_icon_nav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\contactus_icon_nav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\login_icon_nav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logout_icon_nav.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\newsarticle_icon_nav.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

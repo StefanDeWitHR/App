@@ -10,8 +10,8 @@ using Xamarin.Forms.Xaml;
 
 namespace Core.Views
 {
-
-	public partial class NewsArticleDetailPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class NewsArticleDetailPage : ContentPage
 	{
 		public NewsArticleDetailPage()
 		{

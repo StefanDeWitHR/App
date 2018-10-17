@@ -6,31 +6,104 @@
     <MasterDetailPage.Master>
         <ContentPage Title="Menu" BackgroundColor="{StaticResource menuBackground}">
 
+            <ContentPage.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="iOS" Value="20, 40, 20, 20" />
+                    <On Platform="Android, UWP" Value="20" />
+                </OnPlatform>
+            </ContentPage.Padding>
 
             <StackLayout>
                 <!-- User information when logged in -->
                 <StackLayout HeightRequest="200" Padding="10">
-                    <Label HorizontalTextAlignment="Center"  Text="Ingelogd als: Stefan de Wit"></Label>
-                    <Image Source="me.png" Aspect="AspectFit" WidthRequest="180" HeightRequest="180"></Image>
+                    <Label HorizontalTextAlignment="Center"  FontAttributes="Bold" Text="Ingelogd als: Stefan de Wit"></Label>
+                    <Image Source="stefan_placeholder.jpg" 
+                           Aspect="AspectFit" WidthRequest="180"
+                           HeightRequest="180">
+
+                    </Image>
                 </StackLayout>
-                <ScrollView>
+                <BoxView BackgroundColor="Red" HeightRequest="1"  HorizontalOptions="FillAndExpand"/>
+                    <ScrollView>
                     <StackLayout>
-                      
                         <!-- Menu items -->
-                        <Button   CommandParameter="NavigationPage/MainPage"    Text="Home" Command="{Binding OnNavigateCommand}"></Button>
-                          
-                        <Button   CommandParameter="NavigationPage/NewsArticlesPage"    Text="Nieuwsartikelen" Command="{Binding OnNavigateCommand}"></Button>
-                            
-                        <Button   CommandParameter="NavigationPage/AboutUsPage" Text="Over ons" Command="{Binding OnNavigateCommand}"></Button>
-                           
-                        <Button   CommandParameter="NavigationPage/ContactPage" Text="Contact" Command="{Binding OnNavigateCommand}"></Button>
+                        <StackLayout  Orientation="Horizontal" Spacing="10" Padding="10,10,10,10" BackgroundColor="Red">
+                            <Image WidthRequest="32" HeightRequest="32" Source="home_icon_nav.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label  Text="Homepagina" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding OnNavigateCommand}"
+                                                           CommandParameter="NavigationPage/MainPage"
+                                          ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
 
-                        <Button   CommandParameter="MenuPage/NavigationPage/TrialPage"   Text="Proeflidmaatschap aanvragen" Command="{Binding OnNavigateCommand}"></Button>
+                        <StackLayout  Orientation="Horizontal" Spacing="10" Padding="10,10,10,10" BackgroundColor="Red">
+                            <Image WidthRequest="32" HeightRequest="32" Source="newsarticle_icon_nav.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label  Text="Nieuwsartikelen" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding OnNavigateCommand}"
+                                                           CommandParameter="NavigationPage/NewsArticlesPage"
+                                    ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
 
-                        <Button  IsVisible="{Binding IsLoggedOut}"  CommandParameter="NavigationPage/LoginPage"   Text="Inloggen" Command="{Binding OnNavigateCommand}"></Button>
+                        <StackLayout  Orientation="Horizontal" Spacing="10" Padding="10,10,10,10" BackgroundColor="Red">
+                            <Image WidthRequest="32" HeightRequest="32" Source="aboutus_icon_nav.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label  Text="Over ons" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding OnNavigateCommand}"
+                                                           CommandParameter="NavigationPage/AboutUsPage"
+                                    ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
 
-                        <Button  IsVisible="{Binding IsLoggedIn}" CommandParameter="NavigationPage/LoginPage"   Text="Uitloggen" Command="{Binding OnNavigateCommand}"></Button>
+                        <StackLayout  Orientation="Horizontal" Spacing="10" Padding="10,10,10,10" BackgroundColor="Red">
+                            <Image WidthRequest="32" HeightRequest="32" Source="contactus_icon_nav.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label  Text="Contact" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding OnNavigateCommand}"
+                                                           CommandParameter="NavigationPage/ContactPage"
+                                    ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
 
+                        <StackLayout  Orientation="Horizontal" Spacing="10" Padding="10,10,10,10" BackgroundColor="Red">
+                            <Image WidthRequest="32" HeightRequest="32" Source="trial_icon_nav.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label  Text="Proeflidmaatschap aanvragen" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding OnNavigateCommand}"
+                                                           CommandParameter="MenuPage/NavigationPage/TrialPage"
+                                    ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+
+
+                        <StackLayout  Orientation="Horizontal" Spacing="10" Padding="10,10,10,10" BackgroundColor="Red">
+                            <Image WidthRequest="32" HeightRequest="32" Source="login_icon_nav.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label  Text="Inloggen" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding OnNavigateCommand}"
+                                                           CommandParameter="NavigationPage/LoginPage" 
+                                    ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+
+                        <StackLayout  Orientation="Horizontal" Spacing="10" Padding="10,10,10,10" BackgroundColor="Red">
+                            <Image WidthRequest="32" HeightRequest="32" Source="logout_icon_nav.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                            <Label  Text="Inloggen" TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer  Command="{Binding OnNavigateCommand}"
+                                                           CommandParameter="NavigationPage/LoginPage"  
+                                    ></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
