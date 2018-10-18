@@ -23,11 +23,11 @@ namespace Core
         // Trial page
         public static string lblFemale = (Settings.Language == "NL") ? "Vrouw" : "Female";
         public static string lblMale = (Settings.Language == "NL") ? "Man" : "Vrouw";
-        public static string lblFirstName = (Settings.Language == "NL") ? "Voornaam" : "Firstname";
-        public static string lblSecondName = (Settings.Language == "NL") ? "Tussenvoegsel" : "Secondname";
-        public static string lblLastName = (Settings.Language == "NL") ? "Achternaam" : "Lastname";
-        public static string lblCompanyName = (Settings.Language == "NL") ? "Bedrijfsnaam" : "Companyname";
-        public static string lblPhoneNum = (Settings.Language == "NL") ? "Telefoonnummer" : "Phonenumber";
+        public static string lblFirstName = (Settings.Language == "NL") ? "Voornaam" : "First name";
+        public static string lblSecondName = (Settings.Language == "NL") ? "Tussenvoegsel" : "Second name";
+        public static string lblLastName = (Settings.Language == "NL") ? "Achternaam" : "Last name";
+        public static string lblCompanyName = (Settings.Language == "NL") ? "Bedrijfsnaam" : "Company name";
+        public static string lblPhoneNum = (Settings.Language == "NL") ? "Telefoonnummer" : "Phone number";
         public static string lblToRequest = (Settings.Language == "NL") ? "Aanvragen" : "Request";
 
         //Contact us page

@@ -13,7 +13,7 @@ namespace Core
     public static class Settings
     {
         // The only setting that is required to switch content
-        public static Organisations Organisation = Organisations.PropertyNL;
+        public static Organisations Organisation = Organisations.PropertyEU;
 
         public static string Logo = LogoHelper();
         public static string Menu = MenuHelper();
@@ -21,11 +21,73 @@ namespace Core
         public static string ArrowNavRight = ArrowNavigationRightImgHelper();
         public static string ArrowNavLeft = ArrowNavigationLeftImgHelper();
         public static string BackButton = BackButtonHelper();
+        public static string SocialMediaFB = SocialMediaFBHelper();
+        public static string SocialMediaMail = SocialMediaMailHelper();
+        public static string SocialMediaPhone= SocialMediaPhoneHelper();
 
+        //******************* Helpers *********************************//
 
-        // Helpers
+        // Language
         public static string Language = (Organisation == Organisations.PropertyEU) ? "EN" : "NL";
 
+        // Social media
+        public static string SocialMediaPhoneHelper()
+        {
+            string url = "";
+            if (Organisation == Organisations.PropertyEU)
+            {
+                url = " +31(0)88 776 73 78";
+
+            }
+            else if (Organisation == Organisations.PropertyNL)
+            {
+                url = "+31(0)88 776 73 78";
+            }
+            else if (Organisation == Organisations.Ventu)
+            {
+                url = "+31(0)88 776 73 78";
+            }
+            return url;
+        }
+
+        public static string SocialMediaFBHelper()
+        {
+            string url = "";
+            if (Organisation == Organisations.PropertyEU)
+            {
+                url = "387348521312268";
+
+            }
+            else if (Organisation == Organisations.PropertyNL)
+            {
+                url = "943580452350442";
+            }
+            else if (Organisation == Organisations.Ventu)
+            {
+                url = "";
+            }
+            return url;
+        }
+
+        public static string SocialMediaMailHelper()
+        {
+            string url = "";
+            if (Organisation == Organisations.PropertyEU)
+            {
+                url = "mailto:editor@propertyeu.info";
+
+            }
+            else if (Organisation == Organisations.PropertyNL)
+            {
+                url = "mailto:redactie@propertynl.com";
+            }
+            else if (Organisation == Organisations.Ventu)
+            {
+                url = "mailto:service@ventu.nl";
+            }
+            return url;
+        }
+        // Design
         public static string LogoHelper()
         {
             string logo = "";

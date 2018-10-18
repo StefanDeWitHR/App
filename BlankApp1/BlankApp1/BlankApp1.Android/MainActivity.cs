@@ -12,6 +12,9 @@ using Plugin.Permissions;
 
 namespace App.Droid
 {
+   
+  
+
     [Activity(Label = "PropertyNL", Icon = "@drawable/logo", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {

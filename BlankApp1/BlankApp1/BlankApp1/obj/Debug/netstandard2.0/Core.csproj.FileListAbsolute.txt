@@ -1,7 +1,6 @@
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\Core.deps.json
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\Core.dll
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\bin\Debug\netstandard2.0\Core.pdb
-C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Views\AboutUsPage.xaml.g.cs
 C:\Projecten\App\BlankApp1\BlankApp1\BlankApp1\obj\Debug\netstandard2.0\Views\ContactPage.xaml.g.cs

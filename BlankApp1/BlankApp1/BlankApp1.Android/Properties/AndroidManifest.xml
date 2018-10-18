@@ -4,7 +4,5 @@
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-	<application android:label="PropertyNL" android:icon="@drawable/logo">
-
-	</application>
+	<application android:label="PropertyNL" android:icon="@drawable/logo_NL"></application>
 </manifest>

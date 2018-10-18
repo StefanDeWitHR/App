@@ -2912,23 +2912,26 @@ namespace App.Droid
 			// aapt resource value: 0x7F010011
 			public const int logout_icon_nav = 2130771985;
 			
-			// aapt resource value: 0x7F010012
-			public const int logo_EU = 2130771986;
-			
 			// aapt resource value: 0x7F010013
-			public const int logo_NL = 2130771987;
+			public const int logo_EU = 2130771987;
+			
+			// aapt resource value: 0x7F010012
+			public const int logo_EU - Copy = 2130771986;
 			
 			// aapt resource value: 0x7F010014
-			public const int mail_icon = 2130771988;
+			public const int logo_NL = 2130771988;
 			
 			// aapt resource value: 0x7F010015
-			public const int me = 2130771989;
+			public const int mail_icon = 2130771989;
 			
 			// aapt resource value: 0x7F010016
-			public const int menu_EU = 2130771990;
+			public const int me = 2130771990;
 			
 			// aapt resource value: 0x7F010017
-			public const int menu_NL = 2130771991;
+			public const int menu_EU = 2130771991;
+			
+			// aapt resource value: 0x7F010018
+			public const int menu_NL = 2130771992;
 			
 			// aapt resource value: 0x7F090105
 			public const int mr_button_connected_dark = 2131296517;
@@ -2990,17 +2993,17 @@ namespace App.Droid
 			// aapt resource value: 0x7F090118
 			public const int mr_vol_type_audiotrack_light = 2131296536;
 			
-			// aapt resource value: 0x7F010018
-			public const int navigate_back_EU = 2130771992;
-			
 			// aapt resource value: 0x7F010019
-			public const int navigate_back_NL = 2130771993;
+			public const int navigate_back_EU = 2130771993;
+			
+			// aapt resource value: 0x7F010020
+			public const int navigate_back_NL = 2130772000;
 			
 			// aapt resource value: 0x7F09005C
 			public const int navigation_empty_icon = 2131296348;
 			
-			// aapt resource value: 0x7F010020
-			public const int newsarticle_icon_nav = 2130772000;
+			// aapt resource value: 0x7F010021
+			public const int newsarticle_icon_nav = 2130772001;
 			
 			// aapt resource value: 0x7F090001
 			public const int notification_action_background = 2131296257;
@@ -3038,35 +3041,35 @@ namespace App.Droid
 			// aapt resource value: 0x7F09000C
 			public const int notify_panel_notification_icon_bg = 2131296268;
 			
-			// aapt resource value: 0x7F010021
-			public const int phone_icon = 2130772001;
-			
 			// aapt resource value: 0x7F010022
-			public const int post_author = 2130772002;
+			public const int phone_icon = 2130772002;
 			
 			// aapt resource value: 0x7F010023
-			public const int post_category = 2130772003;
+			public const int post_author = 2130772003;
 			
 			// aapt resource value: 0x7F010024
-			public const int post_date = 2130772004;
+			public const int post_category = 2130772004;
 			
 			// aapt resource value: 0x7F010025
-			public const int post_footer_tags = 2130772005;
+			public const int post_date = 2130772005;
 			
 			// aapt resource value: 0x7F010026
-			public const int post_views = 2130772006;
+			public const int post_footer_tags = 2130772006;
 			
 			// aapt resource value: 0x7F010027
-			public const int right_arrow_EU = 2130772007;
+			public const int post_views = 2130772007;
 			
 			// aapt resource value: 0x7F010028
-			public const int right_arrow_NL = 2130772008;
+			public const int right_arrow_EU = 2130772008;
 			
 			// aapt resource value: 0x7F010029
-			public const int share_icon = 2130772009;
+			public const int right_arrow_NL = 2130772009;
 			
 			// aapt resource value: 0x7F010030
-			public const int stefan_placeholder = 2130772016;
+			public const int share_icon = 2130772016;
+			
+			// aapt resource value: 0x7F010031
+			public const int stefan_placeholder = 2130772017;
 			
 			// aapt resource value: 0x7F090069
 			public const int tooltip_frame_dark = 2131296361;
@@ -3074,11 +3077,11 @@ namespace App.Droid
 			// aapt resource value: 0x7F09006A
 			public const int tooltip_frame_light = 2131296362;
 			
-			// aapt resource value: 0x7F010031
-			public const int trial_icon_nav = 2130772017;
-			
 			// aapt resource value: 0x7F010032
-			public const int twitter_icon = 2130772018;
+			public const int trial_icon_nav = 2130772018;
+			
+			// aapt resource value: 0x7F010033
+			public const int twitter_icon = 2130772019;
 			
 			static Drawable()
 			{

@@ -21,7 +21,8 @@ namespace Core
         public App() : this(null) {
 
         }
-       
+
+      
         public static double ScreenHeight;
         public static double ScreenWidth;
         public App(IPlatformInitializer initializer) : base(initializer) { }
@@ -64,18 +65,18 @@ namespace Core
             
             try
             {
-                Device.OpenUri(new Uri("fb://page/943580452350442"));
+                Device.OpenUri(new Uri("fb://page/"+Settings.SocialMediaFB));
             }
             catch
             {
-                Device.OpenUri(new Uri("https://www.facebook.com/pages/PropertyNL"));
+                Device.OpenUri(new Uri("https://www.facebook.com/pages/"+Settings.Organisation));
             }
         }
         private void OnMailTapped(object sender, EventArgs e)
         {
             try
             {
-                Device.OpenUri(new Uri("mailto:redactie@propertynl.com"));
+                Device.OpenUri(new Uri(Settings.SocialMediaMail));
             }
             catch
             {
@@ -86,7 +87,7 @@ namespace Core
         {
             try
             {
-                Device.OpenUri(new Uri("https://www.linkedin.com/company/propertynl"));
+                Device.OpenUri(new Uri("https://www.linkedin.com/company/"+ Settings.Organisation));
             }
             catch
             {
@@ -98,11 +99,11 @@ namespace Core
         {
             try
             {
-                 Device.OpenUri(new Uri("twitter://userName?user_id=propertynl"));
+                 Device.OpenUri(new Uri("twitter://userName?user_id="+Settings.Organisation));
             }
             catch
             {
-                Device.OpenUri(new Uri("https://twitter.com/propertynl"));
+                Device.OpenUri(new Uri("https://twitter.com/"+ Settings.Organisation));
             }
          
         }
@@ -110,7 +111,7 @@ namespace Core
         {
             try
             {
-                Device.OpenUri(new Uri("tel:+31(0)88776 73 78"));
+                Device.OpenUri(new Uri("tel:"+Settings.SocialMediaPhone));
 
             }
             catch
