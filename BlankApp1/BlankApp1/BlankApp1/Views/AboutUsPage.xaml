@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" NavigationPage.HasNavigationBar="false"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:Core;assembly=Core"
+             NavigationPage.HasNavigationBar="false"
              ControlTemplate="{StaticResource header}" x:Class="Core.Views.AboutUsPage">
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -13,8 +15,8 @@
         <ScrollView>
             <StackLayout  Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250">
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Over ons" FontSize="Large"></Label>
-                    <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblAboutUs}}" FontSize="Large"></Label>
+                    <BoxView  HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
                 <StackLayout Margin="10">
                     <Label Text="PropertyNL staat synoniem voor: `gedegen kennis van zaken op vastgoedgebied` "></Label>

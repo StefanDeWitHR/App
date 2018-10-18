@@ -2,8 +2,6 @@
 using Prism;
 using Prism.Ioc;
 using System.Reflection;
-using Plugin.FacebookClient;
-using Refractored.XamForms.PullToRefresh.iOS;
 using UIKit;
 
 
@@ -24,30 +22,17 @@ namespace App.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Stormlion.SNavigation.iOS.Platform.Init();
+
             global::Xamarin.Forms.Forms.Init();
             var cv = typeof(Xamarin.Forms.CarouselView);
             var assembly = Assembly.Load(cv.FullName);
-            //PullToRefreshLayoutRenderer.Init()
+
             LoadApplication(new Core.App(new iOSInitializer()));
-            FacebookClientManager.Initialize(app,options);
+            
                 
             return base.FinishedLaunching(app, options);
         }
-        // Facebook settings
-        public override void OnActivated(UIApplication uiApplication)
-        {
-            FacebookClientManager.OnActivated();
-        }
-        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
-        {
-            return FacebookClientManager.OpenUrl(app, url, options);
-        }
-
-        public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
-        {
-            return FacebookClientManager.OpenUrl(application, url, sourceApplication, annotation);
-        }
+  
 
     }
 

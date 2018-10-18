@@ -100,7 +100,7 @@
       </dict>
     </array>
     <key>FacebookAppID</key>
-    <string>fb721760024858738</string>
+    <string>721760024858738</string>
     <key>FacebookDisplayName</key>
     <string>PropertyNL/EU</string>
     <key>LSApplicationQueriesSchemes</key>
@@ -110,5 +110,7 @@
       <string>fbauth2</string>
       <string>fbshareextension</string>
     </array>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Needs Calendar Permission</string>
   </dict>
 </plist>

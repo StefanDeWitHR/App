@@ -10,8 +10,11 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Windows.Input;
-using Plugin.FacebookClient;
-using Plugin.FacebookClient.Abstractions;
+using Core.Helpers;
+
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
+using Prism.Services;
 using Xamarin.Forms;
 
 namespace Core.ViewModels
@@ -20,34 +23,37 @@ namespace Core.ViewModels
     {
         private readonly INavigationService   _navigationService;
         private readonly INewsArticlesService _newsArticlesService;
+        private readonly IPermissionManager _permissionManager;
+
 
         //Commands
         public ICommand OnCategoryTappedCommand { get; }
         public ICommand OnBackNavigationCommand { get; }
         public DelegateCommand<object> NavigateToRedactorPageCommand { get; }
-        public ICommand ShareItemOnFBCommand { get; }
+        public ICommand ShareItemCommand { get; }
 
-        public NewsArticleDetailPageViewModel(INavigationService navigationService , INewsArticlesService newsArticlesService) : base(navigationService)
+        public NewsArticleDetailPageViewModel(
+            INavigationService navigationService , 
+            INewsArticlesService newsArticlesService,
+            IPermissionManager permissionManager
+            
+           ) : base(navigationService)
         {
             _navigationService = navigationService;
             _newsArticlesService = newsArticlesService;
+            _permissionManager = permissionManager;
 
             OnCategoryTappedCommand = new Command(NavigateToNewsArticleCategory);
             OnBackNavigationCommand = new Command(NavigateBack);
             NavigateToRedactorPageCommand = new DelegateCommand<object>(NavigateToRedactorPage);
-            ShareItemOnFBCommand = new Command(ShareItemOnFacebook);
+            ShareItemCommand = new Command(ShareItemAsync);
         }
 
-        public async  void ShareItemOnFacebook()
+        public void ShareItemAsync()
         {
-            // Example of image
-            var webClient = new WebClient();
-            byte[] imageBytes = webClient.DownloadData("https://propertynl.com/media/newsarticle/photos/105168/27784/Frank_Mulders-20KPMG.jpg?w=690");
-
-            FacebookResponse<bool> response = await CrossFacebookClient.Current.LoginAsync(new string[] { "email", "public_profile" });
-            FacebookSharePhoto[] photos = new FacebookSharePhoto[] { new FacebookSharePhoto("test", imageBytes) };
-            FacebookSharePhotoContent photoContent = new FacebookSharePhotoContent(photos);
-            await CrossFacebookClient.Current.ShareAsync(photoContent);
+            var img = ImageSource.FromUri(new Uri(
+                "https://propertynl.com/media/newsarticle/photos/105183/27801/Roosendaal-Yusen.jpg?w=690"));
+            _permissionManager.ShareItemAsync("title" , "subject" , img);
         }
         public async void NavigateToRedactorPage(object RedactorId)
         {

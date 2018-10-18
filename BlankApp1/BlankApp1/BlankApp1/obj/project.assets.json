@@ -80,18 +80,13 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Plugin.FacebookClient/1.4.0": {
+      "Plugin.Permissions/3.0.0.12": {
         "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1"
-        },
         "compile": {
-          "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.dll": {},
-          "lib/netstandard1.0/Plugin.FacebookClient.dll": {}
+          "lib/netstandard2.0/Plugin.Permissions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.dll": {},
-          "lib/netstandard1.0/Plugin.FacebookClient.dll": {}
+          "lib/netstandard2.0/Plugin.Permissions.dll": {}
         }
       },
       "Prism.Core/7.1.0.431": {
@@ -621,30 +616,26 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "Plugin.FacebookClient/1.4.0": {
-      "sha512": "u7tYffa5huHm0szBUXsxRdDOM1lSd5B6QOEH9JV+TzcYP9s+tTpfOT/OdMQQgb4JMnRJx3cHdnYWDueI9cH6Uw==",
+    "Plugin.Permissions/3.0.0.12": {
+      "sha512": "R8Rlzfci1byoPBGOiJfCMzu0HhhN6Q4Vq4YizlF41W946NEmoL/Mb8U5caP5t5KfSbdPQpzdQ9JfM8fxPG8pfw==",
       "type": "package",
-      "path": "plugin.facebookclient/1.4.0",
+      "path": "plugin.permissions/3.0.0.12",
       "files": [
-        "lib/MonoAndroid81/Plugin.FacebookClient.Abstractions.dll",
-        "lib/MonoAndroid81/Plugin.FacebookClient.Abstractions.pdb",
-        "lib/MonoAndroid81/Plugin.FacebookClient.Abstractions.xml",
-        "lib/MonoAndroid81/Plugin.FacebookClient.XML",
-        "lib/MonoAndroid81/Plugin.FacebookClient.dll",
-        "lib/MonoAndroid81/Plugin.FacebookClient.pdb",
-        "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.dll",
-        "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.pdb",
-        "lib/Xamarin.iOS10/Plugin.FacebookClient.Abstractions.xml",
-        "lib/Xamarin.iOS10/Plugin.FacebookClient.XML",
-        "lib/Xamarin.iOS10/Plugin.FacebookClient.dll",
-        "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.dll",
-        "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.pdb",
-        "lib/netstandard1.0/Plugin.FacebookClient.Abstractions.xml",
-        "lib/netstandard1.0/Plugin.FacebookClient.deps.json",
-        "lib/netstandard1.0/Plugin.FacebookClient.dll",
-        "lib/netstandard1.0/Plugin.FacebookClient.xml",
-        "plugin.facebookclient.1.4.0.nupkg.sha512",
-        "plugin.facebookclient.nuspec"
+        ".signature.p7s",
+        "lib/monoandroid71/Plugin.Permissions.dll",
+        "lib/monoandroid71/Plugin.Permissions.xml",
+        "lib/netstandard1.0/Plugin.Permissions.dll",
+        "lib/netstandard1.0/Plugin.Permissions.xml",
+        "lib/netstandard2.0/Plugin.Permissions.dll",
+        "lib/netstandard2.0/Plugin.Permissions.xml",
+        "lib/uap10.0.10240/Plugin.Permissions.dll",
+        "lib/uap10.0.10240/Plugin.Permissions.pri",
+        "lib/uap10.0.10240/Plugin.Permissions.xml",
+        "lib/xamarinios10/Plugin.Permissions.dll",
+        "lib/xamarinios10/Plugin.Permissions.xml",
+        "plugin.permissions.3.0.0.12.nupkg.sha512",
+        "plugin.permissions.nuspec",
+        "readme.txt"
       ]
     },
     "Prism.Core/7.1.0.431": {
@@ -2096,7 +2087,7 @@
       "FluentValidation >= 8.0.100",
       "NETStandard.Library >= 2.0.3",
       "Newtonsoft.Json >= 11.0.2",
-      "Plugin.FacebookClient >= 1.4.0",
+      "Plugin.Permissions >= 3.0.0.12",
       "Prism.DryIoc.Forms >= 7.1.0.431",
       "Prism.Forms >= 7.1.0.431",
       "Xamarin.Forms.CarouselView >= 2.3.0-pre2"
@@ -2162,9 +2153,9 @@
             "target": "Package",
             "version": "[11.0.2, )"
           },
-          "Plugin.FacebookClient": {
+          "Plugin.Permissions": {
             "target": "Package",
-            "version": "[1.4.0, )"
+            "version": "[3.0.0.12, )"
           },
           "Prism.DryIoc.Forms": {
             "target": "Package",

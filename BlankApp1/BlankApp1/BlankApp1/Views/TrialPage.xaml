@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:Core;assembly=Core"
              x:Class="Core.Views.TrialPage"  Icon="logo.png" NavigationPage.HasNavigationBar="false"
              ControlTemplate="{StaticResource header}">
     
@@ -16,28 +17,28 @@
             <StackLayout  Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250">
 
                 <StackLayout HorizontalOptions="Center">
-                    <Label Text="Proeflidmaatschap aanvragen" FontSize="Large"></Label>
-                    <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblRequestTrial }}" FontSize="Large"></Label>
+                    <BoxView  HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
 
-                    <Label Text="Vrouw"></Label>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblFemale  }}" ></Label>
                     <Switch IsToggled="{Binding IsFemale}"></Switch>
-                    <Label Text="Man"></Label>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblMale  }}" ></Label>
                     <Switch IsToggled="{Binding IsMale}"></Switch>
 
-                    <Label Text="Voornaam"></Label>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblFirstName   }}"></Label>
                     <Entry WidthRequest="100" Text="{Binding User.FirstName}"></Entry>
-                    <Label Text="Tussenvoegsel"></Label>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblSecondName   }}"></Label>
                     <Entry WidthRequest="100"  Text="{Binding User.SecondName}" ></Entry>
-                    <Label Text="Achternaam"></Label>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblLastName   }}"></Label>
                     <Entry Text="{Binding User.LastName}"  WidthRequest="100"></Entry>
                     <Label Text="E-mail" ></Label>
                     <Entry Keyboard="Email" WidthRequest="100"  Text="{Binding User.Email}" ></Entry>
-                    <Label Text="Bedrijfsnaam" ></Label>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblCompanyName   }}" ></Label>
                     <Entry WidthRequest="100"   Text="{Binding User.CompanyName}"></Entry>
-                    <Label Text="Telefoonnummer" ></Label>
+                    <Label Text="{Binding Source={x:Static core:Translate.lblPhoneNum   }}" ></Label>
                     <Entry Keyboard="Telephone" WidthRequest="100"  Text="{Binding User.PhoneNumber}"></Entry>
 
-                    <Button Text="Aanvragen" Command="{Binding  RequestTrialCommand ,Mode=TwoWay }"></Button>
+                    <Button TextColor="White" Text="{Binding Source={x:Static core:Translate.lblToRequest   }}"  Command="{Binding  RequestTrialCommand ,Mode=TwoWay }"></Button>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

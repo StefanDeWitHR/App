@@ -45,14 +45,16 @@ namespace Core
             containerRegistry.RegisterForNavigation<LoginPage, LoginPageViewModel>();
             containerRegistry.RegisterForNavigation<ContactPage , ContactViewModel>();
             containerRegistry.RegisterForNavigation<AboutUsPage>();
-            containerRegistry.RegisterForNavigation<TrialPage , TrialPageViewModel>(); 
+            containerRegistry.RegisterForNavigation<TrialPage , TrialPageViewModel>();
+            containerRegistry.RegisterForNavigation<RedactorPage, RedactorPageViewModel>();
 
             // Services 
             containerRegistry.Register<INewsArticlesService, NewsArticlesService>();
             containerRegistry.Register<IRSSArticlesService, RSSArticlesService>();
             containerRegistry.Register<IHttpManager, HttpManager>();
+            containerRegistry.Register<IPermissionManager, PermissionManager>();
 
-            containerRegistry.RegisterForNavigation<RedactorPage, RedactorPageViewModel>();
+
         }
 
 

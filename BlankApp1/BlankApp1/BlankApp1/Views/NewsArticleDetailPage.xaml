@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Core.Views.NewsArticleDetailPage"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:core="clr-namespace:Core;assembly=Core"
              prism:ViewModelLocator.AutowireViewModel="True" NavigationPage.HasNavigationBar="false" 
              Title="{Binding NewsArticle.Name}" x:Name="DetailNewsArticlePage"
              ControlTemplate="{StaticResource header}">
@@ -25,7 +26,7 @@
                             <ColumnDefinition Width="1*"></ColumnDefinition>
                             <ColumnDefinition Width="9*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0"  HorizontalOptions="StartAndExpand" Source="navigate_back.png" WidthRequest="50" HeightRequest="50">
+                        <Image Grid.Column="0"  HorizontalOptions="StartAndExpand" Source="{Binding Source={x:Static core:Settings.BackButton}}" WidthRequest="50" HeightRequest="50">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer 
                                     Command="{Binding BindingContext.OnBackNavigationCommand,Source={x:Reference DetailNewsArticlePage}}"
@@ -53,7 +54,7 @@
 
                         </Grid.RowDefinitions>
                         <Image  Grid.Row="0" Grid.Column="0" Source="post_category.png"></Image>
-                        <Label  Grid.Row="0" TextColor="Red" FontSize="Small" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="In transacties">
+                        <Label  Grid.Row="0" TextColor="{Binding Source={x:Static core:Settings.Color}}" FontSize="Small" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="In transacties">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer 
                                     Command="{Binding BindingContext.OnCategoryTappedCommand,Source={x:Reference DetailNewsArticlePage}}"                                   
@@ -68,7 +69,7 @@
                         <Label Grid.Row="0" FontSize="Small" Grid.Column="3" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="15-10-2018"></Label>
 
                         <Image Grid.Row="0"  Grid.Column="4" Source="post_views.png"></Image>
-                        <Label Grid.Row="0" FontSize="Small" Grid.Column="5" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="Views: 483"></Label>
+                        <Label Grid.Row="0" FontSize="Small" Grid.Column="5" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"  Text="{Binding Source={x:Static core:Translate.lblViews}} "></Label>
                     </Grid>
                     <ScrollView Orientation="Horizontal">
                         <Grid>
@@ -94,15 +95,29 @@
                     </Grid.ColumnDefinitions>
                     <Label Text="De stad Utrecht, de snelste groeiende gemeente in Nederland, wil met ontwikkelaars, corporaties en beleggers tot een Stadsakkoord Wonen komen."></Label>
                 </Grid>
-                <Button Text="Delen op facebook" BackgroundColor="Blue" Command="{Binding BindingContext.ShareItemOnFBCommand,Source={x:Reference DetailNewsArticlePage}}"></Button>
-                <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
 
-                <Label FontAttributes="Bold" Text="Geplaats door: Stefan de Wit" HorizontalOptions="Center"></Label>
-                <StackLayout HorizontalOptions="CenterAndExpand">
-                    <Image Source="https://propertynl.com/images/Editors/Ronald-de-Blauw.jpg" WidthRequest="250" HeightRequest="200"></Image>
-                    <Button Command="{Binding BindingContext.NavigateToRedactorPageCommand,Source={x:Reference DetailNewsArticlePage}}"  
-                            CommandParameter="Stefan"  Text="Profiel"></Button>
+                <BoxView BackgroundColor="#ececec" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+                <StackLayout Orientation="Horizontal" Spacing="10" WidthRequest="100" Padding="10,10,10,10" BackgroundColor="Green">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer  Command="{Binding BindingContext.ShareItemCommand,Source={x:Reference DetailNewsArticlePage}}"                     
+                        ></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+
+                    <Image WidthRequest="32" HeightRequest="32" Source="share_icon.png" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Label Text="{Binding Source={x:Static core:Translate.lblShare}} "  TextColor="White" VerticalOptions="Center" HorizontalTextAlignment="Center" HorizontalOptions="Center"/>
+
                 </StackLayout>
+                <BoxView BackgroundColor="#ececec" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+
+                <Label FontAttributes="Bold" Text="{Binding Source={x:Static core:Translate.lblPlacedBy} , StringFormat='{0} stefan'}" HorizontalOptions="Center"></Label>
+               
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Image Source="https://propertynl.com/images/Editors/Ronald-de-Blauw.jpg" WidthRequest="250" HeightRequest="200"></Image>
+                    <Button BorderColor="{Binding Source={x:Static core:Settings.Color}}" BorderWidth="2" BackgroundColor="White" TextColor="{Binding Source={x:Static core:Settings.Color}}" 
+                                Command="{Binding BindingContext.NavigateToRedactorPageCommand,Source={x:Reference DetailNewsArticlePage}}"  
+                                CommandParameter="Stefan"  Text="{Binding Source={x:Static core:Translate.lblProfile}}"></Button>
+                    </StackLayout>
+   
             </StackLayout>
 
         </ScrollView>

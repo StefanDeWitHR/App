@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
 using App.Droid;
@@ -22,6 +23,7 @@ namespace App.Droid
             var handler = new ImageLoaderSourceHandler();
             var bitmap = await handler.LoadImageAsync(image, this);
 
+    
             var path = Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDownloads
                                                                      + Java.IO.File.Separator + "logo.png");
 

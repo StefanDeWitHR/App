@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:local="clr-namespace:Core.Converters"
+             xmlns:core="clr-namespace:Core;assembly=Core"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="Core.Views.NewsArticlesPage"   NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}" x:Name="NewsArticlesPageId">
@@ -19,8 +20,8 @@
         <!--<ScrollView>-->
         <StackLayout Padding="0" Margin="0">
             <StackLayout HorizontalOptions="Center">
-                <Label Text="Nieuwsartikelen" FontSize="Large"></Label>
-                <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+                <Label Text="{Binding Source={x:Static core:Translate.lblNewsArticles}}" FontSize="Large"></Label>
+                <BoxView  HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -29,15 +30,16 @@
                 </Grid.ColumnDefinitions>
                
                     <SearchBar x:Name="SearchBar" Grid.Column="0" SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar} ,Mode=TwoWay}" 
-                           SearchCommand="{Binding SearchNewsArticleCommand}"  WidthRequest="175" Placeholder="Zoeken" Margin="0">
+                           SearchCommand="{Binding SearchNewsArticleCommand}" 
+                               WidthRequest="175" Placeholder="{Binding Source={x:Static core:Translate.lblSearch}}" Margin="0">
                         <SearchBar.Behaviors>
                             <local:TextChangedBehavior />
                         </SearchBar.Behaviors>
                     </SearchBar>
-                    <Picker Grid.Column="1" WidthRequest="200"   Title="Categorie"></Picker>
+                <Picker Grid.Column="1" WidthRequest="200"  Title="{Binding Source={x:Static core:Translate.lblCategory}}"></Picker>
              
             </Grid>
-            <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+            <BoxView  HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
 
 
             <ListView ItemsSource="{Binding OC_NewsArticles , Mode=TwoWay}" HasUnevenRows="true" HeightRequest="800" >
@@ -47,7 +49,7 @@
                             <StackLayout>
                                 <Image Source="{Binding Image}"  HeightRequest="375" Aspect="AspectFill" ></Image>
                                 <Label  HeightRequest="25"  Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
-                                <Button Text="Lees meer" 
+                                <Button Text="{Binding Source={x:Static core:Translate.lblReadMore}}"
                                         Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference NewsArticlesPageId}}"
                                         CommandParameter="{Binding .}" />
                             </StackLayout>

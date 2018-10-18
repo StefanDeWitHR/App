@@ -5,7 +5,8 @@
              xmlns:cv="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.CarouselView"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:control="clr-namespace:Core.Controls"
-             xmlns:local="clr-namespace:Core.Converters" 
+             xmlns:local="clr-namespace:Core.Converters"
+             xmlns:core="clr-namespace:Core;assembly=Core"
              prism:ViewModelLocator.AutowireViewModel="True"  x:Name="MainPageId" NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}">
 
@@ -51,7 +52,7 @@
                                         <ColumnDefinition Width="25"></ColumnDefinition>
 
                                     </Grid.ColumnDefinitions>
-                                    <Image IsVisible="{Binding BindingContext.IsArrowLeftVisible ,Source={x:Reference MainPageId} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="0"   WidthRequest="25" HeightRequest="45" Source="left_arrow_carasoulView.png">
+                                    <Image IsVisible="{Binding BindingContext.IsArrowLeftVisible ,Source={x:Reference MainPageId} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="0"   WidthRequest="25" HeightRequest="45" Source="{Binding Source={x:Static core:Settings.ArrowNavLeft}}">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
                                                 Command="{Binding BindingContext.OnPrevRSSArticleCommand,Source={x:Reference MainPageId}}"
@@ -67,7 +68,7 @@
                                         </Image.GestureRecognizers>
                                     </Image>
 
-                                    <Image IsVisible="{Binding BindingContext.IsArrowRightVisible ,Source={x:Reference MainPageId} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="2"    WidthRequest="25" HeightRequest="45" Source="right_arrow_carasoulView.png">
+                                    <Image IsVisible="{Binding BindingContext.IsArrowRightVisible ,Source={x:Reference MainPageId} ,Mode=TwoWay}" Grid.Row="0" Grid.Column="2"    WidthRequest="25" HeightRequest="45" Source="{Binding Source={x:Static core:Settings.ArrowNavRight}}">
                                         <Image.GestureRecognizers>
                                             <TapGestureRecognizer
                                                 Command="{Binding BindingContext.OnNextRSSArticleCommand,Source={x:Reference MainPageId}}"
@@ -81,7 +82,7 @@
                                                 HorizontalOptions="Center" LineBreakMode="WordWrap" VerticalOptions="CenterAndExpand">
                                     </Label>
                                 </ScrollView>
-                                <Button Text="> Lees verder " 
+                                <Button Text="{Binding Source={x:Static core:Translate.lblReadMore}}" 
                                                 Command="{Binding BindingContext.GetNewsArticleCommand,Source={x:Reference MainPageId}}"
                                                 CommandParameter="{Binding .}" />
                             </StackLayout>

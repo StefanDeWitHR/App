@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Core.Views.LoginPage"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:core="clr-namespace:Core;assembly=Core"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Name="LoginPageId" NavigationPage.HasNavigationBar="false" 
              ControlTemplate="{StaticResource header}">
@@ -18,13 +19,13 @@
         <StackLayout  Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="250">
 
             <StackLayout HorizontalOptions="Center">
-                <Label Text="Inloggen" FontSize="Large"></Label>
-                <BoxView BackgroundColor="Red" HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
+                <Label Text="{Binding Source={x:Static core:Translate.lblLogin}}" FontSize="Large"></Label>
+                <BoxView  HeightRequest="1" VerticalOptions="End"  HorizontalOptions="FillAndExpand"/>
             </StackLayout>
             <StackLayout Margin="10">
-                <Entry Text="{Binding Username}" Placeholder="Gebruikersnaam"></Entry>
-                <Entry IsPassword="True" Text="{Binding Password}" Placeholder="Wachtwoord"></Entry>
-                <Button Text="Inloggen" Command="{Binding LoginCommand}"></Button>
+                <Entry Text="{Binding Username}" Placeholder="{Binding Source={x:Static core:Translate.lblUsername}}" ></Entry>
+                <Entry IsPassword="True" Text="{Binding Password}" Placeholder="{Binding Source={x:Static core:Translate.lblPassword}}" ></Entry>
+                <Button Text="{Binding Source={x:Static core:Translate.lblLogin}}"  Command="{Binding LoginCommand}"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
